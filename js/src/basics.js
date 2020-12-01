@@ -1,7 +1,7 @@
 export function consoleDemo() {
     console.log();
     console.log('---------------- console demo ----------------');
-
+    
     // %s converts the corresponding value to a string
     // %o inserts a string representation of an object
     // %j converts a value to a JSON string and inserts it
@@ -73,11 +73,11 @@ export function typesDemo() {
     console.log(typeof x);  // object
     console.log(typeof i);  // number
     
-            // instanceof
+    // instanceof
     console.log((function () { }) instanceof Function);   // true
-        console.log(({}) instanceof Object);  // true
-            console.log([] instanceof Array);     // true
-                    console.log(125 instanceof Number);   // false
+    console.log(({}) instanceof Object);  // true
+    console.log([] instanceof Array);     // true
+    console.log(125 instanceof Number);   // false
 
     // primitive type constructors
     console.log(new Number('123') == 123);              // true
@@ -101,7 +101,7 @@ export function operatorsDemo() {
     obj['true'] = 123; 
     console.log(obj[true]); // 123
 
-    console.log([1,2] + [3,4]);  //'1,2,3,4
+    console.log([1,2] + [3,4]);     //'1,2,3,4
     console.log({a:14} + 'abc');    //[object Object]abc
 
     // assignment
