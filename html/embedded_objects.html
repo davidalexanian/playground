@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- image map and area 
+        3 types of shapes exists, rect, polygone, circle.
+         <area> supports the onClick, onDblClick, onMouseDown ...
+    -->
+    <p>
+        <img src="http://bit.ly/33y4EuS" width="300" height="300" alt="city" usemap="#city">
+        <map name="city">
+            <area shape="rect" coords="0,0,300,100" href="clouds.htm" alt="sky" style="border: 1px red solid">
+            <area shape="rect" coords="0,101,300,200" href="buildings.htm" alt="buildings">
+            <area shape="rect" coords="0,201,300,300" href="street.htm" alt="ground">
+        </map>
+    </p>
+
+    <!-- figure: tag specifies self-contained content, like illustrations, diagrams, photos, code listings-->
+    <figure class="cityImages">
+        <img src="http://bit.ly/33y4EuS" width="300" height="300" alt="city" draggable=false>
+        <figcaption>Fig. 1. One of many cities in the database of City Images.</figcaption>
+    </figure>
+
+    <!-- audio 
+        multiple copies of the same audio file are referenced– each copy using a different compression format– since not all audio formats are supported by all browsers
+        ● Media Types: audio/mpeg, audio/ogg, or audio/wav. 
+        ● controls will show the controller information (depicted above).
+        ● preload has three possible value settings: auto, metadata, and none. These values are for shaping the overall user experience.
+        ● auto is used for loading the entire audio file when the page loads.
+        ● metadata loads only the metadata associated with the audio file when the page loads.
+        ● none instructs the browser not to load the audio file on page load.
+    -->
+    <audio controls loop muted>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- video -->
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video> 
+
+    <!-- iframe -->
+    <div>
+        <iframe src="https://www.google.com/maps/embed?
+            pb=!1m18!1m12!1m3!1d46731.83463789939!2d-
+            122.14235937522655!3d42.94161489584187!2m3!1f0!2f0!3f0!3m2!
+            1i1024!2i768!4f13.1!3m3!1m2!1s0x54c63e84c023ab41%3A0xbae1b
+            f19c88b877a!2sCrater%20Lake!5e0!3m2!1sen!2sca!4v15737505715
+            13!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="eager"
+            sandbox="allow-scripts allow-forms" />
+    </div>
+
+    <!-- embed diff. plugins-->
+    <object type="application/pdf" data="assets/PDF.pdf" height="600" width="300"></object>
+    <object type="audio/x-wav" data="data/test.wav" width="250" height="40">
+        <param name="src" value="data/sound.wav">
+        <param name="autoplay" value="false">
+        <param name="autoStart" value="0">
+        alt : <a href="data/test.wav">sound.wav</a>
+    </object>
+
+    <!-- #region embed -->
+    <embed type="image/jpg" src="pic_trulli.jpg" width="300" height="200"/>
+    <embed type="text/html" src="snippet.html" width="500" height="200"/> 
+    <embed type="video/webm" src="video.mp4" width="400" height="300"/> 
+</body>
+
+</html>

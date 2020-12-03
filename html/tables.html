@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Untitled Page</title>
+    <style>
+        thead td {
+            background-color: Orange;
+            color: black;
+        }
+
+        /*cells in head*/
+        tbody tr {
+            background-color: Aqua;
+            color: black;
+        }
+
+        /*rows in body*/
+
+        /*selecting footer's given row's given cell in table with id tbl*/
+        #tbl tfoot.footer-row.foot-cell {
+            background-color: Fuchsia;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Thead,tbody,tfoot - to group together rows and columns to make it easy to style groups of rows and columns-->
+    <table border="1" style="border-collapse:collapse; table-layout:fixed">
+        <thead>
+            <tr>
+                <th> thead</th>
+                <th> 2 </th>
+                <th> 3 </th>
+                <th> 4 </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="footer-row">
+                <th> tfoot</th>
+                <tdclass="foot-cell"> 10</td>
+                    <td> 11</td>
+                    <td> 12</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th> tbody</th>
+                <td> 6 </td>
+                <td> 7 </td>
+                <td> 8 </td>
+                <td> 8 </td>
+            </tr>
+            <tr>
+                <th> tbody</th>
+                <td> 6 </td>
+                <td> 7 </td>
+                <td> 8 </td>
+                <td> 8 </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!---->
+</body>
+
+</html>
+<!--
+    table-layout css property
+    Shrinkwrapped tables shrink to fit their content. Shrinkwrapped tables are the best choice when you want flexible layouts that adapt to different devices, screen resolutions, and viewport sizes.
+    Sized and stretched tables divide their width proportionally among their columns while ensuring no column is narrower than its content. sized table can be narrower or wider than its container, and a stretched table stretches to the width of its container. 
+    Fixed tables  are a variation of sized or stretched tables . They can be sized or stretched, but not shrinkwrapped. They are different from sized and stretched tables in that they ignore the width of their content when laying out columns.  This prevents a cell’s content from having any influence over a column’s width. Because fixed tables ignore content,  they render much faster than the other types of tables. For shrinkwrapped, sized, and stretched tables, a browser must wait for the entire table to download so it can calculate the minimum and maximum width of the content in  each cell  before it can even begin rendering the table. Fixed tables can be rendered progressively as soon as the first row downloads. 
+
+    Shrinkwrapped   - TABLE_SELECTOR { table-layout:auto ; width:auto ; } 
+    Sized Table     - TABLE_SELECTOR { table-layout:auto ; width:VALUE_OR_PERCENT ; } 
+    Stretched Table - TABLE_SELECTOR { table-layout:auto ; width:100% ; } 
+    Fixed Table     - TABLE_SELECTOR { table-layout:fixed; width:VALUE_OR_PERCENT ; }  
+-->

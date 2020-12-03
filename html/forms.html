@@ -1,0 +1,108 @@
+<html>
+
+<!-- browser request examples for GET/POST mehtods & file upload
+
+    GET /?say=Hi&to=Mom HTTP/2.0
+    Host: foo.com
+            
+
+    POST / HTTP/2.0
+    Host: foo.com
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 13
+
+    say=Hi&to=Mom
+
+    -- sending file: data will be split into multiple parts, one for each file plus one for the text data included in the form body
+    POST /foo HTTP/1.1
+    Content-Length: 68137
+    Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+
+    -----------------------------974767299852498929531610575
+    Content-Disposition: form-data; name="description" 
+
+    some text
+    -----------------------------974767299852498929531610575
+    Content-Disposition: form-data; name="myFile"; filename="foo.txt" 
+    Content-Type: text/plain 
+
+    (content of the uploaded file foo.txt)
+    -----------------------------974767299852498929531610575--
+-->
+
+<body>
+    <!-- button -->
+    <p>
+        <button type=“button” name=”chooseFlavor” value=”choco”>Chocolate</button><br>
+        <button type=“button” name=”chooseFlavor” value=”straw”>Strawberry</button><br>
+        <button type=“button” name=”chooseFlavor” value=”vanil”>Vanilla</button><br>
+    </p>
+
+    <!--fieldset to group related fields-->
+    <form>
+        <fieldset>
+            <legend>CONTACT INFORMATION</legend>
+            Name: <input type="text"><br> <br>
+            Email: <input type="text"><br> <br>
+            Phone Number: <input type="text">
+        </fieldset><br>
+        <fieldset>
+            <legend>EDUCATION</legend>
+            Highest Degree: <input type="text"><br> <br>
+            School: <input type="text"><br> <br>
+            Graduation Date: <input type="text">
+        </fieldset><br>
+    </form>
+
+    <!-- input controls -->
+    <form action="page to get/post the form" method="post" style="border:1px solid Red">
+        <!-- Input types are:
+        button,checkbox,color,date,datetime,datetime-local,
+        email,file,hidden,image,month,number,password,radio,
+        range,reset,search,submit,tel,text,time,url,week-->
+
+        <!-- text controls -->
+        <input type="text" name="age" maxlength="30" value="default text" disabled="disabled" readonly="readonly" />
+        <br /><br />
+        <textarea id="TextArea1" cols="20" rows="10" wrap="off"
+            style="width:500px; height:300px;">default text</textarea>
+        <br /><br />
+
+        <!-- check & radio (with grouping) -->
+        <input id="Checkbox1" name="Checkbox1" type="checkbox" checkedtabindex="1" /> First <br />
+        <input id="Checkbox2" name="Checkbox2" type="checkbox" tabindex="2" />
+        <!-- labels -->
+        <label for="Checkbox2">Second</label><br /><br />
+
+        <!-- group by giving the same name -->
+        <input id="Radio1" name="Radio" type="radio" value="small" title="small" /> small <br />
+        <input id="Radio2" name="Radio" type="radio" value="medium" checked /> medium <br />
+        <input id="Radio3" name="Radio" type="radio" value="big" /> big <br /><br />
+
+        <!-- drop down box (with multiple & default selection) -->
+        <select id="Select1" name="Select1" multiple="multiple" size="10">
+            <optgroup label="Grouping"></optgroup>
+            <option value="AMD" selected="selected">Armenian Dram</option>
+            <option value="USD">United States Dollar</option>
+            <option value="RUR">Russian Rubly</option>
+        </select><br /><br />
+
+        <!-- buttons -->
+        <input id="Reset1" type="reset" value="reset" />
+        <input id="Submit1" type="submit" value="submit" />
+    </form>
+
+    <!-- file upload -->
+    <form method="post" action="https://www.foo.com" enctype="multipart/form-data">
+        <div>
+            <label for="file">Choose a file</label>
+            <input type="file" id="file" name="myFile">
+        </div>
+        <div>
+            <button>Send the file</button>
+        </div>
+    </form>
+    
+</body>
+
+</html>
