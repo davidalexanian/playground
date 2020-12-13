@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>box models</title>
+
+    <style type=text/css>
+        .container {
+            background-color: greenyellow;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        .containerAbsolute {
+            background-color: Yellow;
+            border: 1px solid black;
+            position: relative;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .inlineElements {
+            padding: 20px;
+            border: 2px solid red;
+            outline: green solid 10px;
+            margin: 100px;
+        }
+
+        .inline-box {
+            display: inline-block;
+            overflow: scroll;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid green;
+            background-color: Aqua;
+        }
+
+        .block-box {
+            display: block;
+            overflow: scroll;
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            padding: 50px;
+            border: 1px solid green;
+            background-color: Aqua;
+        }
+
+        div.absolute1 {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: red;
+        }
+
+        div.absolute2 {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            background-color: red;
+        }
+
+        div.fixed {
+            position: fixed;
+            background-color: Red;
+            left: 300px;
+            top: 100px;
+        }
+
+        *.box {
+            float: left;
+            overflow: auto;
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            background-color: Aqua;
+        }
+
+        *.small {
+            background-color: Fuchsia;
+            width: 50px;
+            height: 30px;
+        }
+
+        .floating {
+            background-color: red;
+            float: right;
+            height: 5rem;
+            width: 3rem;
+        }
+
+        .floating-2 {
+            background-color: blue;
+            float: left;
+            height: 5rem;
+            width: 3rem;
+        }
+
+        .content {
+            clear: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- display: inline-->
+    <p class="container">
+        <span>span1</span>
+        <span class="inlineElements">inline</span>
+        <span>span3</span>
+    </p>
+
+    <!-- display: inline-block-->
+    <div class="container">
+        <span>BEFORE</span>
+        <span class="inline-box">Inline element displayed as an inline block.</span>
+        <span>AFTER</span>
+    </div>
+
+    <!-- display: block -->
+    <div class="container">
+        <div style="background-color: blueviolet;">BEFORE</div>
+        <span class="block-box">block box</span>
+        <div style="background-color: blueviolet;">AFTER</div>
+    </div>
+
+    <!-- display absolute-->
+    <div class="containerAbsolute">
+        <div style="background-color:Yellow">before</div>
+        <div class="fixed">fixed: will scroll with page</div>
+        <div style="background-color:Yellow">after</div>
+        <div class="absolute1">absolute 1</div>
+        <div class="absolute2">absolute 2: relative to absolute 1</div>
+    </div>
+
+    <!-- float -->
+    <div class="container">
+        <div style="background-color:Red;">BEFORE</div>
+        <div class="box small">float 1</div>
+        <div class="box">float 2</div>
+        <div class="box small">float 3</div>
+        <div style="background-color:gray">AFTER</div>
+    </div>
+
+    <div class="container" style="margin-top: 150px;">
+        <div class="floating"></div>
+        <div class="floating-2"></div>
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec sapien dolor. Nunc condimentum sem nec
+            commodo sollicitudin.
+        </div>
+    </div>
+
+</body>
+
+</html>

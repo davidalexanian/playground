@@ -1,0 +1,35 @@
+<!-- 
+    The following properties are inherited by inline elements: 
+        letter-spacing, word-spacing, white-space, line-height, color, font, font-family, font-size, font-style, font-variant, font-weight, text-decoration, text-transform, and direction
+
+    The following properties are not inherited:
+        display, margin, border, padding, background, height, min-height, max-height,width, min-width, max-width, overflow, position, left, right, top, bottom, z-index,float, clear, table-layout, vertical-align, page-break-after, page-break-before,and unicode-bidi.
+    
+    When you assign 'inherited' to a property, that property inherits its value from its parent element. 
+-->
+<html>
+
+<head>
+    <title>Subclass seletors</title>
+    <style type="text/css">
+        p.classParent {
+            color: tomato;
+            font-size: 20px;
+            border: red solid 2px;
+        }
+        span.myclass {
+            color: inherit;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="classParent">
+        <span>style inherited</span><br/>
+        <span class="myclass">color inherited, font-size overriden</span>
+        <p style="color:inherit!important">style is not inherited</p>
+    </p>
+</body>
+
+</html>

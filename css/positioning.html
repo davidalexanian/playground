@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Positioning</title>
+    <style type="text/css">
+        .static {
+            background-color: Yellow;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 20px;
+            right: 200px;
+            background-color: Aqua;
+        }
+
+        .fixed {
+            top: 500px;
+            position: fixed;
+            background-color: yellow;
+        }
+
+        .relative {
+            position: relative;
+            left: 50px;
+            top: 100px;
+            background-color: red;
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="static-block">
+        <span class="static-inline">static inline</span>
+    </div>
+    <div>
+        second div
+    </div>
+
+    <div class="static">static div</div>
+    <div class="relative">
+        relative div (2n element)
+        <div class="absolute">absolute to relative</div>
+    </div>
+    <div class="fixed">fixed is relative to browser window</div>
+    <div class="absolute">absolute to body</div>
+    <div class="static">static div 2 (goes down because of relative div)</div>
+
+    <div style="height: 150px; width: 400px; overflow: scroll; border: 1px solid black;">
+        <p>Some example text..</p>
+        <div class="sticky">I will stick to the screen when you reach my scroll position</div>
+        <h2>Scroll back up again to "remove" the sticky position.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
+            lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue
+            eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet
+    </div>
+</body>
+
+</html>

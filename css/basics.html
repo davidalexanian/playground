@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>Subclass seletors</title>
+    <style type="text/css">
+
+/* border */
+        #rcorners4 {
+            border-radius: 0px 50px;
+            background: #8AC007;
+        }
+        #rcorners8 {
+            border-radius: 100px/50px;
+            background: #8AC007;
+        }
+        #borderimg {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image: url(border.png) 30 stretch;
+        }
+
+/* background */
+        #bg1 {
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-color: rgb(255, 0, 0);
+            opacity: 0.6;
+        }
+
+        /*A linear gradient from left to right:*/
+        #grad1 {
+            background: linear-gradient(to right, red, blue);
+        }
+
+        /*A linear gradient that starts at top left (and goes to bottom right):*/
+        #grad2 {
+            background: linear-gradient(to bottom right, red, blue);
+        }
+
+        /*A linear gradient with a specified angle:*/
+        #grad3 {
+            background: linear-gradient(180deg, red, blue);
+        }
+
+/* shadow */
+        h1 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        div {
+            box-shadow: 10px 10px 5px red;
+        }
+
+/* text */
+/* 
+•	text-align-last 	Specifies how to align the last line of a text
+•	text-emphasis 	A shorthand for setting text-emphasis-style and text-emphasis-color in one declaration
+•	text-justify 	Specifies how justified text should be aligned and spaced
+•	text-overflow 	Specifies how overflowed content that is not displayed should be signaled to the user
+•	word-break 	Specifies line breaking rules for non-CJK scripts
+•	word-wrap 	Allows long words to be able to be broken and wrap onto the next line 
+*/
+        p.test1 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        p.test2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.test2:hover {
+            text-overflow: inherit;
+            overflow: visible;
+        }
+
+        @media (min-width: 400px) {  html { background: red; }}
+@media (min-width: 600px) {  html { background: green; }}
+@media (min-width: 800px) {  html { background: blue; }}
+
+    </style>
+</head>
+
+<body>
+    <p id="rcorners4" style="height: 100px;">rcorners4</p>
+    <p id="rcorners8" style="height: 100px;">rcorners4</p>
+    <p id="borderimg" style="height: 100px;">rcorners4</p>
+    <p id='bg1' style="height: 200px;">background</p>
+    <p id="grad1" style="height: 100px;">rcorners4</p>
+    <p id="grad2" style="height: 100px;">rcorners4</p>
+    <p id="grad3" style="height: 100px;">rcorners4</p>
+    <h1>white text with black, blue, and darkblue shadow</h1>
+    <div>shadow position 7 color</div>
+    <p class="test1">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn </p>
+    <p class="test2">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogntest1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn</p>
+</body>
+
+</html>

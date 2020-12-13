@@ -1,0 +1,63 @@
+<!-- 
+    descendant selector (space)
+    child selector (>)
+    adjacent sibling selector (+)
+    general sibling selector (~) 
+    * - all elements
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Selectors</title>
+        <style type="text/css">
+            /* p,ol,li elements get same styles*/
+            p,ol,li { 
+                border:1px solid black; padding-left:10px; font-family:monospace; margin:10px; margin-left:0px; 
+            }
+            .my-class {
+                background-color: violet;
+            }
+            /* span that is inside div */
+            div span { 
+                background-color:Red; 
+            }	
+            /* div having the class */
+            div.my-class { 
+                background-color: tomato;
+
+            } 
+            
+            /* Descendant Selectors */
+            #my-id p { 
+                background-color:Green; 
+            } 
+            /* all childs of elem with id */
+            #my-id > * { 
+                border:3px solid black; 
+            } 
+            /* Sibling Selector */
+            li+li { 
+                font-style:italic; 
+                color:blue; 
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="my-id">
+           <ol>
+                <li>div ol li</li>
+                <li>div ol li</li>
+                <li>
+                    <p class="my-class">div ol li p.my-class </p>
+                </li>
+            </ol>
+        </div>
+        <div class="my-class">
+            <p>
+                <span class="my-class">
+                    div*.my-class
+                </span>
+            </p>
+        </div>
+    </body>
+</html>        

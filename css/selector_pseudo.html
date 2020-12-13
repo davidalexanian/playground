@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Subclass seletors</title>
+    <style type="text/css">
+        a:link {
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            color: gray;
+            background-color: white;
+        }
+
+        a:hover {
+            color: white;
+            background-color: green;
+        }
+
+        /*make the hyperlink “flash”*/
+        a:active,
+        a:focus {
+            color: green;
+            background-color: red;
+        }
+
+        p:first-line {
+            font-weight: bold;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            color: Red;
+        }
+
+        p:first-letter {
+            font-size: 48px;
+        }
+
+        .rollup:hover  {
+            color:red;
+            background:url('http://www.vadafrica.org/wp-content/uploads/2011/02/Bajaj-Auto-Small-Car-Project.jpg');
+            background-position:center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>selects the first line of a terminal block element,paragraph.</p>
+    <p>
+        <a href="ysu.am">ysu.am</a>
+    </p>    
+    <div class="rollup" style="background-color:Aqua; height:100px">
+        content 
+    </div>
+</body>
+
+</html>
