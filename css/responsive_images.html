@@ -1,0 +1,28 @@
+<!-- 
+    This sets the image so that its width never exceeds the width of its container. The
+    height: auto makes sure that the image retains its aspect ratio.
+-->
+
+<html>
+
+<head>
+    <title>Media queries</title>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            font-size: clamp(16px, 4.8vw, 64px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>some text</h1>
+        <img src="sample.jpg"><br>
+    </div>
+</body>
+
+</html>

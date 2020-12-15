@@ -1,0 +1,44 @@
+<!-- 
+        We can use the flex-wrap property on a flex container to automatically wrap elements to the next line if the viewport is too narrow, 
+        in order to prevent the need for horizontal scrolling. 
+    -->
+
+<html>    
+<head>
+    <title>Subclass seletors</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: skyblue;
+            padding: 0.25rem;
+        }
+
+        .item {
+            background: red;
+            color: white;
+            text-align: center;
+            margin: 0.25rem;
+            font-size: 2rem;
+        }
+
+        .wide {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Flex Item 1</div>
+        <div class="item wide">Flex Item 2</div>
+        <div class="item">Flex Item 3</div>
+        <div class="item">Flex Item 4</div>
+        <div class="item wide">Flex Item 5</div>
+        <div class="item">Flex Item 6</div>
+    </div>
+</body>
+
+</html>

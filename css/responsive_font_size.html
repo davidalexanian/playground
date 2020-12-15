@@ -1,0 +1,54 @@
+<!-- 
+    If the viewport becomes very wide, the font size of the heading becomes very large. 
+    On the other extreme, if the viewport is very narrow, the heading’s font size becomes very small 
+    We can fix this by using the clamp function. clamp takes three arguments: the minimum 
+    size, the preferred size, and the maximum size. We can keep our font size of 4.8vw as the 
+    preferred size and add a lower bound of 16px and an upper bound of 48px:
+-->
+
+<html>
+
+<head>
+    <title>Media queries</title>
+    <style>
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+            p {
+                font-size: 1vw;
+            }
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+            p {
+                font-size: 2vw;
+            }
+            div {
+                font-size: clamp(16px, 3vw, 48px);
+            }
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            p {
+                font-size: 3vw;
+            }
+        }
+        /* Extra large devices (large laptops and desktops, 1200px and up)  */
+        @media only screen and (min-width: 992px) {
+            p {
+                font-size: 4vw;
+            }
+        }
+
+        div {
+            font-size: clamp(16px, 3vw, 48px);
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p> some long long text wih media query only</p>
+    <div> some long long text wih media query only</div>
+</body>
+
+</html>

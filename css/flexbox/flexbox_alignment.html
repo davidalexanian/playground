@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>flexbox alignment</title>
+    <style type=text/css>
+        .container {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        .item {
+            background-color: coral;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .containerCentered {
+            background: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .itemCentered {
+            background: orangered;
+            width: 5rem;
+            height: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>jusify content</h2>
+    <div class="container">
+        <div class="item">default</div>
+    </div>
+    <div class="container" style="justify-content: center;">
+        <div class="item">justify-content: center</div>
+    </div>
+    <div class="container" style="justify-content: space-between;">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+    </div>
+
+    <h2>align-items</h2>
+    <div class="container" style="align-items: stretch;">
+        <div class="item">item</div>
+        <div class="item">item<br>item</div>
+        <div class="item">item<br />item<br />item</div>
+    </div>
+    <div class="container" style="align-items: flex-start;">
+        <div class="item">item</div>
+        <div class="item">item<br>item</div>
+        <div class="item">item<br />item<br />item</div>
+    </div>
+    <div class="container" style="align-items: flex-end;">
+        <div class="item">item</div>
+        <div class="item">item<br>item</div>
+        <div class="item">item<br />item<br />item</div>
+    </div>
+    <div class="container" style="align-items: center;">
+        <div class="item">item</div>
+        <div class="item">item<br>item</div>
+        <div class="item">item<br />item<br />item</div>
+    </div>
+
+    <h2>align content</h2>
+    <div class="container">
+        <div class="item" style="margin: auto;">item</div>
+        <div class="item" style="margin: auto;">item<br>item</div>
+        <div class="item" style="margin: auto;">item<br />item<br />item</div>
+    </div>
+
+    <h2>centered container</h2>
+    <div class="containerCentered">
+        <div class="itemCentered"></div>
+    </div>
+</body>
+
+</html>

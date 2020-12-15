@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>flexbox</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        .item {
+            font-size: 1.5rem;
+            padding: 2rem;
+            margin: 5px;
+            color: white;
+        }
+        .item1 {
+            background: rebeccapurple;
+        }
+        .item2 {
+            background: skyblue;
+        }
+
+        .item3 {
+            background: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>default</h2>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+    <h2>flex-direction: column</h2>
+    <div class="container" style="flex-direction: column;">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+    <h2>shrunks items widths to fit if there is enough space for item's content</h2>
+    <div class="container" style="width: 500px;">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+    </div>
+    
+    <h2>overflow if not enough space for item's contents</h2>
+    <div class="container" style="width: 300px;">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+    </div>
+
+    <h2>flex-wrap: flex items will wrap to the next line if container is smaller than items</h2> 
+    <div class="container" style="flex-wrap: wrap; width: 200px;">
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+    </div>
+
+    <h2>
+        flex-grow (item) - By default, if the items are not large enough to fill the container, there will be empty space 
+        flex-grow is a relative measure. If all of the items are set to flex-grow: 1, they will all grow equally to fill the space.
+        item1 and item2 will grow x2, item3 will grow x3, all the width will be shrunk to fit the container 
+    </h2>
+    <div class="container">
+        <div class="item item1" style="flex-grow: 2;">item1</div>
+        <div class="item item2" style="flex-grow: 2;">item2</div>
+        <div class="item item3" style="flex-grow: 3;">item3</div>
+    </div>
+
+    <h2> flex-shrink (item)
+        We saw earlier that if the flex items exceed the size of the container, the browser will try
+        to shrink them to fit. By default, it will try to shrink all elements evenly. Just like we can
+        control growth with flex-grow, we can also control shrinking with flex-shrink. 
+    </h2>
+    <div class="container" style="width: 500px;">
+        <div class="item item1" style="width: 400px;">item1</div>
+        <div class="item item2" style="width: 400px; flex-shrink: 2;">item2</div>
+        <div class="item item3" style="width: 400px;">item3</div>
+    </div>
+
+</body>
+
+</html>
