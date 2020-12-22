@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace ConsoleApp
 {
@@ -6,8 +7,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
+            var wc = new WaitCallback((obj) => {
+                Console.WriteLine((obj));
+            });
+            ThreadPool.QueueUserWorkItem(wc, "state");
+            Console.ReadLine();
         }
     }
 }
