@@ -2,11 +2,11 @@ export default function someFunct() {
     console.log('someFunct');
 }
 
-export function sum(x, y) { 
+export function sum(x, y) {
     return x + y;
 }
 
-function sub(x, y) { 
+function sub(x, y) {
     return x - y;
 }
 
@@ -22,15 +22,14 @@ export {
 export function evalAndDemo() {
     eval('console.log(2 * 4)');
     const times1 = new Function('a', 'b', 'console.log(a * b)');
-    times1(2,3);
+    times1(2, 3);
 }
 
 export function controlFlowDemo() {
 
     // ---- break
-    for (const x of ['a', 'b', 'c', 'd']) 
-    {
-        if (x == 'b') continue; 
+    for (const x of ['a', 'b', 'c', 'd']) {
+        if (x == 'b') continue;
         if (x === 'c') break;
         console.log(x);
     }
@@ -54,7 +53,7 @@ export function controlFlowDemo() {
     }
 
     // ---- for loops
-    for (let i=0; i<3; i++) {
+    for (let i = 0; i < 3; i++) {
         console.log(i);
     }
 
@@ -72,13 +71,13 @@ export function controlFlowDemo() {
         console.log(`${index} -> ${elem}`);
     }
 
-    for (const key in {a:'a', b:'b'}) {
+    for (const key in { a: 'a', b: 'b' }) {
         console.log(key);
     }
 
     try {
         throw new Error('desc');
-    } 
+    }
     catch (err) {
         console.log(err.message);
         console.log(err.stack);
@@ -90,28 +89,28 @@ export function controlFlowDemo() {
 
 export function destructuringAssignmentDemo() {
     // array destructuring
-    let [a, , b] = [1,2,3]; 
+    let [a, , b] = [1, 2, 3];
     console.log("a:", a, "b:", b);
 
     // setting 7, 42 as default values
-    let list = [ 7, 42 ]; 
+    let list = [7, 42];
     let [c = 1, d = 2, e] = list;
     console.log("c:", c, "d:", d, "e:", e);
- 
+
     // object destructuring
-    var {foo, bar} = {foo: 'lorem', bar: 'ipsum', choo: 'uhoh'}; 
+    var { foo, bar } = { foo: 'lorem', bar: 'ipsum', choo: 'uhoh' };
     console.log("foo:", foo, "bar:", bar);
 
-    let cust = { address: { street: "1001 Oak Drive", state: "Summerville" } }; 
-    let { address: {city: city}, address: {state: state} } = cust; 
+    let cust = { address: { street: "1001 Oak Drive", state: "Summerville" } };
+    let { address: { city: city }, address: { state: state } } = cust;
     console.log("City:", city, "\nState:", state);
 
     // function arguments
-    function f ([ name, val ]) { console.log(name, val); } 
-    function g ({ name: n, val: v }) { console.log(n, v); }
-    function h ({ name, val }) { console.log(name, val); }
-     
-    f([ "bar", 42 ]); 
-    g({ name: "foo", val: 7 }); 
+    function f([name, val]) { console.log(name, val); }
+    function g({ name: n, val: v }) { console.log(n, v); }
+    function h({ name, val }) { console.log(name, val); }
+
+    f(["bar", 42]);
+    g({ name: "foo", val: 7 });
     h({ name: "bar", val: 42 });
 }

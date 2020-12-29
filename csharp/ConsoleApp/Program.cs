@@ -7,11 +7,29 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var wc = new WaitCallback((obj) => {
-                Console.WriteLine((obj));
-            });
-            ThreadPool.QueueUserWorkItem(wc, "state");
-            Console.ReadLine();
+            var arr  = new object[2] { 
+                new object(),
+                new object()
+            };
+            Array.Sort(arr);
+        }
+
+        class y : xx {
+            public override void methdo()
+            {
+                base.methdo();
+            }
+        }
+        class xx : x
+        {
+            public virtual void methdo()
+            {
+                throw new NotImplementedException();
+            }
+        }
+        interface x {
+
+            void methdo();
         }
     }
 }
