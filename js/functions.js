@@ -1,4 +1,4 @@
-export function functionsDemo()
+(function functionsDemo()
 {
     function f1(x, y = 11) {
         console.log(`x-${x}, y-${y}`);
@@ -27,9 +27,9 @@ export function functionsDemo()
     };    
     myArray.forEach(callback1);
     myArray.forEach(callback2);
-}
+})();
 
-export function arrowFunctionsDemo() {
+(function arrowFunctionsDemo() {
     const myArray = ['a', 'b'];
     const callback1 = (v) => console.log(v);
     const callback2 = (v, i) => {
@@ -37,9 +37,9 @@ export function arrowFunctionsDemo() {
     };    
     myArray.forEach(callback1);
     myArray.forEach(callback2);
-}
+})();
 
-export function spreadOperatorDemo() {
+(function spreadOperatorDemo() {
     function add(a, b) { return a + b; } 
 
     let nums = [5, 4]; 
@@ -51,5 +51,5 @@ export function spreadOperatorDemo() {
     let a = [2, 3, 4]; 
     let b = [1, ...a, 5]; 
     console.log(b);     // 1,2,3,4,5
-}
+})();
 

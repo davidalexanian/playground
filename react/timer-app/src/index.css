@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div.timersDashboard {
+  margin: auto;
+  width: 250px;
+  margin-top: 5em;
+}
+
+div.editableTimerList {
+  margin: 0;
+}
+
+div.editableTimer {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  box-shadow: rgb(200, 200, 200) 1px 1px 1px 1px;
+}
+
+div.timer {
+  display: flex;
+  flex-direction: column;
+}
+
+div.timer div.timerButtonContainer {
+  text-align: right;
+  vertical-align: middle;
+}
+
+div.timer .title {
+  font-weight: bold;
+}
+
+div.timer .project {
+  font-size: 0.8em;
+  color: gray;
+}
+
+div.timer .elapsed {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+div.TimerFormContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+div.TimerFormContainer .label {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+div.TimerFormContainer div.buttonContainer {
+  margin-top : 0.8em;
+  text-align: center;
+}
+
+.update {
+  color: green;
+  background-color: white;
+  border: 1px solid green;
+  font-weight: bold;
+}
+.cancel {
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+  font-weight: bold;
+  margin-left: 0.1em;
+}
+
+div.toggleableTimerForm {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+  color: gray;
+}
+a.plusSign {
+  color: gray;
+  border: 1px solid gray;
+  padding: 0.1em 0.3em;
+}
+a.plusSign:hover {
+  cursor: pointer;
+}
+
+button.startTimer {
+  color: green;
+  background-color: white;
+  border: none;
+  border: 1px solid green;
+  margin:auto;
+  width: 100%;
+  font-weight: bold;
+}
+
+button.startTimer:hover {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+}
+
+button.stopTimer {
+  color: red;
+  background-color: white;
+  border: none;
+  border: 1px solid red;
+  margin:auto;
+  width: 100%;
+  font-weight: bold;
+}
+
+button.stopTimer:hover {
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}

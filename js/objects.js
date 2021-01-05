@@ -1,4 +1,4 @@
-export function objectsDemo() {
+(function objectsDemo() {
     // property shorthand
     let first = "john";
     let last = "doe";
@@ -29,18 +29,18 @@ export function objectsDemo() {
 
     obj2.fullName = 'aaa bbb';
     console.log(obj2.fullName);
-}
+})();
 
-export function objectAssignDemo() {
+(function objectAssignDemo() {
     const target = { a: 1, b: 2 };
     const source1 = { b: 4, c: 5 };
     const source2 = { d: 'dd' };
     const returnedTarget = Object.assign(target, source1, source2);
     console.log(target);    // { a: 1, b: 4, c: 5, d: 'dd' }
     console.log(returnedTarget == target);  // true
-}
+})();
 
-export function objectAsDictionaryDemo() {
+(function objectAsDictionaryDemo() {
     const obj = {
         'any string': 123,
         'nice method'() { return 'method'; },
@@ -59,4 +59,4 @@ export function objectAsDictionaryDemo() {
     console.log(Object.keys(obj));      // list keys
     console.log(Object.values(obj));    // list values
     delete obj.aaa;                     // delete keys
-}
+})();
