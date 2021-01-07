@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 
 namespace ConsoleApp
@@ -7,29 +8,8 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var arr  = new object[2] { 
-                new object(),
-                new object()
-            };
-            Array.Sort(arr);
+            Console.WriteLine("abc".Reverse());
         }
-
-        class y : xx {
-            public override void methdo()
-            {
-                base.methdo();
-            }
-        }
-        class xx : x
-        {
-            public virtual void methdo()
-            {
-                throw new NotImplementedException();
-            }
-        }
-        interface x {
-
-            void methdo();
-        }
+      
     }
 }
