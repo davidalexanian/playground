@@ -13,6 +13,12 @@ var globalVar = 'global-var';
 })();
 // console.log(x);  -- not defined
 
+function function1111() {
+    xyzz = 1111;
+}
+function1111();
+console.log(xyzz);
+
 // --------------------------- local scope
 (function localScopeDemo() {
     console.log();

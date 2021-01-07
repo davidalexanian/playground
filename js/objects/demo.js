@@ -1,3 +1,4 @@
+console.log("-------------------- objectsDemo");
 (function objectsDemo() {
     // property shorthand
     let first = "john";
@@ -31,20 +32,12 @@
     console.log(obj2.fullName);
 })();
 
-(function objectAssignDemo() {
-    const target = { a: 1, b: 2 };
-    const source1 = { b: 4, c: 5 };
-    const source2 = { d: 'dd' };
-    const returnedTarget = Object.assign(target, source1, source2);
-    console.log(target);    // { a: 1, b: 4, c: 5, d: 'dd' }
-    console.log(returnedTarget == target);  // true
-})();
-
+console.log("-------------------- objectAsDictionaryDemo");
 (function objectAsDictionaryDemo() {
     const obj = {
         'any string': 123,
         'nice method'() { return 'method'; },
-        ['f'+'o'+'o']: 567,
+        ['f' + 'o' + 'o']: 567,
         aaa: 11,
         [Symbol.toStringTag]() {
             return 'function with symbol name';
