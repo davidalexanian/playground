@@ -8,8 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("abc".Reverse());
+
         }
-      
     }
 }

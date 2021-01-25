@@ -1,0 +1,14 @@
+{
+  "name": "dalezander",
+  "version": "1.0.0",
+  "description": "dalezander package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "dalezander"
+  ],
+  "author": "dalezander",
+  "license": "ISC"
+}

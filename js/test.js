@@ -1,8 +1,12 @@
-var result;
-function Sum(val1, val2)
-{
-    return val1 + val2;
+function myFunction() {
+    console.log('x');
 }
-eval("result = Sum(5, 5);");
-console.log(result);
+console.log(typeof myFunction);
 
+myFunction.someMethod = function() {
+    console.log('someMethod');
+}
+myFunction.someMethod();
+
+// new myFunction().someMethod();   - error
+console.log(myFunction.prototype.someMethod);  // undefined
