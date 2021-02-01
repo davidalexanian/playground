@@ -4,6 +4,7 @@ import { WelcomeFunction, WelcomeClass } from './FunctionComponents.js'
 import Choice from './Choice.js'
 import Counter from './Counter.js'
 import Newspaper from './Newspaper.js'
+import Forms from './Forms.js'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Choice/>
       <Counter initialValue={12} />
       <Newspaper/>
+      <Forms/>
     </div>
   );
 }
