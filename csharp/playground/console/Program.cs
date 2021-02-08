@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace playground
+namespace playground.console
 {
     class Program
     {
