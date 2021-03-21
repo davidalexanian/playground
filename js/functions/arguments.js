@@ -15,8 +15,6 @@ function f3({start, end=3}) {
     console.log(`start-${start}, end-${end}`);
 }
 
-
-
 f2(1);      // x-1, y-[]
 f2(1,2,3);  // x-1, y-2,3
 
