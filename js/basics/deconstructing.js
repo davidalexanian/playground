@@ -1,6 +1,5 @@
 let zz;
 
-
 (function destructuringAssignmentDemo() {
     // array destructuring
     let [a, , b] = [1, 2, 3];

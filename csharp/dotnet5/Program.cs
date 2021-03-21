@@ -1,0 +1,1 @@
+﻿dotnet5.TopLevelStatement.Run();

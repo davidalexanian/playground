@@ -1,4 +1,3 @@
-console.log();
 console.log('---------------- let and const ----------------');
 
 let i = 10;

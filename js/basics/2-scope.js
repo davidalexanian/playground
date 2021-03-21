@@ -47,7 +47,7 @@ console.log(xyzz);
     }
 })();
 
-// ------------- early activation dmeo
+// ------------- early activation demo
 // functions are early activated, regardless of where it is located
 console.log(foo()); // OK
 function foo() { return 'foo'; }
