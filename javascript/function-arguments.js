@@ -6,18 +6,14 @@ f1(10);  // x-10, y-11
 f1(undefined, undefined);    // undefined, 11
 
 
-console.log("--------------- ");
-
 function f2(x, ...y) {
     console.log(`x-${x}, y-${y.length == 0 ? '[]' : y}`);
 }
 function f3({start, end=3}) {
     console.log(`start-${start}, end-${end}`);
 }
-
 f2(1);      // x-1, y-[]
 f2(1,2,3);  // x-1, y-2,3
-
 f3({end: 1, start:2});
 f3({}); // undefined, 3
 //f3(); - error
