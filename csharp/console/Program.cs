@@ -11,7 +11,6 @@ namespace console
             var tx = new TaxCalculator("Ireland", "10.11", "40");
             tx.Calculate();
             tx.Print();
-
         }
     }
 
