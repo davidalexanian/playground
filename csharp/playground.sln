@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataflow", "dataflow\datafl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet5", "dotnet5\dotnet5.csproj", "{2794B78A-4B27-4844-81CD-30549DC38F10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerTestApp", "DockerTestApp\DockerTestApp.csproj", "{916672B7-D943-4B85-A4ED-77CF8A30B889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerTestApp", "DockerTestApp\DockerTestApp.csproj", "{916672B7-D943-4B85-A4ED-77CF8A30B889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
