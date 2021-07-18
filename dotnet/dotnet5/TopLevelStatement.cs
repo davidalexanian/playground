@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using dotnet5.Records;
@@ -9,11 +10,17 @@ namespace dotnet5
     {
         public static Task Run()
         {
-            RunRecordsSample();
+            var o = new object();
+            var dict = new HashSet<object>();
+            dict.Add(o);
+            dict.Add(o);
+            dict.Add(new object());
+            Console.WriteLine(dict.Count);
+
+            //RunRecordsSample();
+
             return Task.CompletedTask;
         }
-        
-        
 
         private static void RunRecordsSample()
         {

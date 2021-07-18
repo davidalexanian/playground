@@ -2,7 +2,7 @@ let arr = ['a', 'b', 'c'];
 arr = new Array(1, 2, 3);
 arr[0] = 'a';
 arr[4] = Date.now();
-console.log(arr[3], arr[4]);            // undefined, current time
+console.log(arr[3], arr[4]);             // undefined, current time
 console.log(typeof (arr) === 'object');  //true
 
 let b = Array.isArray(arr);
