@@ -3,7 +3,7 @@ arr = new Array(1, 2, 3);
 arr[0] = 'a';
 arr[4] = Date.now();
 console.log(arr[3], arr[4]);             // undefined, current time
-console.log(typeof (arr) === 'object');  //true
+console.log(typeof (arr) === 'object');  // true
 
 let b = Array.isArray(arr);
 b = [] instanceof Array;
@@ -32,8 +32,9 @@ console.log(fruits.slice(1, 2).toString());
 let kids = ["Cecilie", "Lone"].concat(["Emil", "Tobias", "Linus"]);
 
 // sort
+// by def sorts as a string, or pass a sorting funcition that retunr (-1,-0, 1)
 let points = [40, 100, 1, 5, 25, 10];
-console.log(points.sort());             // by def sorts as a string
+console.log(points.sort());
 console.log(points.sort(function (a, b) { return a - b }));
 points.reverse();
 

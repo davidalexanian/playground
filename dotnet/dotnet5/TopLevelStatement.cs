@@ -10,7 +10,10 @@ namespace dotnet5
     {
         public static Task Run()
         {
+            var u = new Uri("http://supply-chain-practice-web.supply-chain-practice");
+            return Task.CompletedTask;
             var o = new object();
+            
             var dict = new HashSet<object>();
             dict.Add(o);
             dict.Add(o);
