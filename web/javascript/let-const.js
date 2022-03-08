@@ -1,7 +1,6 @@
 console.log('---------------- let and const ----------------');
 
-let i = 10;
-//let i =2 - duplicate declaration error
+let i = 10;     //let i = 2 - duplicate declaration error
 i = 100;
 console.log(i); //100
 

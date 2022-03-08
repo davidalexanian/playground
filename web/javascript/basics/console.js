@@ -55,23 +55,3 @@ readline.question(`What's your name?`, (name) => {
 })
 
 
-console.log('')
-console.log('------------------ progress bar');
-const { setTimeout } = require("timers");
-const ProgressBar = require('progress')
-const bar = new ProgressBar(':bar', { total: 100 })
-
-let currentProgress = 0;
-const increase = 5;
-const timer = setInterval(() => {
-    currentProgress += increase;
-    bar.tick(increase)
-    console.log(currentProgress);
-    if (bar.complete) {
-        clearInterval(timer)
-    }
-}, 50)
-console.log('cleaning console in 2 seconds');
-setTimeout(() => console.clear(), 2000);
-
-
