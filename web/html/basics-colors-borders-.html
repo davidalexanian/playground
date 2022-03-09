@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Subclass seletors</title>
+    <title></title>
     <style type="text/css">
 
 /* border */
@@ -42,6 +42,7 @@
             background: linear-gradient(180deg, red, blue);
         }
 
+
 /* shadow */
         h1 {
             color: white;
@@ -49,34 +50,6 @@
         }
         div {
             box-shadow: 10px 10px 5px red;
-        }
-
-/* text */
-/* 
-•	text-align-last 	Specifies how to align the last line of a text
-•	text-emphasis 	A shorthand for setting text-emphasis-style and text-emphasis-color in one declaration
-•	text-justify 	Specifies how justified text should be aligned and spaced
-•	text-overflow 	Specifies how overflowed content that is not displayed should be signaled to the user
-•	word-break 	Specifies line breaking rules for non-CJK scripts
-•	word-wrap 	Allows long words to be able to be broken and wrap onto the next line 
-*/
-        p.test1 {
-            white-space: nowrap;
-            width: 200px;
-            border: 1px solid #000000;
-            overflow: hidden;
-            text-overflow: clip;
-        }
-        p.test2 {
-            white-space: nowrap;
-            width: 200px;
-            border: 1px solid #000000;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        p.test2:hover {
-            text-overflow: inherit;
-            overflow: visible;
         }
 
         @media (min-width: 400px) {  html { background: red; }}
@@ -94,10 +67,7 @@
     <p id="grad1" style="height: 100px;">rcorners4</p>
     <p id="grad2" style="height: 100px;">rcorners4</p>
     <p id="grad3" style="height: 100px;">rcorners4</p>
-    <h1>white text with black, blue, and darkblue shadow</h1>
-    <div>shadow position 7 color</div>
-    <p class="test1">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn </p>
-    <p class="test2">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogntest1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn</p>
+    
 </body>
 
 </html>

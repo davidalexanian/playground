@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html>
 
+<style>
+/* text */
+/* 
+•	text-align-last 	Specifies how to align the last line of a text
+•	text-emphasis 	A shorthand for setting text-emphasis-style and text-emphasis-color in one declaration
+•	text-justify 	Specifies how justified text should be aligned and spaced
+•	text-overflow 	Specifies how overflowed content that is not displayed should be signaled to the user
+•	word-break 	Specifies line breaking rules for non-CJK scripts
+•	word-wrap 	Allows long words to be able to be broken and wrap onto the next line 
+*/
+p.test1 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        p.test2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p.test2:hover {
+            text-overflow: inherit;
+            overflow: visible;
+        }
+</style>
+
 <body>
     <!-------- text related ---------->
     <!--abbreviation-->
@@ -98,8 +128,17 @@
         article tag is used for areas of self-contained content that hypothetically could be distributed on their own separately 
         aside is content related to but separated from some other content it is associated with.
     -->
-    <article>Blog Post #1</article>
+    <article>Blog Post #1</article>    
     <aside>Blog Post #1.1</aside>
+    <br/><br/>
+
+    <article style="background-color: azure">
+        <h1>white text with black, blue, and darkblue shadow</h1>
+        <div>shadow position 7 color</div>
+        <p class="test1">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn </p>
+        <p class="test2">test1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogntest1 long lng long ADadDdDadlogn ADadDdDadl ognADadDdDadlogn</p>
+    </article>
+
 
     <footer>
         <p>Author: Hege Refsnes</p>
