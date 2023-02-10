@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+﻿using System.Collections;
+using System.Threading;
+
+await CallMethodAsync();
+
+static async Task CallMethodAsync() {
+    int result = await MethodAsync(1, 2);
+    Console.WriteLine(result);
+}
+
+static async Task<int> MethodAsync(int arg1, int arg2)
+{
+    // control returned when reaching the line with await keyword.
+    // If does not contain await keyword, runs synchronously
+    await Task.Delay(3000);
+    return arg1 + arg2;
+}
+
+
+=======
 ﻿using System;
 using System.Threading;
 
@@ -33,3 +54,4 @@ namespace dotNetNew
         }
     }
 }
+>>>>>>> 352521e528d4a81cdec2108bbe10123f1c5abc60
