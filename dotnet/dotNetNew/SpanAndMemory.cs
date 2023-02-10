@@ -4,6 +4,11 @@ namespace DotNetNew
 {
     public static class SpanAndMemory
     {
+        public static void Play() {
+            SpanOverArrayDemo();
+            SpanOverStack();
+        }
+
         public static void SpanOverArrayDemo() {
             // Create a span over an array.
             var array = new byte[100];
