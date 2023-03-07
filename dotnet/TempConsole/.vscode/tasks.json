@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/dotNetNew.csproj",
+                "${workspaceFolder}/TempConsole.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/dotNetNew.csproj",
+                "${workspaceFolder}/TempConsole.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/dotNetNew.csproj"
+                "${workspaceFolder}/TempConsole.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

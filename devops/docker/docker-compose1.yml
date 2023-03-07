@@ -1,0 +1,32 @@
+version: '3'
+services:
+  web:
+    # Path to dockerfile, '.' represents the directory docker-compose.yml is located
+    build: .
+
+    # Mapping of container port to host
+    ports:
+      - "5000:5000"
+
+    # Mount volume 
+    volumes:
+      - "/usercode/:/code"
+
+    # Link database container to app container for reachability.
+    links:
+      - "database:backenddb"
+
+  database:
+    # image to fetch from docker hub
+    image: mysql/mysql-server:5.7
+
+    # Environment variables 
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_USER=testuser"
+      - "MYSQL_PASSWORD=admin123"
+      - "MYSQL_DATABASE=backend"
+    
+    # Mount init.sql file to automatically run (postgres run this on start)
+    volumes:
+      - "/usercode/db/init.sql:/docker-entrypoint-initdb.d/init.sql"
