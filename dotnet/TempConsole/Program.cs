@@ -13,8 +13,7 @@ namespace TempConsole {
         static async Task Main(string[] args)
         {
             Counter<int> hatsSoldCounter = meter.CreateCounter<int>("hats.sold.counter");
-            meter.CreateObservableCounter("hats.sold.counter.observable", )
-            meter.cre
+            //meter.CreateObservableCounter("hats.sold.counter.observable", )
 
             Console.WriteLine("Press any key to exit");
             var counter = 0;
