@@ -4,22 +4,25 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitTests
+namespace MassTransitTests.RequestResponse
 {
-    public record SampleRequest {
+    public record SampleRequest
+    {
         public string OrderId { get; init; }
     }
 
-    public record SampleResponse {
+    public record SampleResponse
+    {
         public string OrderId { get; init; }
         public string Message { get; init; }
         public DateTime DateTime { get; init; }
     }
-    public class RequestResponseSender : BackgroundService {
+    public class RequestResponseSender : BackgroundService
+    {
 
         readonly IBus _bus;
 
-        public RequestResponseSender(IBus bus)  => _bus = bus;
+        public RequestResponseSender(IBus bus) => _bus = bus;
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
