@@ -4,9 +4,8 @@ arr[0] = 'a';
 arr[4] = Date.now();
 console.log(arr[3], arr[4]);             // undefined, current time
 console.log(typeof (arr) === 'object');  // true
-
-let b = Array.isArray(arr);
-b = [] instanceof Array;
+console.log(Array.isArray(arr));         // true
+console.log([] instanceof Array);        // true
 
 // methods
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
