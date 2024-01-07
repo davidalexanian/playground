@@ -4,9 +4,9 @@ using Microsoft.Extensions.Hosting;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using MassTransitTests.Sagas;
-using MassTransitTests.RequestResponse;
-using MassTransitTests.SamplePublisherConumer;
+using MassTransitProject.Sagas;
+using MassTransitProject.RequestResponse;
+using MassTransitProject.SamplePublisherConumer;
 
 namespace RabbitMQTest
 {

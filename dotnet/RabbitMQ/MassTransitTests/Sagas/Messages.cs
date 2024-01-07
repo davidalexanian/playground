@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using System;
 
-namespace MassTransitTests.Sagas
+namespace MassTransitProject.Sagas
 {
     public record OrderSubmitted : CorrelatedBy<Guid>
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace MassTransitTests.RequestResponse
+namespace MassTransitProject.RequestResponse
 {
     public class RequestResponseConsumer : IConsumer<SampleRequest>
     {

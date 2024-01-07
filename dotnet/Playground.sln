@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQRPCServer", "Rabbit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQRPCClient", "RabbitMQ\RabbitMQRPClient\RabbitMQRPCClient.csproj", "{5294C3D3-DF4E-400D-A82E-7B72CF5F5FEB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransitTests", "RabbitMQ\MassTransitTests\MassTransitTests.csproj", "{D0F96B44-EDB1-40AE-AF0D-E91299076EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransitProject", "RabbitMQ\MassTransitTests\MassTransitProject.csproj", "{D0F96B44-EDB1-40AE-AF0D-E91299076EEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

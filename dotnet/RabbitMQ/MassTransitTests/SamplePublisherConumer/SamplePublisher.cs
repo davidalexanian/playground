@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitTests.SamplePublisherConumer
+namespace MassTransitProject.SamplePublisherConumer
 {
     public record SampleEvent() { public string Value { get; init; } }
 

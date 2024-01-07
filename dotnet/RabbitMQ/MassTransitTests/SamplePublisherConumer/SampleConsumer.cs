@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Logging;
 
-namespace MassTransitTests.SamplePublisherConumer
+namespace MassTransitProject.SamplePublisherConumer
 {
     public class SampleConsumer : IConsumer<SampleEvent>
     {

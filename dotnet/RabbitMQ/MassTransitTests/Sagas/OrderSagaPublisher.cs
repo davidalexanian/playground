@@ -2,10 +2,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MassTransit;
-using MassTransitTests.Sagas;
+using MassTransitProject.Sagas;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitTests.Sagas
+namespace MassTransitProject.Sagas
 {
     public class OrderSagaPublisher : BackgroundService
     {

@@ -3,7 +3,7 @@ using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MassTransitTests.Sagas
+namespace MassTransitProject.Sagas
 {
     /// <summary>
     /// Consumer sagas (choreography example)
