@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempConsole", "TempConsole\TempConsole.csproj", "{8CD21939-9D39-4467-9212-17634320BC60}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQ", "RabbitMQ", "{847B1D0A-A7BF-423A-8EB2-98FB3818BD35}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQTests", "RabbitMQ\RabbitMQTests\RabbitMQTests.csproj", "{04C7D44F-1CE5-4091-9029-6B89C5C13A52}"
@@ -19,11 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{673B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChat", "SignalRChat\SignalRChat.csproj", "{D45C92A3-3911-40CC-9941-2D40147AB211}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrpcClientServer", "GrpcClientServer", "{C9E63858-80EA-4428-9ABA-06CA7E81B9BE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grpc", "Grpc", "{C9E63858-80EA-4428-9ABA-06CA7E81B9BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "Grpc\GrpcClient\GrpcClient.csproj", "{D899282D-D975-4B44-9516-E9EFF6E38BE4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "Grpc\GrpcService\GrpcService.csproj", "{C960D72B-3AD3-4F62-BDF5-BAC9E3559C66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TempConsole", "Temp\TempConsole\TempConsole.csproj", "{CD5610ED-5AA3-4FAC-A5E1-03BE90995836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Temp", "Temp", "{11E04E1D-F59E-4304-A6D9-34A7D70EA173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CD21939-9D39-4467-9212-17634320BC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CD21939-9D39-4467-9212-17634320BC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CD21939-9D39-4467-9212-17634320BC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CD21939-9D39-4467-9212-17634320BC60}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04C7D44F-1CE5-4091-9029-6B89C5C13A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04C7D44F-1CE5-4091-9029-6B89C5C13A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C7D44F-1CE5-4091-9029-6B89C5C13A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +61,10 @@ Global
 		{C960D72B-3AD3-4F62-BDF5-BAC9E3559C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C960D72B-3AD3-4F62-BDF5-BAC9E3559C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C960D72B-3AD3-4F62-BDF5-BAC9E3559C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5610ED-5AA3-4FAC-A5E1-03BE90995836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5610ED-5AA3-4FAC-A5E1-03BE90995836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5610ED-5AA3-4FAC-A5E1-03BE90995836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5610ED-5AA3-4FAC-A5E1-03BE90995836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +77,7 @@ Global
 		{D45C92A3-3911-40CC-9941-2D40147AB211} = {673B75C4-11C5-4939-B9BF-7FCC636BF28E}
 		{D899282D-D975-4B44-9516-E9EFF6E38BE4} = {C9E63858-80EA-4428-9ABA-06CA7E81B9BE}
 		{C960D72B-3AD3-4F62-BDF5-BAC9E3559C66} = {C9E63858-80EA-4428-9ABA-06CA7E81B9BE}
+		{CD5610ED-5AA3-4FAC-A5E1-03BE90995836} = {11E04E1D-F59E-4304-A6D9-34A7D70EA173}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {188C6C8F-2870-4159-AC66-C7BEB67CE089}
