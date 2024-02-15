@@ -71,7 +71,7 @@ startChatHub();
 
 // connect clockHub
 let connectionClockHub = new signalR.HubConnectionBuilder()
-    .configureLogging(signalR.LogLevel.Information)
+    .configureLogging(signalR.LogLevel.Debug)
     .withUrl("/clockHub")
     .withAutomaticReconnect()
     .build();
