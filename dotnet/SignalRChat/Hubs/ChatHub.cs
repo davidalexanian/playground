@@ -1,15 +1,17 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using MessagePack;
+using Microsoft.AspNetCore.SignalR;
 using System.Collections.Concurrent;
 
 namespace SignalRChat.Hubs
 {
+    [MessagePackObject()]
     public class MessageModel
     {
         public string FromUser { get; set; }
 
         public string ToUser { get; set; }
 
-        public string Message{ get; set; }
+        public string Message { get; set; }
     }
 
     public class ChatHub : Hub
@@ -18,18 +20,17 @@ namespace SignalRChat.Hubs
         private static string ReceiveMethodNameOnClient = "ReceiveMessage";
         private static ConcurrentDictionary<string, string> usersByConnections = new ();
 
-        public async Task SendMessageToAll(string user, string message)
+        public async Task SendToOtherUsers(string user, string message)
         {
             Console.WriteLine($"User: {user}, connection {this.Context.ConnectionId}, message:{message}");
-            var others = Clients.AllExcept(Context.ConnectionId);
-            others = Clients.Others;
+            var others = Clients.Others;   // or Clients.AllExcept(Context.ConnectionId)
             await others.SendAsync(ReceiveMethodNameOnClient, user, message);
 
             // foraround to avoid registrating users
             usersByConnections.AddOrUpdate(user, Context.ConnectionId, (k,v) => Context.ConnectionId);
         }
 
-        [HubMethodName("SendMessageToUser")]    // override method name by attribute
+        [HubMethodName(nameof(SendMessageToUser))]    // override method name by attribute
         public async Task SendMessageToUser(MessageModel model)
         {
             if (usersByConnections.TryGetValue(model.ToUser, out var connectionId))

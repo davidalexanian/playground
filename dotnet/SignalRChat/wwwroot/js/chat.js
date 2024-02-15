@@ -1,16 +1,12 @@
 ﻿"use strict";
 
-// disable the send button until connection is established.
-document.getElementById("sendToAllButton").disabled = true;
-document.getElementById("sendToUserButton").disabled = true;
-
 // button clicks
-document.getElementById("sendToAllButton").addEventListener("click", function (event) {
-    var user = document.getElementById("userInput").value;
-    var message = document.getElementById("messageInput").value;
+document.getElementById("sendToOthersButton").addEventListener("click", function (event) {
+    let user = document.getElementById("userInput").value;
+    let message = document.getElementById("messageInput").value;
 
     connection
-        .invoke("SendMessageToAll", user, message)  // or send (doesnt waits for the server metod to complete)
+        .invoke("SendToOtherUsers", user, message)  // or send (doesnt waits for the server metod to complete)
         .catch(function (err) {
             return console.error(err.toString());
         });
@@ -44,9 +40,7 @@ connection.on("ReceiveMessage", function (user, message) {
 async function start() {
     try {
         await connection.start();
-        console.log("SignalR Connected.");
-        document.getElementById("sendToAllButton").disabled = false;
-        document.getElementById("sendToUserButton").disabled = false;
+        console.log("SignalR Connected");
     } catch (err) {
         console.log(err);
         setTimeout(start, 5000);
