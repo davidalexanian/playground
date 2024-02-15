@@ -16,11 +16,22 @@
         <div class="col-6 text-end">
             <input type="button" id="sendToOthersButton" value="Send To Others" />
             <input type="button" id="sendToUserButton" value="Send To User" />
+            <input type="button" id="sendBigPayload" value="Get Big Payload" />
         </div>
     </div>
     <div class="row p-1">
         <div class="col-6">
             <hr />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-4">
+            <span>current time:</span>
+            <span id="timeSpan"></span>
+        </div>
+        <div class="col-8">
+            <span>big payload:</span>
+            <span id="bigPayloadSpan"></span>
         </div>
     </div>
     <div class="row p-1">
@@ -30,7 +41,6 @@
     </div>
 </div>
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/signalr/dist/browser/msgpack5.js"></script>
 <script src="~/js/signalr/dist/browser/signalr-protocol-msgpack.js"></script>
 
 <script src="~/js/chat.js"></script>

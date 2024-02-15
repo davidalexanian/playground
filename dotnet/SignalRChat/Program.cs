@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.Connections;
+using Microsoft.Extensions.DependencyInjection;
 using SignalRChat.Hubs;
 
 namespace SignalRChat
@@ -10,26 +12,31 @@ namespace SignalRChat
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
             builder.Services
-                .AddSignalR(hubOptions => {
-                    hubOptions.EnableDetailedErrors = true;
-                })
+                .AddSignalR()
                 .AddJsonProtocol(config => {
                     config.PayloadSerializerOptions.WriteIndented = true;
                     config.PayloadSerializerOptions.AllowTrailingCommas = true;
+                })
+                .AddMessagePackProtocol(config => { })
+                .AddHubOptions<ClockHub>(config => {
+                    config.EnableDetailedErrors = true;
+                    config.SupportedProtocols = new List<string>() { "json" };
+                })
+                .AddHubOptions<ChatHub>(config => {
+                    config.EnableDetailedErrors = true;
+                    config.SupportedProtocols = new List<string>() { "messagepack" };
                 });
 
             builder.Services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(
-                    builder =>
-                    {
-                        builder.WithOrigins("https://example.com")
-                            .AllowAnyHeader()
-                            .WithMethods("GET", "POST")
-                            .AllowCredentials();
-                    });
-            });
+                options.AddDefaultPolicy(builder => builder
+                    .SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()));
+
+            builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();
 
@@ -47,7 +54,12 @@ namespace SignalRChat
             app.MapRazorPages();
 
             app.UseCors();  // UseCors must be called before MapHub.
-            app.MapHub<ChatHub>("/chatHub");
+            app.MapHub<ChatHub>("/chatHub", options => {
+                options.Transports = HttpTransportType.WebSockets;
+                options.ApplicationMaxBufferSize = 64 * 1024;   // 64kb default
+                options.TransportMaxBufferSize = 64 * 1024;     // 64kb default
+            });
+            app.MapHub<ClockHub>("/clockHub");
 
             app.Run();
         }
