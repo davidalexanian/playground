@@ -4,14 +4,14 @@ namespace SignalRChat.Hubs
 {
     public interface IClock
     {
-        Task ShowTime(string currentTime);
+        Task ShowTime(ClockPayload clockPayload);
     }
 
     public class ClockHub : Hub<IClock>
     {
-        public async Task SendTimeToClients(string currentTime)
+        public async Task SendTimeToClients(ClockPayload clockPayload)
         {
-            await Clients.All.ShowTime(currentTime);
+            await Clients.All.ShowTime(clockPayload);
         }
     }
 }

@@ -33,6 +33,12 @@ document.getElementById("sendBigPayload").addEventListener("click", function (ev
     event.preventDefault();
 });
 
+document.getElementById("compressButton").addEventListener("click", function (event) {
+    
+
+    event.preventDefault();
+});
+
 // connect to chat hub
 let connectionChatHub = new signalR.HubConnectionBuilder()
     .configureLogging(signalR.LogLevel.Debug)
@@ -76,8 +82,8 @@ let connectionClockHub = new signalR.HubConnectionBuilder()
     .withAutomaticReconnect()
     .build();
 
-connectionClockHub.on("ShowTime", function (currentTime) {
-    document.getElementById("timeSpan").textContent = currentTime;
+connectionClockHub.on("ShowTime", function (clockPayload) {
+    document.getElementById("timeSpan").textContent = JSON.stringify(clockPayload);
 });
 
 async function startClockHub() {

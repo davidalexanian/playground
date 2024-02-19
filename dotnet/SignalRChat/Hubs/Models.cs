@@ -1,18 +1,24 @@
 ﻿using MessagePack;
+using System.Runtime.Serialization;
 
 namespace SignalRChat.Hubs
 {
-    [MessagePackObject]
     public class SendMessageToUserRequest
     {
-        [Key("fromUser")]
         public string? FromUser { get; set; }
 
-        [Key("toUser")]
         public string? ToUser { get; set; }
 
-        [Key("message")]
         public string? Message { get; set; }
+    }
+
+    public class ClockPayload
+    {
+        public string Date { get; set; }
+
+        public string Time { get; set; }
+
+        public string TimeZone { get; set; }
     }
 
     public class BigPayload

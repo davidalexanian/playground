@@ -10,8 +10,8 @@ namespace SignalRChat
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddResponseCompression(options => options.EnableForHttps = true);
 
             builder.Services
                 .AddSignalR()
@@ -38,7 +38,9 @@ namespace SignalRChat
 
             builder.Services.AddHostedService<Worker>();
 
+
             var app = builder.Build();
+            //app.UseResponseCompression();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

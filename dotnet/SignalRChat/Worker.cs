@@ -19,8 +19,12 @@ namespace SignalRChat
             while (!stoppingToken.IsCancellationRequested)
             {
                 await Task.Delay(2000, stoppingToken);
-                _logger.LogInformation("Worker running at: {Time}", DateTime.Now);
-                await _clockHub.Clients.All.ShowTime(DateTime.Now.ToLongTimeString());
+                await _clockHub.Clients.All.ShowTime(new ClockPayload 
+                {
+                    Date = DateTime.Now.ToLongDateString(),
+                    Time = DateTime.Now.ToLongTimeString(),
+                    TimeZone = TimeZoneInfo.Local.StandardName
+                });
             }
         }
     }
