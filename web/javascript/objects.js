@@ -4,7 +4,7 @@ console.log("-------------------- objectsDemo");
     let first = "john";
     let last = "doe";
     let obj1 = { first: first, last: last };
-    obj1 = { first, last };
+    obj1 = { first, last, a:15 };
     console.log(obj1);
 
     const obj2 = {
@@ -50,6 +50,6 @@ console.log("-------------------- objectAsDictionaryDemo");
     // is there a property with a given key
     console.log('any string' in obj);
     console.log(Object.keys(obj));      // list keys
-    console.log(Object.values(obj));    // list values
     delete obj.aaa;                     // delete keys
+    console.log(Object.keys(obj));      // list keys
 })();

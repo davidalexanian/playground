@@ -1,6 +1,9 @@
+using MessagePack;
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Serialization;
 using SignalRChat.Hubs;
+using System.Text.Json;
 
 namespace SignalRChat
 {
@@ -15,11 +18,21 @@ namespace SignalRChat
 
             builder.Services
                 .AddSignalR()
-                .AddJsonProtocol(config => {
-                    config.PayloadSerializerOptions.WriteIndented = true;
-                    config.PayloadSerializerOptions.AllowTrailingCommas = true;
+                //.AddJsonProtocol(config => {
+                //    config.PayloadSerializerOptions.WriteIndented = true;
+                //    config.PayloadSerializerOptions.AllowTrailingCommas = true;
+                //})
+                .AddNewtonsoftJsonProtocol(config => {
+                    config.PayloadSerializerSettings.DateParseHandling = Newtonsoft.Json.DateParseHandling.DateTimeOffset;
                 })
-                .AddMessagePackProtocol(config => { })
+                .AddMessagePackProtocol(config => {
+
+                    config.SerializerOptions = MessagePack.Resolvers.StandardResolver.Options;
+                    config.SerializerOptions
+                        .WithAllowAssemblyVersionMismatch(true)
+                        .WithSecurity(MessagePackSecurity.UntrustedData)
+                        .WithResolver(MessagePack.Resolvers.StandardResolver.Instance);
+                })
                 .AddHubOptions<ClockHub>(config => {
                     config.EnableDetailedErrors = true;
                     config.SupportedProtocols = new List<string>() { "json" };
@@ -40,7 +53,7 @@ namespace SignalRChat
 
 
             var app = builder.Build();
-            //app.UseResponseCompression();
+            app.UseResponseCompression();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

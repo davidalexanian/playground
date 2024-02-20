@@ -7,7 +7,6 @@ namespace SignalRChat.Hubs
     {
         private static string AllUsersGroup = "AllUsers";
         private static string ReceiveMessageMethodNameOnClient = "ReceiveMessage";
-        private static string ReceiveBigMessageMethodNameOnClient = "ReceiveBigMessage";
         private static ConcurrentDictionary<string, string> usersByConnections = new ();
 
         public async Task SendToOtherUsers(string user, string message)
@@ -23,10 +22,15 @@ namespace SignalRChat.Hubs
         [HubMethodName(nameof(SendMessageToUser))]    // override method name by attribute
         public async Task SendMessageToUser(SendMessageToUserRequest model)
         {
-            Console.WriteLine($"FromUser: {model.FromUser}, ToUser: {model.ToUser}, connection {this.Context.ConnectionId}, message:{model.Message}");
+            Console.WriteLine($"FromUser: {model.FromUser}, ToUser: {model.ToUser}, connection {this.Context.ConnectionId}, message:{model.Message}, dict-count:{model.Dict?.Count ?? null}");
             if (usersByConnections.TryGetValue(model.ToUser ?? string.Empty, out var connectionId))
             {
-                await Clients.Client(connectionId).SendAsync(ReceiveMessageMethodNameOnClient, model.FromUser, model.Message);
+                model.MyEnumProperty = MyEnum.Bb;
+                await Clients.Client(connectionId).SendAsync("ReceiveMessageSentToUser", model);
+            }
+            else 
+            {
+                Console.WriteLine($"User {model.ToUser} not found");
             }
         }
 
@@ -40,8 +44,14 @@ namespace SignalRChat.Hubs
                 A3 = new string('3', 1000),
                 A4 = new string('4', 1000),
                 A5 = new string('5', 1000),
+                Dict = new Dictionary<string, string>()
+                {
+                    { "a1", "a1" },
+                    { "a2", "a2" },
+                    { "a3", "a3" }
+                }
             };
-            await Clients.Caller.SendAsync(ReceiveBigMessageMethodNameOnClient, payload);
+            await Clients.Caller.SendAsync("ReceiveBigMessage", payload);
         }
 
         public override async Task OnConnectedAsync()

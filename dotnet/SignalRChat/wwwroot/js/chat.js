@@ -17,7 +17,10 @@ document.getElementById("sendToUserButton").addEventListener("click", function (
     connectionChatHub.invoke("SendMessageToUser", {
         fromUser: document.getElementById("userInput").value,
         toUser: document.getElementById("toUserInput").value,
-        message: document.getElementById("messageInput").value
+        message: document.getElementById("messageInput").value,
+        dict: {
+            "apple": "apple", "orange": 15, "banana": { a: 1, b: 2 }
+        }
     }).catch(function (err) {
         return console.error(err.toString());
     });
@@ -26,16 +29,10 @@ document.getElementById("sendToUserButton").addEventListener("click", function (
 
 document.getElementById("sendBigPayload").addEventListener("click", function (event) {
     connectionChatHub
-        .invoke("SendBigPayloadToCaller", document.getElementById("userInput").value)
+        .invoke("sendBigPayloadToCaller", document.getElementById("userInput").value)
         .catch(function (err) {
             return console.error(err.toString());
         });
-    event.preventDefault();
-});
-
-document.getElementById("compressButton").addEventListener("click", function (event) {
-    
-
     event.preventDefault();
 });
 
@@ -48,18 +45,26 @@ let connectionChatHub = new signalR.HubConnectionBuilder()
 
 connectionChatHub.on("ReceiveMessage", function (user, message) {
     let li = document.createElement("li");
-    document.getElementById("messagesList").appendChild(li);
     li.textContent = `${user} says ${message}`;
+    document.getElementById("messagesList").appendChild(li);
 });
 
-connectionChatHub.on("ReceiveBigMessage", function (response) {
-    // assuming 1B per char
+connectionChatHub.on("receiveMessageSentToUser", function (response) {
+    let li = document.createElement("li");
+    li.textContent = `messsage receiver: ${JSON.stringify(response)}`;
+    document.getElementById("messagesList").appendChild(li);
+});
+
+connectionChatHub.on("receiveBigMessage", function (response) {
+    console.log(response);
+
+    //assuming 1B per char
     document.getElementById("bigPayloadSpan").textContent =
-        response.A1.length +
-        response.A2.length +
-        response.A3.length +
-        response.A4.length +
-        response.A5.length + ' bytes';
+        response.a1.length +
+        response.a2.length +
+        response.a3.length +
+        response.a4.length +
+        response.a5.length + ' bytes';
 });
 
 connectionChatHub.onclose(async () => {

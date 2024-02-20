@@ -7,7 +7,7 @@
 		exports["msgpack"] = factory(require("signalR"));
 	else
 		root["signalR"] = root["signalR"] || {}, root["signalR"]["protocols"] = root["signalR"]["protocols"] || {}, root["signalR"]["protocols"]["msgpack"] = factory(root["signalR"]);
-})(self, (__WEBPACK_EXTERNAL_MODULE__1__) => {
+})(self, function(__WEBPACK_EXTERNAL_MODULE__1__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ([
@@ -545,26 +545,16 @@ var Encoder = /** @class */ (function () {
         this.view = new DataView(new ArrayBuffer(this.initialBufferSize));
         this.bytes = new Uint8Array(this.view.buffer);
     }
+    Encoder.prototype.getUint8Array = function () {
+        return this.bytes.subarray(0, this.pos);
+    };
     Encoder.prototype.reinitializeState = function () {
         this.pos = 0;
     };
-    /**
-     * This is almost equivalent to {@link Encoder#encode}, but it returns an reference of the encoder's internal buffer and thus much faster than {@link Encoder#encode}.
-     *
-     * @returns Encodes the object and returns a shared reference the encoder's internal buffer.
-     */
-    Encoder.prototype.encodeSharedRef = function (object) {
-        this.reinitializeState();
-        this.doEncode(object, 1);
-        return this.bytes.subarray(0, this.pos);
-    };
-    /**
-     * @returns Encodes the object and returns a copy of the encoder's internal buffer.
-     */
     Encoder.prototype.encode = function (object) {
         this.reinitializeState();
         this.doEncode(object, 1);
-        return this.bytes.slice(0, this.pos);
+        return this.getUint8Array();
     };
     Encoder.prototype.doEncode = function (object, depth) {
         if (depth > this.maxDepth) {
@@ -1147,8 +1137,8 @@ var Decoder = /** @class */ (function () {
         return new RangeError("Extra ".concat(view.byteLength - pos, " of ").concat(view.byteLength, " byte(s) found at buffer[").concat(posToShow, "]"));
     };
     /**
-     * @throws {@link DecodeError}
-     * @throws {@link RangeError}
+     * @throws {DecodeError}
+     * @throws {RangeError}
      */
     Decoder.prototype.decode = function (buffer) {
         this.reinitializeState();
@@ -1537,7 +1527,7 @@ var Decoder = /** @class */ (function () {
             while (stack.length > 0) {
                 // arrays and maps
                 var state = stack[stack.length - 1];
-                if (state.type === 0 /* State.ARRAY */) {
+                if (state.type === 0 /* ARRAY */) {
                     state.array[state.position] = object;
                     state.position++;
                     if (state.position === state.size) {
@@ -1548,7 +1538,7 @@ var Decoder = /** @class */ (function () {
                         continue DECODE;
                     }
                 }
-                else if (state.type === 1 /* State.MAP_KEY */) {
+                else if (state.type === 1 /* MAP_KEY */) {
                     if (!isValidMapKeyType(object)) {
                         throw new DecodeError("The type of key must be string or number but " + typeof object);
                     }
@@ -1556,7 +1546,7 @@ var Decoder = /** @class */ (function () {
                         throw new DecodeError("The key __proto__ is not allowed");
                     }
                     state.key = object;
-                    state.type = 2 /* State.MAP_VALUE */;
+                    state.type = 2 /* MAP_VALUE */;
                     continue DECODE;
                 }
                 else {
@@ -1569,7 +1559,7 @@ var Decoder = /** @class */ (function () {
                     }
                     else {
                         state.key = null;
-                        state.type = 1 /* State.MAP_KEY */;
+                        state.type = 1 /* MAP_KEY */;
                         continue DECODE;
                     }
                 }
@@ -1609,7 +1599,7 @@ var Decoder = /** @class */ (function () {
             throw new DecodeError("Max length exceeded: map length (".concat(size, ") > maxMapLengthLength (").concat(this.maxMapLength, ")"));
         }
         this.stack.push({
-            type: 1 /* State.MAP_KEY */,
+            type: 1 /* MAP_KEY */,
             size: size,
             key: null,
             readCount: 0,
@@ -1621,7 +1611,7 @@ var Decoder = /** @class */ (function () {
             throw new DecodeError("Max length exceeded: array length (".concat(size, ") > maxArrayLength (").concat(this.maxArrayLength, ")"));
         }
         this.stack.push({
-            type: 0 /* State.ARRAY */,
+            type: 0 /* ARRAY */,
             size: size,
             array: new Array(size),
             position: 0,
@@ -1652,7 +1642,7 @@ var Decoder = /** @class */ (function () {
     Decoder.prototype.stateIsMapKey = function () {
         if (this.stack.length > 0) {
             var state = this.stack[this.stack.length - 1];
-            return state.type === 1 /* State.MAP_KEY */;
+            return state.type === 1 /* MAP_KEY */;
         }
         return false;
     };
@@ -1835,7 +1825,7 @@ class MessagePackHubProtocol {
         /** The name of the protocol. This is used by SignalR to resolve the protocol between the client and server. */
         this.name = "messagepack";
         /** The version of the protocol. */
-        this.version = 2;
+        this.version = 1;
         /** The TransferFormat of the protocol. */
         this.transferFormat = external_signalR_.TransferFormat.Binary;
         this._errorResult = 1;
@@ -1888,12 +1878,6 @@ class MessagePackHubProtocol {
                 return BinaryMessageFormat.write(SERIALIZED_PING_MESSAGE);
             case external_signalR_.MessageType.CancelInvocation:
                 return this._writeCancelInvocation(message);
-            case external_signalR_.MessageType.Close:
-                return this._writeClose();
-            case external_signalR_.MessageType.Ack:
-                return this._writeAck(message);
-            case external_signalR_.MessageType.Sequence:
-                return this._writeSequence(message);
             default:
                 throw new Error("Invalid message type.");
         }
@@ -1918,10 +1902,6 @@ class MessagePackHubProtocol {
                 return this._createPingMessage(properties);
             case external_signalR_.MessageType.Close:
                 return this._createCloseMessage(properties);
-            case external_signalR_.MessageType.Ack:
-                return this._createAckMessage(properties);
-            case external_signalR_.MessageType.Sequence:
-                return this._createSequenceMessage(properties);
             default:
                 // Future protocol changes can add message types, old clients can ignore them
                 logger.log(external_signalR_.LogLevel.Information, "Unknown message type '" + messageType + "' ignored.");
@@ -2016,26 +1996,6 @@ class MessagePackHubProtocol {
         };
         return completionMessage;
     }
-    _createAckMessage(properties) {
-        // check minimum length to allow protocol to add items to the end of objects in future releases
-        if (properties.length < 1) {
-            throw new Error("Invalid payload for Ack message.");
-        }
-        return {
-            sequenceId: properties[1],
-            type: external_signalR_.MessageType.Ack,
-        };
-    }
-    _createSequenceMessage(properties) {
-        // check minimum length to allow protocol to add items to the end of objects in future releases
-        if (properties.length < 1) {
-            throw new Error("Invalid payload for Sequence message.");
-        }
-        return {
-            sequenceId: properties[1],
-            type: external_signalR_.MessageType.Sequence,
-        };
-    }
     _writeInvocation(invocationMessage) {
         let payload;
         if (invocationMessage.streamIds) {
@@ -2066,8 +2026,7 @@ class MessagePackHubProtocol {
         return BinaryMessageFormat.write(payload.slice());
     }
     _writeCompletion(completionMessage) {
-        const resultKind = completionMessage.error ? this._errorResult :
-            (completionMessage.result !== undefined) ? this._nonVoidResult : this._voidResult;
+        const resultKind = completionMessage.error ? this._errorResult : completionMessage.result ? this._nonVoidResult : this._voidResult;
         let payload;
         switch (resultKind) {
             case this._errorResult:
@@ -2086,18 +2045,6 @@ class MessagePackHubProtocol {
         const payload = this._encoder.encode([external_signalR_.MessageType.CancelInvocation, cancelInvocationMessage.headers || {}, cancelInvocationMessage.invocationId]);
         return BinaryMessageFormat.write(payload.slice());
     }
-    _writeClose() {
-        const payload = this._encoder.encode([external_signalR_.MessageType.Close, null]);
-        return BinaryMessageFormat.write(payload.slice());
-    }
-    _writeAck(ackMessage) {
-        const payload = this._encoder.encode([external_signalR_.MessageType.Ack, ackMessage.sequenceId]);
-        return BinaryMessageFormat.write(payload.slice());
-    }
-    _writeSequence(sequenceMessage) {
-        const payload = this._encoder.encode([external_signalR_.MessageType.Sequence, sequenceMessage.sequenceId]);
-        return BinaryMessageFormat.write(payload.slice());
-    }
     _readHeaders(properties) {
         const headers = properties[1];
         if (typeof headers !== "object") {
@@ -2112,7 +2059,7 @@ class MessagePackHubProtocol {
 // The .NET Foundation licenses this file to you under the MIT license.
 // Version token that will be replaced by the prepack command
 /** The version of the SignalR Message Pack protocol library. */
-const VERSION = "8.0.0";
+const VERSION = "6.0.8";
 
 
 ;// CONCATENATED MODULE: ./src/browser-index.ts

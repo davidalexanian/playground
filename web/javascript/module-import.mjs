@@ -1,11 +1,10 @@
-import { sum, pi, v } from './export.mjs';
-import { add as newAdd, pi as newPi} from './export.mjs';
-import defFunction from './export.mjs';
-import * as MyModule from './export.mjs';
-import { Square } from './export.mjs';
+import defaultFunct, { sum, pi, v } from './module-export.mjs';
+import { add as newAdd, pi as newPi} from './module-export.mjs';
+import * as MyModule from './module-export.mjs';
+import { Square } from './module-export.mjs';
 
 console.log(pi, sum(1,2), v);
 console.log(newPi, newAdd(1,2));
-defFunction();
+defaultFunct()
 MyModule.sum(1,2);
 // v = 10;  error, cant change the value (treated as const)

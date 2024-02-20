@@ -5,36 +5,46 @@ using OpenTelemetry.Trace;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using MessagePack;
+using AutoFixture;
+using System.Text.Json;
 
 namespace TempConsole 
 {
-    public class ContractlessSample
+    
+    public class Model
     {
-        public int MyProperty1 { get; set; }
-        public int MyProperty2 { get; set; }
+        public string MyPropertyString { get; set; }
+
+        public DateTime MyPropertyDateTime { get; set; }
+
+        public IEnumerable<ModelItem> Items { get; set; }
+
+        public void OnBeforeSerialize()
+        {
+            Console.WriteLine("OnBefore");
+        }
+
+        public void OnAfterDeserialize()
+        {
+            Console.WriteLine("OnAfter");
+        }
     }
 
     class Program
     {
         static async Task Main(string[] args)
         {
+            var fixture = new AutoFixture.Fixture();
+            var data = fixture.Create<Model>();
 
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize<Model>(data, 
+                new System.Text.Json.JsonSerializerOptions{ PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
+            var binData = MessagePackSerializer.Serialize(data, MessagePack.Resolvers.ContractlessStandardResolver.Options);
 
-            var data = new ContractlessSample { MyProperty1 = 99, MyProperty2 = 9999 };
-            var bin = MessagePackSerializer.Serialize(data, MessagePack.Resolvers.ContractlessStandardResolver.Options);
-            Console.WriteLine(MessagePackSerializer.ConvertToJson(bin));
-
-            // You can also set ContractlessStandardResolver as the default.
-            // (Global state; Not recommended when writing library code)
-            MessagePackSerializer.DefaultOptions = MessagePack.Resolvers.ContractlessStandardResolver.Options;
-
-            // Now serializable...
-            var bin2 = MessagePackSerializer.Serialize(data);
-            Console.WriteLine(MessagePackSerializer.ConvertToJson(bin2));
+            var data2 = MessagePackSerializer.Deserialize<Model>(binData, MessagePack.Resolvers.ContractlessStandardResolver.Options);
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize<Model>(data,
+                new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
         }
-
-
-
 
 
 

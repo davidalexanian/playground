@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.18.1" />
     <PackageReference Include="MessagePack" Version="2.5.140" />
     <PackageReference Include="MessagePackAnalyzer" Version="2.5.140">
       <PrivateAssets>all</PrivateAssets>

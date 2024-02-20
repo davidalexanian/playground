@@ -9,6 +9,9 @@ var v = 10;
 export default function defaultFunct() {
     console.log('defaultFunct');
 }
+export default function defaultFunct2() {
+    console.log('defaultFunct');
+}
 // or export default defaultFunct
 
 // give an alias while exporting
