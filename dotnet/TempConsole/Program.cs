@@ -17,8 +17,6 @@ namespace TempConsole
 
         public DateTime MyPropertyDateTime { get; set; }
 
-        public IEnumerable<ModelItem> Items { get; set; }
-
         public void OnBeforeSerialize()
         {
             Console.WriteLine("OnBefore");
