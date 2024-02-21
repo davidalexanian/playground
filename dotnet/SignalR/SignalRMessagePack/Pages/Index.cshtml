@@ -1,0 +1,28 @@
+﻿@page
+
+<style>
+    pre {
+        background-color: #C8E0E8;
+        border: 1px black solid
+    }
+</style>
+
+<div class="container">
+    <div class="row p-1">
+        <div class="col-12">
+            <input type="button" id="sendToServerMessagePackButton" value="Send To Server (MessagePack)" />
+            <input type="button" id="sendToServerJsonButton" value="Send To Server (Json)" />
+            <input type="button" id="sendFromServerMessagePackButton" value="Get From Server (MessagePack)" />
+            <input type="button" id="sendFromServerJsonButton" value="Get From Server (Json)" />
+        </div>
+    </div>
+    <div class="row p-1">
+        <hr />
+        <div class="col-12" id="messagesList">
+        </div>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/signalr/dist/browser/signalr-protocol-msgpack.js"></script>
+
+<script src="~/js/chat.js"></script>
