@@ -103,8 +103,14 @@ namespace SignalRMessagePack.Hubs
             writer.Write((double)value);
         }
 
-        public decimal? Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options) =>
-            reader.TryReadNil() ? default : (decimal)reader.ReadDouble();
+        public decimal? Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+        {
+            if (reader.TryReadNil()) 
+            {
+                return null;
+            }
+            return (decimal?)reader.ReadDouble();
+        }
     }
 
     public sealed class MyDecimalFormatter : IMessagePackFormatter<decimal>

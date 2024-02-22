@@ -15,6 +15,25 @@ namespace SignalRMessagePack.Hubs
             Console.WriteLine($"Method:{nameof(SendToServerButtonClick)}, connection:{this.Context.ConnectionId}, payload:{JsonSerializer.Serialize(payload)}");
         }
 
+        public async Task SendToServerArgumentsButtonClick(
+            Guid PropId,
+            int? PropInt,
+            string? PropString,
+            decimal PropDecimal,
+            decimal? PropDecimalNullable,
+            double? PropDouble,
+            DateTime PropDateTime,
+            DateTime? PropDateTimeNullable,
+            DateTimeOffset PropDateTimeOffset,
+            DateTimeOffset? PropDateTimeOffsetNullable,
+            MyEnum? PropEnum,
+            List<ModelItem>? PropItems,
+            Dictionary<string, object>? PropDict)
+        {
+            await Task.Yield();
+            Console.WriteLine($"Method:{nameof(SendToServerArgumentsButtonClick)}");
+        }
+
         public async Task SendFromServerButtonClick()
         {
             var payload = PayloadModel.Create();

@@ -1,18 +1,8 @@
 ﻿"use strict";
 
-// button clicks
 document.getElementById("sendToServerMessagePackButton").addEventListener("click", function (event) {
     messagePackHub
         .invoke("SendToServerButtonClick", payloadToSend)
-        .catch(function (err) {
-            return console.error(err.toString());
-        });
-    event.preventDefault();
-});
-
-document.getElementById("sendFromServerMessagePackButton").addEventListener("click", function (event) {
-    messagePackHub
-        .invoke("SendFromServerButtonClick")
         .catch(function (err) {
             return console.error(err.toString());
         });
@@ -28,6 +18,34 @@ document.getElementById("sendToServerJsonButton").addEventListener("click", func
     event.preventDefault();
 });
 
+document.getElementById("sendToServerArgumentsMessagePackButton").addEventListener("click", function (event) {
+    let args = Object.values(payloadToSend);
+    messagePackHub
+        .invoke("SendToServerArgumentsButtonClick", ...args)
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
+    event.preventDefault();
+});
+
+document.getElementById("sendToServerArgumentsJsonButton").addEventListener("click", function (event) {
+    let args = Object.values(payloadToSend);
+    jsonHub
+        .invoke("SendToServerArgumentsButtonClick", ...args)
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
+    event.preventDefault();
+});
+
+document.getElementById("sendFromServerMessagePackButton").addEventListener("click", function (event) {
+    messagePackHub
+        .invoke("SendFromServerButtonClick")
+        .catch(function (err) {
+            return console.error(err.toString());
+        });
+    event.preventDefault();
+});
 document.getElementById("sendFromServerJsonButton").addEventListener("click", function (event) {
     jsonHub
         .invoke("SendFromServerButtonClick")
@@ -74,7 +92,6 @@ try {
     console.log(err);
 }
 
-
 const payloadToSend =
 {
     PropId: "29de8602-b7cc-4514-b086-443c1fe4b880",
@@ -82,6 +99,7 @@ const payloadToSend =
     PropString: "abcdef",
     PropDecimal: 123.456,
     PropDecimalNullable: null,
+    PropDouble: 123.456,
     PropDateTime: "2024-02-22T22:22:22.123456+01:00",
     PropDateTimeNullable: null,
     PropDateTimeOffset: "2024-02-22T22:22:22.123456+01:00",

@@ -1,16 +1,11 @@
-﻿using OpenTelemetry.Resources;
-using OpenTelemetry;
-using System.Diagnostics.Tracing;
-using OpenTelemetry.Trace;
-using System.Diagnostics;
-using System.Diagnostics.Metrics;
+﻿using AutoFixture;
 using MessagePack;
-using AutoFixture;
+using System.Diagnostics.Metrics;
 using System.Text.Json;
 
-namespace TempConsole 
+namespace TempConsole
 {
-    
+
     public class Model
     {
         public string MyPropertyString { get; set; }
