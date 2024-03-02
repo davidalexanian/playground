@@ -100,10 +100,10 @@ const payloadToSend =
     PropDecimal: 123.456,
     PropDecimalNullable: null,
     PropDouble: 123.456,
-    PropDateTime: "2024-02-22T22:22:22.123456+01:00",
-    PropDateTimeNullable: null,
-    PropDateTimeOffset: "2024-02-22T22:22:22.123456+01:00",
-    PropDateTimeOffsetNullable: null,
+    PropDateTime: "2024-03-03T06:05:05.7307678+01:00",
+    PropDateTimeNullable: "2024-03-03T05:05:05.7307678Z",
+    PropDateTimeOffset: "2024-03-01T06:05:05.7307678+01:00",
+    PropDateTimeOffsetNullable: "2024-03-01T05:05:05.7307678+00:00",
     PropEnum: 2,
     PropItems: [
         {
@@ -122,9 +122,7 @@ const payloadToSend =
             "Cc1": 1,
             "Cc2": "Cc2"
         },
-        dd: {
-            "ItemId": 1,
-            "ItemName": "Name1"
-        }
+        ee: null,
+        ff: [11, "aa", null]
     }
 };

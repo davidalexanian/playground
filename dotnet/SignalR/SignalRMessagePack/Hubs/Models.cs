@@ -40,9 +40,9 @@ namespace SignalRMessagePack.Hubs
             PropDecimalNullable = null,
             PropDouble = 123456789.123456789D,
             PropDateTime = DateTime.Now,
-            PropDateTimeNullable = null,
+            PropDateTimeNullable = DateTime.UtcNow,
             PropDateTimeOffset = DateTimeOffset.Now,
-            PropDateTimeOffsetNullable = null,
+            PropDateTimeOffsetNullable = DateTimeOffset.UtcNow,
             PropEnum = MyEnum.Cc,
             PropItems = new List<ModelItem> 
             {
@@ -54,7 +54,8 @@ namespace SignalRMessagePack.Hubs
                 { "aa", "Aaa" },
                 { "bb", 11 },
                 { "cc", new { Cc1 = 1, Cc2 = "Cc2" } },
-                { "dd", new ModelItem { ItemId = 1, ItemName = "Name1" } },
+                { "ee", null },
+                { "ff", new object[] {11, "aa", null }}
             }
         };
     }
