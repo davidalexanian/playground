@@ -20,6 +20,7 @@ namespace SignalRMessagePack.Hubs
             int? PropInt,
             string? PropString,
             decimal PropDecimal,
+            string PropDecimalString,
             decimal? PropDecimalNullable,
             double? PropDouble,
             DateTime PropDateTime,

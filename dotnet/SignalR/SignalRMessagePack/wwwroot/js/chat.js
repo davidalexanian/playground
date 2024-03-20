@@ -98,6 +98,7 @@ const payloadToSend =
     PropInt: 10,
     PropString: "abcdef",
     PropDecimal: 123.456,
+    PropDecimalString: 88,
     PropDecimalNullable: null,
     PropDouble: 123.456,
     PropDateTime: "2024-03-03T06:05:05.7307678+01:00",

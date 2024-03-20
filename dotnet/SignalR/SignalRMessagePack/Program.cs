@@ -23,7 +23,7 @@ namespace SignalRMessagePack
                 })
                 .AddMessagePackProtocol(config => {
                     config.SerializerOptions =
-                        ContractlessStandardResolver.Options
+                        StandardResolver.Options
                             .WithAllowAssemblyVersionMismatch(true)
                             .WithSecurity(MessagePackSecurity.UntrustedData)
                             .WithResolver(CompositeResolver.Create(
@@ -35,7 +35,7 @@ namespace SignalRMessagePack
                                     MyDateTimeOffsetFormatter.Instance,
                                     MyNullableDateTimeOffsetFormatter.Instance,
                                 },
-                                new IFormatterResolver[] { ContractlessStandardResolver.Instance }));
+                                new IFormatterResolver[] { StandardResolver.Instance }));
                 })
                 .AddHubOptions<JsonHub>(config => {
                     config.EnableDetailedErrors = true;

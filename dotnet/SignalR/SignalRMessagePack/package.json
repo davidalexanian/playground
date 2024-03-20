@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@microsoft/signalr": "6.0.8",
-    "@microsoft/signalr-protocol-msgpack": "6.0.8"
+    "@microsoft/signalr-protocol-msgpack": "6.0.8",
+    "camelcase-keys": "^9.1.3"
   }
 }

@@ -2,33 +2,59 @@
 
 namespace SignalRMessagePack.Hubs
 {
-    [MessagePackObject(true)]
+    [MessagePackObject()]
+    public abstract class PayloadModelBase
+    {
+        [Key("PropIntBase")]
+        public int? PropIntBase { get; set; } = 11;
+
+        [Key("PropStringBase")]
+        public string? PropStringBase { get; set; } = "Abc";
+    }
+
+    [MessagePackObject()]
     public class PayloadModel
     {
+        [Key("PropId")]
         public Guid? PropId { get; set; }
 
+        [Key("PropInt")]
         public int? PropInt { get; set; }
 
+        [Key("PropString")]
         public string? PropString { get; set; }
 
+        [Key("PropDecimal")]
         public decimal PropDecimal { get; set; }
 
+        [Key("PropDecimalString")]
+        public string PropDecimalString { get; set; }
+
+        [Key("PropDecimalNullable")]
         public decimal? PropDecimalNullable { get; set; }
 
+        [Key("PropDouble")]
         public double? PropDouble { get; set; }
 
+        [Key("PropDateTime")]
         public DateTime PropDateTime { get; set; }
 
+        [Key("PropDateTimeNullable")]
         public DateTime? PropDateTimeNullable { get; set; }
 
+        [Key("PropDateTimeOffset")]
         public DateTimeOffset PropDateTimeOffset { get; set; }
 
+        [Key("PropDateTimeOffsetNullable")]
         public DateTimeOffset? PropDateTimeOffsetNullable { get; set; }
 
+        [Key("PropEnum")]
         public MyEnum? PropEnum { get; set; }
 
+        [Key("PropItems")]
         public List<ModelItem>? PropItems { get; set; }
 
+        [Key("PropDict")]
         public Dictionary<string, object>? PropDict { get; set; }
 
         public static PayloadModel Create() => new PayloadModel()
