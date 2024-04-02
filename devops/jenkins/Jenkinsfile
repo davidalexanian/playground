@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''
-                cd ./mypythonapp1
+                ls ${WORKSPACE}
+                cd ./devops/jenkins/mypythonapp1
                 pip install -r requirements.txt
                 '''
             }
@@ -21,7 +22,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh '''
-                cd ./mypythonapp1
+                cd ./devops/jenkins/mypythonapp1
                 python3 hello.py
                 python3 hello.py --name=david
                 '''
