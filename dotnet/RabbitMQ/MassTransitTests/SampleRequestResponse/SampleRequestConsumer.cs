@@ -2,15 +2,16 @@
 using System;
 using System.Threading.Tasks;
 
-namespace MassTransitProject.RequestResponse
+namespace MassTransitProject.SampleRequestResponse
 {
-    public class RequestResponseConsumer : IConsumer<SampleRequest>
+    public class SampleRequestConsumer : IConsumer<SampleRequest>
     {
-
-        public RequestResponseConsumer() { }
+        public SampleRequestConsumer() { }
 
         public async Task Consume(ConsumeContext<SampleRequest> context)
         {
+            Console.WriteLine($"{nameof(SampleRequestConsumer)} got request: {context.Message}");
+
             await context.RespondAsync<SampleResponse>(new
             {
                 context.Message.OrderId,

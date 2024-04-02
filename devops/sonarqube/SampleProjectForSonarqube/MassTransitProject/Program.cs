@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using MassTransitProject.SampleRequestResponse;
 using MassTransitProject.SamplePublisherConsumer;
+using System;
 
 namespace MassTransitProject
 {
@@ -12,6 +13,8 @@ namespace MassTransitProject
     {
         public static async Task Main(string[] args)
         {
+            Console.WriteLine("aaa");
+            return;
             await CreateHostBuilder(args).Build().RunAsync();
         }
 
@@ -49,15 +52,15 @@ namespace MassTransitProject
                         // x.AddHostedService<OrderStateMachinePublisher>();
 
                         // transport
-                        //x.UsingInMemory((context, cfg) =>
-                        //{
-                        //    cfg.ConfigureEndpoints(context);
-                        //});
-                        x.UsingRabbitMq((context, cfg) =>
+                        x.UsingInMemory((context, cfg) =>
                         {
-                            cfg.Host("localhost", "/", h => { h.Username("guest"); h.Password("guest"); });
                             cfg.ConfigureEndpoints(context);
                         });
+                        //x.UsingRabbitMq((context, cfg) =>
+                        //{
+                        //    cfg.Host("localhost", "/", h => { h.Username("guest"); h.Password("guest"); });
+                        //    cfg.ConfigureEndpoints(context);
+                        //});
                     });
                 });
     }

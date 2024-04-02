@@ -2,7 +2,7 @@
 using RabbitMQ.Client.Events;
 using System.Text;
 
-namespace RabbitMQTest
+namespace MassTransitProject
 {
     class Program
     {

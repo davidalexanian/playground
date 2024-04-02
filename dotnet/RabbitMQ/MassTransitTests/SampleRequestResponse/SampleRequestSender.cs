@@ -4,25 +4,14 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitProject.RequestResponse
+namespace MassTransitProject.SampleRequestResponse
 {
-    public record SampleRequest
-    {
-        public string OrderId { get; init; }
-    }
-
-    public record SampleResponse
-    {
-        public string OrderId { get; init; }
-        public string Message { get; init; }
-        public DateTime DateTime { get; init; }
-    }
-    public class RequestResponseSender : BackgroundService
+    public class SampleRequestSender : BackgroundService
     {
 
         readonly IBus _bus;
 
-        public RequestResponseSender(IBus bus) => _bus = bus;
+        public SampleRequestSender(IBus bus) => _bus = bus;
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -33,8 +22,8 @@ namespace MassTransitProject.RequestResponse
             while (!stoppingToken.IsCancellationRequested)
             {
                 var response = await client.GetResponse<SampleResponse>(new { OrderId = i++ });
-                Console.WriteLine($"{nameof(RequestResponseSender)} got response: {response.Message.OrderId}-{response.Message.DateTime}");
-                await Task.Delay(2000, stoppingToken);
+                Console.WriteLine($"{nameof(SampleRequestSender)} got response: {response.Message}");
+                await Task.Delay(2500, stoppingToken);
             }
         }
     }

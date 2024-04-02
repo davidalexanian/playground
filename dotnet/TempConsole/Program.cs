@@ -5,7 +5,6 @@ using System.Text.Json;
 
 namespace TempConsole
 {
-
     public class Model
     {
         public string MyPropertyString { get; set; }

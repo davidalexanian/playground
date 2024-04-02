@@ -16,7 +16,7 @@ namespace SignalRMessagePack.Hubs
         }
 
         public async Task SendToServerArgumentsButtonClick(
-            Guid PropId,
+            Guid PropId1,
             int? PropInt,
             string? PropString,
             decimal PropDecimal,
