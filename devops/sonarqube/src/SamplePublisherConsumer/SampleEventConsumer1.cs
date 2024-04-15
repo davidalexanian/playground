@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using MassTransit;
 
-namespace MassTransitProject.SamplePublisherConsumer
+namespace SonarqubeSampleProject.SamplePublisherConsumer
 {
-    public class SampleEventConsumer2 : IConsumer<SampleEvent>
+    public class SampleEventConsumer1 : IConsumer<SampleEvent>
     {
-        public SampleEventConsumer2() { }
+        public SampleEventConsumer1() { }
 
         public Task Consume(ConsumeContext<SampleEvent> context)
         {

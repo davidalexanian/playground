@@ -2,16 +2,16 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MassTransit;
-using MassTransitProject.Sagas;
+using SonarqubeSampleProject.Sagas;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitProject.Sagas
+namespace SonarqubeSampleProject.Sagas
 {
-    public class OrderStateMachinePublisher : BackgroundService
+    public class OrderStateMachinePublisherCopy : BackgroundService
     {
         readonly IBus bus;
 
-        public OrderStateMachinePublisher(IBus bus) => this.bus = bus;
+        public OrderStateMachinePublisherCopy(IBus bus) => this.bus = bus;
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {

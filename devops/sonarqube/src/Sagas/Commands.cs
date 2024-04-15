@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using System;
 
-namespace MassTransitProject.Sagas
+namespace SonarqubeSampleProject.Sagas
 {
     public record OrderSubmittedCommand : CorrelatedBy<Guid>
     {

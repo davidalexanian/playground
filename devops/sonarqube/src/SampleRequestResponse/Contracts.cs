@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MassTransitProject.SampleRequestResponse
+namespace SonarqubeSampleProject.SampleRequestResponse
 {
     public record SampleRequest
     {

@@ -3,12 +3,12 @@ using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MassTransitProject.Sagas
+namespace SonarqubeSampleProject.Sagas
 {
     /// <summary>
     /// Consumer sagas (choreography example)
     /// </summary>
-    public class OrderSaga : ISaga,
+    public class OrderSagaCopy : ISaga,
         InitiatedBy<OrderSubmitted>,    //or InitiatedByOrOrchestrates<OrderSubmitted>
         Orchestrates<OrderCompleted>,
         Observes<OrderCancelled, OrderSaga>

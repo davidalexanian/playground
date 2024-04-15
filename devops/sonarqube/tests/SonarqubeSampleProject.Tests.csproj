@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MassTransitProject\MassTransitProject.csproj" />
+    <ProjectReference Include="..\src\SonarqubeSampleProject.csproj" />
   </ItemGroup>
 
 </Project>

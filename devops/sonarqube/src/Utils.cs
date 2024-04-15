@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MassTransitProject
+namespace SonarqubeSampleProject
 {
     public class PrimeService
     {
@@ -20,5 +20,7 @@ namespace MassTransitProject
             }
             return true;
         }
+
+        public void NonCoveredMethod() => Console.WriteLine(nameof(NonCoveredMethod));
     }
 }

@@ -1,4 +1,4 @@
-namespace MassTransitProject.Tests
+namespace SonarqubeSampleProject.Tests
 {
     [TestClass]
     public class UnitTest1

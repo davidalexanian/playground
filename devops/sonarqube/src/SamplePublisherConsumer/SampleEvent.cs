@@ -1,4 +1,4 @@
-﻿namespace MassTransitProject.SamplePublisherConsumer
+﻿namespace SonarqubeSampleProject.SamplePublisherConsumer
 {
     public record SampleEvent()
     {

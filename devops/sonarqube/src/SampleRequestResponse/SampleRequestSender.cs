@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitProject.SampleRequestResponse
+namespace SonarqubeSampleProject.SampleRequestResponse
 {
     public class SampleRequestSender : BackgroundService
     {

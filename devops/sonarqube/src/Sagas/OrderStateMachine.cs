@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using System;
 
-namespace MassTransitProject.Sagas
+namespace SonarqubeSampleProject.Sagas
 {
     // Order saga (orchestration example)
     // An instance contains the data for a state machine instance

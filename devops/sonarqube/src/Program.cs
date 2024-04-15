@@ -3,18 +3,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Reflection;
 using System.Threading.Tasks;
-using MassTransitProject.SampleRequestResponse;
-using MassTransitProject.SamplePublisherConsumer;
+using SonarqubeSampleProject.SampleRequestResponse;
+using SonarqubeSampleProject.SamplePublisherConsumer;
 using System;
 
-namespace MassTransitProject
+namespace SonarqubeSampleProject
 {
     class Program
     {
         public static async Task Main(string[] args)
         {
-            Console.WriteLine("aaa");
-            return;
             await CreateHostBuilder(args).Build().RunAsync();
         }
 

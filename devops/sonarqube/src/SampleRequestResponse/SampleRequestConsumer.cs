@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace MassTransitProject.SampleRequestResponse
+namespace SonarqubeSampleProject.SampleRequestResponse
 {
     public class SampleRequestConsumer : IConsumer<SampleRequest>
     {
