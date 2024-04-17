@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Hosting;
 
-namespace MassTransitProject.SamplePublisherConsumer
+namespace MassTransitProject.SamplePubSub
 {
     public class SampleEventPublisher : BackgroundService
     {
@@ -16,8 +16,11 @@ namespace MassTransitProject.SamplePublisherConsumer
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                await _bus.Publish(new SampleEvent { Value = $"The time is {DateTimeOffset.Now}" }, stoppingToken);
-                await Task.Delay(2500, stoppingToken);
+                await _bus.Publish(new SampleEvent { Value = $"Published at {DateTimeOffset.Now}" }, stoppingToken);
+
+                var endpoint = await _bus.GetPublishSendEndpoint<SampleEvent>();
+                endpoint.Send(new SampleEvent { Value = "send" });
+                await Task.Delay(5000, stoppingToken);
             }
         }
     }

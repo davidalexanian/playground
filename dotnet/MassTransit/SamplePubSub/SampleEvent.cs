@@ -1,4 +1,4 @@
-﻿namespace MassTransitProject.SamplePublisherConsumer
+﻿namespace MassTransitProject.SamplePubSub
 {
     public record SampleEvent()
     {

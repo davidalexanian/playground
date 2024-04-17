@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MassTransit;
 
-namespace MassTransitProject.SamplePublisherConsumer
+namespace MassTransitProject.SamplePubSub
 {
     public class SampleEventConsumer1 : IConsumer<SampleEvent>
     {

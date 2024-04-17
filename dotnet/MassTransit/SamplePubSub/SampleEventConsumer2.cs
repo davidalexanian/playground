@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MassTransit;
 
-namespace MassTransitProject.SamplePublisherConsumer
+namespace MassTransitProject.SamplePubSub
 {
     public class SampleEventConsumer2 : IConsumer<SampleEvent>
     {
@@ -10,7 +10,7 @@ namespace MassTransitProject.SamplePublisherConsumer
 
         public Task Consume(ConsumeContext<SampleEvent> context)
         {
-            Console.WriteLine($"{nameof(SampleEventConsumer1)}: {context.Message}");
+            Console.WriteLine($"{nameof(SampleEventConsumer2)}: {context.Message}");
             return Task.CompletedTask;
         }
     }

@@ -1,10 +1,9 @@
 ﻿using MassTransit;
+using MassTransitProject.Endpoints;
+using MassTransitProject.SampleCommand;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Reflection;
 using System.Threading.Tasks;
-using MassTransitProject.SampleRequestResponse;
-using MassTransitProject.SamplePublisherConsumer;
 
 namespace MassTransitProject
 {
@@ -25,14 +24,27 @@ namespace MassTransitProject
                         x.SetInMemorySagaRepositoryProvider();
 
                         // SampleRequestResponse
-                        x.AddRequestClient<SampleRequest>();
-                        x.AddHostedService<SampleRequestSender>();
-                        x.AddConsumer<SampleRequestConsumer>();
+                        //x.AddRequestClient<SampleRequest>();
+                        //x.AddHostedService<SampleRequestSender>();
+                        //x.AddConsumer<SampleRequestConsumer>();
 
-                        // SamplePublisherConsumer
-                        x.AddHostedService<SampleEventPublisher>();
-                        x.AddConsumer<SampleEventConsumer1>();
-                        x.AddConsumer<SampleEventConsumer2>();
+                        // SamplePubSub
+                        //x.AddHostedService<SampleEventPublisher>();
+                        //x.AddConsumer<SampleEventConsumer1>();
+                        //x.AddConsumer<SampleEventConsumer2>();
+
+                        // SamplePubSubBatch
+                        //x.AddHostedService<BatchSampleEventPublisher>();
+                        //x.AddConsumer<BatchSampleEventConsumer>().Endpoint(cnf => { cnf.ConcurrentMessageLimit = 10; cnf.PrefetchCount = 200; });
+
+                        // SampleCommand
+                        // x.AddHostedService<SampleCommandPublisher>();
+                        // x.AddConsumer<SampleCommandHandler1>();
+                        // x.AddConsumer<SampleCommandHandler2>();
+
+                        // use endpoint address
+                        x.AddHostedService<SendEndpointPublisher>();
+                        x.AddConsumer<SendEndpointConsumer>();
 
                         // var entryAssembly = Assembly.GetEntryAssembly();
                         // x.AddConsumers(entryAssembly);
