@@ -1,6 +1,8 @@
 ﻿using MassTransit;
 using MassTransitProject.Endpoints;
+using MassTransitProject.Sagas;
 using MassTransitProject.SampleCommand;
+using MassTransitProject.SampleRequestResponse;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Threading.Tasks;
@@ -42,23 +44,21 @@ namespace MassTransitProject
                         // x.AddConsumer<SampleCommandHandler1>();
                         // x.AddConsumer<SampleCommandHandler2>();
 
-                        // use endpoint address
-                        x.AddHostedService<SendEndpointPublisher>();
-                        x.AddConsumer<SendEndpointConsumer>();
+                        // SendEndpointEvent
+                        //x.AddHostedService<SendEndpointPublisher>();
+                        //x.AddConsumer<SendEndpointConsumer>();
 
-                        // var entryAssembly = Assembly.GetEntryAssembly();
+                        // configuration
                         // x.AddConsumers(entryAssembly);
                         // x.AddActivities(entryAssembly);
                         //x.AddSagas(entryAssembly);
                         //x.AddSagaStateMachines(entryAssembly);
 
-                        //x.AddSaga<OrderSaga>().InMemoryRepository();
-                        //x.AddSagaStateMachine<OrderStateMachine, OrderState>().InMemoryRepository();
-
-                        // message senders (uncomment to execute)
-                        // x.AddHostedService<SamplePublisher>();
-                        // x.AddHostedService<OrderSagaPublisher>();
-                        // x.AddHostedService<OrderStateMachinePublisher>();
+                        // sagas
+                        x.AddSaga<OrderSagaChoregraphy>().InMemoryRepository();
+                        x.AddHostedService<OrderSagaChoregraphyPublisher>();
+                        x.AddSagaStateMachine<OrderStateMachine, OrderState>().InMemoryRepository();
+                        x.AddHostedService<OrderStateMachinePublisher>();
 
                         // transport
                         //x.UsingInMemory((context, cfg) =>

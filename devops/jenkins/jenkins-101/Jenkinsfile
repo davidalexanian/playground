@@ -11,6 +11,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building.."
+				def myVar = "origin/SSICLOUD-141392-sonarqube-test".replaceFirst("origin/")
+				echo "${myVar}"
+
                 sh '''
                 cd devops/jenkins/jenkins-101/myapp
                 pip install -r requirements.txt

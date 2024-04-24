@@ -1,17 +1,16 @@
-﻿using System;
+﻿using MassTransit;
+using Microsoft.Extensions.Hosting;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using MassTransit;
-using MassTransitProject.Sagas;
-using Microsoft.Extensions.Hosting;
 
 namespace MassTransitProject.Sagas
 {
-    public class OrderSagaPublisher : BackgroundService
+    public class OrderSagaChoregraphyPublisher : BackgroundService
     {
         readonly IBus bus;
 
-        public OrderSagaPublisher(IBus bus) => this.bus = bus;
+        public OrderSagaChoregraphyPublisher(IBus bus) => this.bus = bus;
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
