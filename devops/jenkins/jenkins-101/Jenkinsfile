@@ -12,7 +12,7 @@ pipeline {
             steps {
 				script {
 					echo "Building.."
-					def myVar = "origin/SSICLOUD-141392-sonarqube-test".replaceFirst("origin/")
+					def myVar = "origin/SSICLOUD-141392-sonarqube-test".replaceFirst("origin/", "")
 					echo "${myVar}"
 
 					sh '''
