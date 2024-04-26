@@ -9,9 +9,9 @@ namespace MassTransitProject.Sagas
     /// Consumer sagas (choreography example)
     /// </summary>
     public class OrderSagaChoregraphy : ISaga,
-        InitiatedBy<OrderSubmitted>,            // or InitiatedByOrOrchestrates<OrderSubmitted>
-        Orchestrates<OrderCompleted>,           // i.e. consumes OrderCompleted
-        Observes<OrderCancelled, OrderSagaChoregraphy>
+        InitiatedBy<OrderSubmittedEvent>,                       // or InitiatedByOrOrchestrates<OrderSubmitted>
+        Orchestrates<OrderCompletedEvent>,                      // i.e. consumes OrderCompleted
+        Observes<OrderCancelledEvent, OrderSagaChoregraphy>     // i.e. consumes OrderCancelledEvent
     {
         public Guid CorrelationId { get; set; }
 
@@ -21,27 +21,27 @@ namespace MassTransitProject.Sagas
 
         public DateTime? CancelDate { get; set; }
 
-        public Task Consume(ConsumeContext<OrderSubmitted> context)
+        public Task Consume(ConsumeContext<OrderSubmittedEvent> context)
         {
             SubmitDate = context.Message.Timestamp;
-            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderSubmitted)}: {context.CorrelationId}");
+            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderSubmittedEvent)}: {context.CorrelationId}");
             return Task.CompletedTask;
         }
 
-        public Task Consume(ConsumeContext<OrderCompleted> context)
+        public Task Consume(ConsumeContext<OrderCompletedEvent> context)
         {
             AcceptDate = context.Message.Timestamp;
-            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderCompleted)}: {context.CorrelationId}");
+            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderCompletedEvent)}: {context.CorrelationId}");
             return Task.CompletedTask;
         }
 
         // for events not implementing CorrelationId
-        public Expression<Func<OrderSagaChoregraphy, OrderCancelled, bool>> CorrelationExpression =>
+        public Expression<Func<OrderSagaChoregraphy, OrderCancelledEvent, bool>> CorrelationExpression =>
             (saga, @event) => @event.OrderId == saga.CorrelationId;
 
-        public Task Consume(ConsumeContext<OrderCancelled> context)
+        public Task Consume(ConsumeContext<OrderCancelledEvent> context)
         {
-            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderCancelled)}: {context.CorrelationId}");
+            Console.WriteLine($"{nameof(OrderSagaChoregraphy)} consume {nameof(OrderCancelledEvent)}: {context.CorrelationId}");
             CancelDate = context.Message.Timestamp;
             return Task.CompletedTask;
         }

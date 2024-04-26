@@ -15,13 +15,13 @@ namespace MassTransitProject.Sagas
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             var guid = Guid.NewGuid();
-            await bus.Publish(new OrderSubmitted { OrderId = guid, Timestamp = DateTime.Now });
+            await bus.Publish(new OrderSubmittedEvent { OrderId = guid, Timestamp = DateTime.Now });
 
             await Task.Delay(2000);
-            await bus.Publish(new OrderCompleted { OrderId = guid, Timestamp = DateTime.Now });
+            await bus.Publish(new OrderCompletedEvent { OrderId = guid, Timestamp = DateTime.Now });
 
             await Task.Delay(2000);
-            await bus.Publish(new OrderCancelled { OrderId = guid, Timestamp = DateTime.Now });
+            await bus.Publish(new OrderCancelledEvent { OrderId = guid, Timestamp = DateTime.Now });
         }
     }
 }

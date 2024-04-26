@@ -3,7 +3,7 @@ using System;
 
 namespace MassTransitProject.Sagas
 {
-    public record OrderSubmitted : CorrelatedBy<Guid>
+    public record OrderSubmittedEvent : CorrelatedBy<Guid>
     {
         public Guid OrderId { get; init; }
 
@@ -12,7 +12,7 @@ namespace MassTransitProject.Sagas
         public Guid CorrelationId => OrderId;
     }
 
-    public record OrderCancelled : CorrelatedBy<Guid>
+    public record OrderCancelledEvent : CorrelatedBy<Guid>
     {
         public Guid OrderId { get; init; }
 
@@ -21,7 +21,7 @@ namespace MassTransitProject.Sagas
         public Guid CorrelationId => OrderId;
     }
 
-    public record OrderCompleted : CorrelatedBy<Guid>
+    public record OrderCompletedEvent : CorrelatedBy<Guid>
     {
         public Guid OrderId { get; init; }
 

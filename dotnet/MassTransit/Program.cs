@@ -1,8 +1,5 @@
 ﻿using MassTransit;
-using MassTransitProject.Endpoints;
 using MassTransitProject.Sagas;
-using MassTransitProject.SampleCommand;
-using MassTransitProject.SampleRequestResponse;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Threading.Tasks;
@@ -56,9 +53,9 @@ namespace MassTransitProject
 
                         // sagas
                         x.AddSaga<OrderSagaChoregraphy>().InMemoryRepository();
-                        x.AddHostedService<OrderSagaChoregraphyPublisher>();
-                        x.AddSagaStateMachine<OrderStateMachine, OrderState>().InMemoryRepository();
-                        x.AddHostedService<OrderStateMachinePublisher>();
+                        //x.AddHostedService<OrderSagaChoregraphyPublisher>();
+                        x.AddSagaStateMachine<OrderSagaOrchestration, OrderState>().InMemoryRepository();
+                        x.AddHostedService<OrderSagaOrchestrationPublisher>();
 
                         // transport
                         //x.UsingInMemory((context, cfg) =>

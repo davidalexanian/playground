@@ -1,23 +1,12 @@
 ﻿using MassTransit;
 using System;
 
-namespace MassTransitProject.Sagas
+namespace SonarqubeSampleProject.Sagas
 {
-    // Order saga (orchestration example)
-    // An instance contains the data for a state machine instance
-    // A new instance is created for every consumed initial event where an existing instance with the same CorrelationId was not found
-    public class OrderState : SagaStateMachineInstance
-    {
-        public Guid CorrelationId { get; set; }
-
-        public State CurrentState { get; set; }
-
-        public DateTime? SubmitedOn { get; set; }
-    }
 
     // A state machine defines the states, events, and behavior of a finite state machine. 
     // Created once, and then used to apply event triggered behavior to state machine instances.
-    public class OrderStateMachine : MassTransitStateMachine<OrderState>
+    public class OrderStateMachineCopy : MassTransitStateMachine<OrderState>
     {
         // own props
 
@@ -34,14 +23,14 @@ namespace MassTransitProject.Sagas
         // to support request/response
         public Event<OrderInformationRequest> OrderInformationRequested { get; private set; }
 
-        static OrderStateMachine()
+        static OrderStateMachineCopy()
         {
             GlobalTopology.Send.UseCorrelationId<OrderSubmittedCommand>(x => x.OrderId);
             GlobalTopology.Send.UseCorrelationId<OrderCancelledCommand>(x => x.OrderId);
             GlobalTopology.Send.UseCorrelationId<OrderCompletedCommand>(x => x.OrderId);
         }
 
-        public OrderStateMachine()
+        public OrderStateMachineCopy()
         {
             // declare property that holds current state
             InstanceState(os => os.CurrentState);
@@ -101,21 +90,5 @@ namespace MassTransitProject.Sagas
                     OrderId = context.Saga.CorrelationId, 
                     State = context.Saga.CurrentState.ToString() }));
         }
-    }
-
-    public record OrderInformationRequest {
-        public Guid OrderId { get; set; }
-    }
-
-    public record OrderInformationResponse
-    {
-        public Guid OrderId { get; init; }
-
-        public string State { get; init; }
-    }
-
-    public record OrderNotFound
-    {
-        public Guid OrderId { get; set; }
     }
 }

@@ -1,86 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="ec2c41fd-7d28-47fc-a701-9d53d97374c2" name="alexa@LENOVOLEGION7 2024-04-15 17:35:47" runUser="LENOVOLEGION7\alexa" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2024-04-15T17:35:47.3365655+02:00" queuing="2024-04-15T17:35:47.3365656+02:00" start="2024-04-15T17:35:46.5140630+02:00" finish="2024-04-15T17:35:47.3670426+02:00" />
-  <TestSettings name="default" id="76916cdb-cb68-4e0d-9946-73e109e7d781">
-    <Deployment runDeploymentRoot="alexa_LENOVOLEGION7_2024-04-15_17_35_47" />
+<TestRun id="922e6868-71a1-4b2d-be1a-59780fd238b7" name="alexa@LENOVOLEGION7 2024-04-15 18:42:12" runUser="LENOVOLEGION7\alexa" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-04-15T18:42:12.9868288+02:00" queuing="2024-04-15T18:42:12.9868291+02:00" start="2024-04-15T18:42:12.2325765+02:00" finish="2024-04-15T18:42:13.0231668+02:00" />
+  <TestSettings name="default" id="671cc1a1-1d61-428a-a12a-1dc62f5bc2c5">
+    <Deployment runDeploymentRoot="alexa_LENOVOLEGION7_2024-04-15_18_42_12" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="737a1c68-a1db-4297-964a-14b756afa7e2" testId="7b6c1a6c-b0b5-a013-26d1-0c66b9ab3430" testName="IsPrime_PrimesLessThan10_ReturnTrue (2)" computerName="LENOVOLEGION7" duration="00:00:00.0001042" startTime="2024-04-15T17:35:47.2696541+02:00" endTime="2024-04-15T17:35:47.2698031+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="737a1c68-a1db-4297-964a-14b756afa7e2" />
-    <UnitTestResult executionId="c8ff5059-7c09-4ed5-9bc0-b7e56578981f" testId="57e2a32b-88c4-1f42-093c-17670ca74afa" testName="IsPrime_ValuesLessThan2_ReturnFalse (1)" computerName="LENOVOLEGION7" duration="00:00:00.0000024" startTime="2024-04-15T17:35:47.2695910+02:00" endTime="2024-04-15T17:35:47.2696399+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8ff5059-7c09-4ed5-9bc0-b7e56578981f" />
-    <UnitTestResult executionId="157ffbbe-c6dd-4a86-8b71-74cdfa2237da" testId="8a86a2b7-a60b-a850-a33b-83a4c20e7884" testName="IsPrime_ValuesLessThan2_ReturnFalse (-1)" computerName="LENOVOLEGION7" duration="00:00:00.0006211" startTime="2024-04-15T17:35:47.2656727+02:00" endTime="2024-04-15T17:35:47.2694193+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="157ffbbe-c6dd-4a86-8b71-74cdfa2237da" />
-    <UnitTestResult executionId="454f831a-e7d4-46f1-855c-144b5bc96237" testId="e0d21071-2159-cb38-45f0-8ae0b53de0f5" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (8)" computerName="LENOVOLEGION7" duration="00:00:00.0000024" startTime="2024-04-15T17:35:47.2998701+02:00" endTime="2024-04-15T17:35:47.2999192+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="454f831a-e7d4-46f1-855c-144b5bc96237" />
-    <UnitTestResult executionId="bfbfaa1c-f204-4777-bc72-384a14e378a9" testId="51254fae-ccec-be1e-44ac-e4d1cf686a21" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (9)" computerName="LENOVOLEGION7" duration="00:00:00.0000021" startTime="2024-04-15T17:35:47.2999313+02:00" endTime="2024-04-15T17:35:47.3000547+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfbfaa1c-f204-4777-bc72-384a14e378a9" />
-    <UnitTestResult executionId="f1a3baa2-1e1b-4d8e-a2bc-746a1cecc9e2" testId="dc18baed-14c5-98ca-cef1-e3ea923050b2" testName="IsPrime_PrimesLessThan10_ReturnTrue (5)" computerName="LENOVOLEGION7" duration="00:00:00.0000023" startTime="2024-04-15T17:35:47.2698958+02:00" endTime="2024-04-15T17:35:47.2699370+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1a3baa2-1e1b-4d8e-a2bc-746a1cecc9e2" />
-    <UnitTestResult executionId="d7f0abc1-1ae4-4159-92b6-bfa98ceb5164" testId="b6003b9e-6468-5817-331d-035205ca52df" testName="IsPrime_PrimesLessThan10_ReturnTrue (7)" computerName="LENOVOLEGION7" duration="00:00:00.0000022" startTime="2024-04-15T17:35:47.2699473+02:00" endTime="2024-04-15T17:35:47.2699830+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7f0abc1-1ae4-4159-92b6-bfa98ceb5164" />
-    <UnitTestResult executionId="00ce395d-f041-4529-a919-bb054513e9ea" testId="726b6c8c-1313-4c84-e710-ec1ef9ca3ae3" testName="IsPrime_ValuesLessThan2_ReturnFalse (0)" computerName="LENOVOLEGION7" duration="00:00:00.0000050" startTime="2024-04-15T17:35:47.2694734+02:00" endTime="2024-04-15T17:35:47.2695745+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00ce395d-f041-4529-a919-bb054513e9ea" />
-    <UnitTestResult executionId="d4f0fd15-2903-4378-adbc-d03999859d2f" testId="c559bc7a-fa99-a8e5-5951-9d5621b75c8c" testName="IsPrime_PrimesLessThan10_ReturnTrue (3)" computerName="LENOVOLEGION7" duration="00:00:00.0000038" startTime="2024-04-15T17:35:47.2698218+02:00" endTime="2024-04-15T17:35:47.2698807+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4f0fd15-2903-4378-adbc-d03999859d2f" />
-    <UnitTestResult executionId="d36215fc-6d32-4fb2-bc57-6903864881b9" testId="cd214c83-cb89-faeb-3591-1e05996b7cea" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (4)" computerName="LENOVOLEGION7" duration="00:00:00.0000635" startTime="2024-04-15T17:35:47.2699970+02:00" endTime="2024-04-15T17:35:47.2701067+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d36215fc-6d32-4fb2-bc57-6903864881b9" />
-    <UnitTestResult executionId="0ee16667-d1c4-4677-8184-b6ebae7b8582" testId="3e2028ef-0288-2f87-a935-20b7249fceea" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (6)" computerName="LENOVOLEGION7" duration="00:00:00.0000079" startTime="2024-04-15T17:35:47.2997055+02:00" endTime="2024-04-15T17:35:47.2998424+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ee16667-d1c4-4677-8184-b6ebae7b8582" />
-    <UnitTestResult executionId="7a262e5f-b11c-43c7-86a6-13399e13723a" testId="43b8793b-0d64-deae-f908-8e49b72868df" testName="TestMethod1" computerName="LENOVOLEGION7" duration="00:00:00.3483138" startTime="2024-04-15T17:35:46.9031911+02:00" endTime="2024-04-15T17:35:47.2609313+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a262e5f-b11c-43c7-86a6-13399e13723a" />
+    <UnitTestResult executionId="41199e94-45d2-4af5-986c-f468bd94f76c" testId="dc18baed-14c5-98ca-cef1-e3ea923050b2" testName="IsPrime_PrimesLessThan10_ReturnTrue (5)" computerName="LENOVOLEGION7" duration="00:00:00.0000026" startTime="2024-04-15T18:42:12.9189141+02:00" endTime="2024-04-15T18:42:12.9189779+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41199e94-45d2-4af5-986c-f468bd94f76c" />
+    <UnitTestResult executionId="4fcfe381-d009-4c14-9d26-b0e3dc7dab7e" testId="b6003b9e-6468-5817-331d-035205ca52df" testName="IsPrime_PrimesLessThan10_ReturnTrue (7)" computerName="LENOVOLEGION7" duration="00:00:00.0000023" startTime="2024-04-15T18:42:12.9189888+02:00" endTime="2024-04-15T18:42:12.9190263+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4fcfe381-d009-4c14-9d26-b0e3dc7dab7e" />
+    <UnitTestResult executionId="3f7edf2e-a855-4d23-aba3-c007e5d6fb83" testId="7b6c1a6c-b0b5-a013-26d1-0c66b9ab3430" testName="IsPrime_PrimesLessThan10_ReturnTrue (2)" computerName="LENOVOLEGION7" duration="00:00:00.0001520" startTime="2024-04-15T18:42:12.9185987+02:00" endTime="2024-04-15T18:42:12.9187979+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f7edf2e-a855-4d23-aba3-c007e5d6fb83" />
+    <UnitTestResult executionId="cd724f6f-9776-4bd0-88ee-4c5c28b60fcd" testId="43b8793b-0d64-deae-f908-8e49b72868df" testName="TestMethod1" computerName="LENOVOLEGION7" duration="00:00:00.2659834" startTime="2024-04-15T18:42:12.6333917+02:00" endTime="2024-04-15T18:42:12.9097275+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd724f6f-9776-4bd0-88ee-4c5c28b60fcd" />
+    <UnitTestResult executionId="3cdf774c-0d3d-4ac8-831f-e04dd90bf817" testId="cd214c83-cb89-faeb-3591-1e05996b7cea" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (4)" computerName="LENOVOLEGION7" duration="00:00:00.0000693" startTime="2024-04-15T18:42:12.9190413+02:00" endTime="2024-04-15T18:42:12.9191605+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3cdf774c-0d3d-4ac8-831f-e04dd90bf817" />
+    <UnitTestResult executionId="779e359a-5aa9-4283-853e-7613565189ba" testId="3e2028ef-0288-2f87-a935-20b7249fceea" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (6)" computerName="LENOVOLEGION7" duration="00:00:00.0000094" startTime="2024-04-15T18:42:12.9497419+02:00" endTime="2024-04-15T18:42:12.9498886+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="779e359a-5aa9-4283-853e-7613565189ba" />
+    <UnitTestResult executionId="2f361d3c-3680-4a1e-99d0-332e38ecd659" testId="c559bc7a-fa99-a8e5-5951-9d5621b75c8c" testName="IsPrime_PrimesLessThan10_ReturnTrue (3)" computerName="LENOVOLEGION7" duration="00:00:00.0000046" startTime="2024-04-15T18:42:12.9188188+02:00" endTime="2024-04-15T18:42:12.9188971+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f361d3c-3680-4a1e-99d0-332e38ecd659" />
+    <UnitTestResult executionId="feb04c62-45ca-42d0-be6c-a63e6059a34e" testId="8a86a2b7-a60b-a850-a33b-83a4c20e7884" testName="IsPrime_ValuesLessThan2_ReturnFalse (-1)" computerName="LENOVOLEGION7" duration="00:00:00.0006745" startTime="2024-04-15T18:42:12.9145077+02:00" endTime="2024-04-15T18:42:12.9183233+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="feb04c62-45ca-42d0-be6c-a63e6059a34e" />
+    <UnitTestResult executionId="e235dda1-9d1a-4a38-9bf8-4d39668646b7" testId="51254fae-ccec-be1e-44ac-e4d1cf686a21" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (9)" computerName="LENOVOLEGION7" duration="00:00:00.0000023" startTime="2024-04-15T18:42:12.9499894+02:00" endTime="2024-04-15T18:42:12.9501170+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e235dda1-9d1a-4a38-9bf8-4d39668646b7" />
+    <UnitTestResult executionId="80e105fb-b778-49cb-a5b8-b3107df9b59c" testId="726b6c8c-1313-4c84-e710-ec1ef9ca3ae3" testName="IsPrime_ValuesLessThan2_ReturnFalse (0)" computerName="LENOVOLEGION7" duration="00:00:00.0000076" startTime="2024-04-15T18:42:12.9183841+02:00" endTime="2024-04-15T18:42:12.9185122+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80e105fb-b778-49cb-a5b8-b3107df9b59c" />
+    <UnitTestResult executionId="239e9c66-54db-4cdc-b4e9-9d10a7bd8616" testId="57e2a32b-88c4-1f42-093c-17670ca74afa" testName="IsPrime_ValuesLessThan2_ReturnFalse (1)" computerName="LENOVOLEGION7" duration="00:00:00.0000052" startTime="2024-04-15T18:42:12.9185311+02:00" endTime="2024-04-15T18:42:12.9185839+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="239e9c66-54db-4cdc-b4e9-9d10a7bd8616" />
+    <UnitTestResult executionId="1614d488-2aec-4ba3-9145-78df5985f4ba" testId="e0d21071-2159-cb38-45f0-8ae0b53de0f5" testName="IsPrime_NonPrimesLessThan10_ReturnFalse (8)" computerName="LENOVOLEGION7" duration="00:00:00.0000081" startTime="2024-04-15T18:42:12.9499226+02:00" endTime="2024-04-15T18:42:12.9499760+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1614d488-2aec-4ba3-9145-78df5985f4ba" />
   </Results>
   <TestDefinitions>
     <UnitTest name="IsPrime_ValuesLessThan2_ReturnFalse (0)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="726b6c8c-1313-4c84-e710-ec1ef9ca3ae3">
-      <Execution id="00ce395d-f041-4529-a919-bb054513e9ea" />
+      <Execution id="80e105fb-b778-49cb-a5b8-b3107df9b59c" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_ValuesLessThan2_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_PrimesLessThan10_ReturnTrue (5)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="dc18baed-14c5-98ca-cef1-e3ea923050b2">
-      <Execution id="f1a3baa2-1e1b-4d8e-a2bc-746a1cecc9e2" />
+      <Execution id="41199e94-45d2-4af5-986c-f468bd94f76c" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_PrimesLessThan10_ReturnTrue" />
     </UnitTest>
     <UnitTest name="IsPrime_ValuesLessThan2_ReturnFalse (1)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="57e2a32b-88c4-1f42-093c-17670ca74afa">
-      <Execution id="c8ff5059-7c09-4ed5-9bc0-b7e56578981f" />
+      <Execution id="239e9c66-54db-4cdc-b4e9-9d10a7bd8616" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_ValuesLessThan2_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_NonPrimesLessThan10_ReturnFalse (8)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="e0d21071-2159-cb38-45f0-8ae0b53de0f5">
-      <Execution id="454f831a-e7d4-46f1-855c-144b5bc96237" />
+      <Execution id="1614d488-2aec-4ba3-9145-78df5985f4ba" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_NonPrimesLessThan10_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_PrimesLessThan10_ReturnTrue (2)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="7b6c1a6c-b0b5-a013-26d1-0c66b9ab3430">
-      <Execution id="737a1c68-a1db-4297-964a-14b756afa7e2" />
+      <Execution id="3f7edf2e-a855-4d23-aba3-c007e5d6fb83" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_PrimesLessThan10_ReturnTrue" />
     </UnitTest>
     <UnitTest name="TestMethod1" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="43b8793b-0d64-deae-f908-8e49b72868df">
-      <Execution id="7a262e5f-b11c-43c7-86a6-13399e13723a" />
+      <Execution id="cd724f6f-9776-4bd0-88ee-4c5c28b60fcd" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="TestMethod1" />
     </UnitTest>
     <UnitTest name="IsPrime_NonPrimesLessThan10_ReturnFalse (9)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="51254fae-ccec-be1e-44ac-e4d1cf686a21">
-      <Execution id="bfbfaa1c-f204-4777-bc72-384a14e378a9" />
+      <Execution id="e235dda1-9d1a-4a38-9bf8-4d39668646b7" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_NonPrimesLessThan10_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_NonPrimesLessThan10_ReturnFalse (6)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="3e2028ef-0288-2f87-a935-20b7249fceea">
-      <Execution id="0ee16667-d1c4-4677-8184-b6ebae7b8582" />
+      <Execution id="779e359a-5aa9-4283-853e-7613565189ba" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_NonPrimesLessThan10_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_ValuesLessThan2_ReturnFalse (-1)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="8a86a2b7-a60b-a850-a33b-83a4c20e7884">
-      <Execution id="157ffbbe-c6dd-4a86-8b71-74cdfa2237da" />
+      <Execution id="feb04c62-45ca-42d0-be6c-a63e6059a34e" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_ValuesLessThan2_ReturnFalse" />
     </UnitTest>
     <UnitTest name="IsPrime_PrimesLessThan10_ReturnTrue (3)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="c559bc7a-fa99-a8e5-5951-9d5621b75c8c">
-      <Execution id="d4f0fd15-2903-4378-adbc-d03999859d2f" />
+      <Execution id="2f361d3c-3680-4a1e-99d0-332e38ecd659" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_PrimesLessThan10_ReturnTrue" />
     </UnitTest>
     <UnitTest name="IsPrime_PrimesLessThan10_ReturnTrue (7)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="b6003b9e-6468-5817-331d-035205ca52df">
-      <Execution id="d7f0abc1-1ae4-4159-92b6-bfa98ceb5164" />
+      <Execution id="4fcfe381-d009-4c14-9d26-b0e3dc7dab7e" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_PrimesLessThan10_ReturnTrue" />
     </UnitTest>
     <UnitTest name="IsPrime_NonPrimesLessThan10_ReturnFalse (4)" storage="d:\prof\code\playground\devops\sonarqube\tests\bin\debug\net6.0\sonarqubesampleproject.tests.dll" id="cd214c83-cb89-faeb-3591-1e05996b7cea">
-      <Execution id="d36215fc-6d32-4fb2-bc57-6903864881b9" />
+      <Execution id="3cdf774c-0d3d-4ac8-831f-e04dd90bf817" />
       <TestMethod codeBase="D:\prof\code\playground\devops\sonarqube\tests\bin\Debug\net6.0\SonarqubeSampleProject.Tests.dll" adapterTypeName="executor://mstestadapter/v2" className="SonarqubeSampleProject.Tests.UnitTest1" name="IsPrime_NonPrimesLessThan10_ReturnFalse" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="7b6c1a6c-b0b5-a013-26d1-0c66b9ab3430" executionId="737a1c68-a1db-4297-964a-14b756afa7e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="57e2a32b-88c4-1f42-093c-17670ca74afa" executionId="c8ff5059-7c09-4ed5-9bc0-b7e56578981f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8a86a2b7-a60b-a850-a33b-83a4c20e7884" executionId="157ffbbe-c6dd-4a86-8b71-74cdfa2237da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e0d21071-2159-cb38-45f0-8ae0b53de0f5" executionId="454f831a-e7d4-46f1-855c-144b5bc96237" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="51254fae-ccec-be1e-44ac-e4d1cf686a21" executionId="bfbfaa1c-f204-4777-bc72-384a14e378a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="dc18baed-14c5-98ca-cef1-e3ea923050b2" executionId="f1a3baa2-1e1b-4d8e-a2bc-746a1cecc9e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b6003b9e-6468-5817-331d-035205ca52df" executionId="d7f0abc1-1ae4-4159-92b6-bfa98ceb5164" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="726b6c8c-1313-4c84-e710-ec1ef9ca3ae3" executionId="00ce395d-f041-4529-a919-bb054513e9ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="c559bc7a-fa99-a8e5-5951-9d5621b75c8c" executionId="d4f0fd15-2903-4378-adbc-d03999859d2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cd214c83-cb89-faeb-3591-1e05996b7cea" executionId="d36215fc-6d32-4fb2-bc57-6903864881b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="3e2028ef-0288-2f87-a935-20b7249fceea" executionId="0ee16667-d1c4-4677-8184-b6ebae7b8582" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="43b8793b-0d64-deae-f908-8e49b72868df" executionId="7a262e5f-b11c-43c7-86a6-13399e13723a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc18baed-14c5-98ca-cef1-e3ea923050b2" executionId="41199e94-45d2-4af5-986c-f468bd94f76c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b6003b9e-6468-5817-331d-035205ca52df" executionId="4fcfe381-d009-4c14-9d26-b0e3dc7dab7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b6c1a6c-b0b5-a013-26d1-0c66b9ab3430" executionId="3f7edf2e-a855-4d23-aba3-c007e5d6fb83" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43b8793b-0d64-deae-f908-8e49b72868df" executionId="cd724f6f-9776-4bd0-88ee-4c5c28b60fcd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd214c83-cb89-faeb-3591-1e05996b7cea" executionId="3cdf774c-0d3d-4ac8-831f-e04dd90bf817" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3e2028ef-0288-2f87-a935-20b7249fceea" executionId="779e359a-5aa9-4283-853e-7613565189ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c559bc7a-fa99-a8e5-5951-9d5621b75c8c" executionId="2f361d3c-3680-4a1e-99d0-332e38ecd659" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a86a2b7-a60b-a850-a33b-83a4c20e7884" executionId="feb04c62-45ca-42d0-be6c-a63e6059a34e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="51254fae-ccec-be1e-44ac-e4d1cf686a21" executionId="e235dda1-9d1a-4a38-9bf8-4d39668646b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="726b6c8c-1313-4c84-e710-ec1ef9ca3ae3" executionId="80e105fb-b778-49cb-a5b8-b3107df9b59c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57e2a32b-88c4-1f42-093c-17670ca74afa" executionId="239e9c66-54db-4cdc-b4e9-9d10a7bd8616" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0d21071-2159-cb38-45f0-8ae0b53de0f5" executionId="1614d488-2aec-4ba3-9145-78df5985f4ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />

@@ -32,6 +32,7 @@ namespace SonarqubeSampleProject
 
                         // SamplePublisherConsumer
                         x.AddHostedService<SampleEventPublisher>();
+                        x.AddHostedService<SampleEventPublisherCopy>();
                         x.AddConsumer<SampleEventConsumer1>();
                         x.AddConsumer<SampleEventConsumer2>();
 
