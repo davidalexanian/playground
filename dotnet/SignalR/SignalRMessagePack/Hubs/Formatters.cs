@@ -1,9 +1,84 @@
 ﻿using MessagePack;
 using MessagePack.Formatters;
+using Newtonsoft.Json.Linq;
 using System.Globalization;
 
 namespace SignalRMessagePack.Hubs
 {
+    public class JArrayFormatter : IMessagePackFormatter<JArray>
+    {
+        public static readonly JArrayFormatter Instance = new();
+
+        private JArrayFormatter() { }
+
+        public JArray Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+        {
+            if (reader.TryReadNil()) return null;
+            var formatter = options.Resolver.GetFormatterWithVerify<IList<object>>();
+            var collection = formatter.Deserialize(ref reader, options);
+            return JArray.FromObject(collection);
+        }
+
+        public void Serialize(ref MessagePackWriter writer, JArray value, MessagePackSerializerOptions options)
+        {
+            if (value == null)
+            {
+                writer.WriteNil();
+                return;
+            }
+
+            var formatter = options.Resolver.GetFormatterWithVerify<object?[]>();
+            var arr = JObjectFormatter.ToArrayRecursive(value)!;
+            formatter.Serialize(ref writer, arr, options);
+        }
+    }
+
+    public class JObjectFormatter : IMessagePackFormatter<JObject>
+    {
+        public static readonly JObjectFormatter Instance = new();
+
+        private JObjectFormatter() { }
+
+        public JObject Deserialize(ref MessagePackReader reader, MessagePackSerializerOptions options)
+        {
+            if (reader.TryReadNil()) return null;
+            var formatter = options.Resolver.GetFormatterWithVerify<IDictionary<string, object?>>();
+            var dict = formatter.Deserialize(ref reader, options)!;
+            return JObject.FromObject(dict);
+        }
+
+        public void Serialize(ref MessagePackWriter writer, JObject value, MessagePackSerializerOptions options)
+        {
+            if (value == null)
+            {
+                writer.WriteNil();
+                return;
+            }
+
+            var formatter = options.Resolver.GetFormatterWithVerify<IDictionary<string, object>>();
+            Dictionary<string,object> dict = ToDictionaryRecursive(value);
+            formatter.Serialize(ref writer, dict, options);
+        }
+
+        public static Dictionary<string, object?> ToDictionaryRecursive(JObject obj)
+        {
+            var dict = obj.ToObject<Dictionary<string, object?>>()!;
+            dict.Keys.ToList().ForEach(key => dict[key] = ProcessEntry(dict[key]));
+            return dict;
+        }
+
+        public static object?[] ToArrayRecursive(JArray arr) =>
+            arr.ToObject<object[]>()!.Select(ProcessEntry).ToArray();
+
+        private static object? ProcessEntry(object? obj) =>
+            obj switch
+            {
+                JObject jobj => ToDictionaryRecursive(jobj),
+                JArray jarr => ToArrayRecursive(jarr),
+                _ => obj
+            };
+    }
+
     public class MyDateTimeFormatter : IMessagePackFormatter<DateTime>
     {
         private const string WriteFormatString = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss.FFFFFFFK";

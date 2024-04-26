@@ -125,5 +125,18 @@ const payloadToSend =
         },
         ee: null,
         ff: [11, "aa", null]
-    }
+    },
+    PropIntBase: 10,
+    PropStringBase: "PropStringBase",
+    JObject: {
+        "Id": 3,
+        "Name": "Color",
+        "Blue": null,
+        "Obj": {
+            "a": "aa",
+            "b": "bb"
+        },
+        "Arr": [11, null, "text", { "c": "ccc", "d": "ddd" }]
+    },
+    JArray: [ 123, "text", -2.56, null, {}, { "a": "aaa", "b": 123 }, [1, null, "text"]]
 };

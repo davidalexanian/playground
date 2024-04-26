@@ -34,6 +34,8 @@ namespace SignalRMessagePack
                                     MyNullableDateTimeFormatter.Instance,
                                     MyDateTimeOffsetFormatter.Instance,
                                     MyNullableDateTimeOffsetFormatter.Instance,
+                                    JObjectFormatter.Instance,
+                                    JArrayFormatter.Instance
                                 },
                                 new IFormatterResolver[] { StandardResolver.Instance }));
                 })

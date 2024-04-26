@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
+using Newtonsoft.Json.Linq;
 using System.Text.Json;
 
 namespace SignalRMessagePack.Hubs
@@ -16,11 +17,11 @@ namespace SignalRMessagePack.Hubs
         }
 
         public async Task SendToServerArgumentsButtonClick(
-            Guid PropId1,
+            Guid PropId,
             int? PropInt,
             string? PropString,
             decimal PropDecimal,
-            string PropDecimalString,
+            string? PropDecimalString,
             decimal? PropDecimalNullable,
             double? PropDouble,
             DateTime PropDateTime,
@@ -29,7 +30,11 @@ namespace SignalRMessagePack.Hubs
             DateTimeOffset? PropDateTimeOffsetNullable,
             MyEnum? PropEnum,
             List<ModelItem>? PropItems,
-            Dictionary<string, object>? PropDict)
+            Dictionary<string, object>? PropDict,
+            int PropIntBase,
+            string PropStringBase,
+            object JObject,
+            object JArray)
         {
             await Task.Yield();
             Console.WriteLine($"Method:{nameof(SendToServerArgumentsButtonClick)}");

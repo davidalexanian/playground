@@ -1,4 +1,6 @@
 ﻿using MessagePack;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SignalRMessagePack.Hubs
 {
@@ -6,14 +8,14 @@ namespace SignalRMessagePack.Hubs
     public abstract class PayloadModelBase
     {
         [Key("PropIntBase")]
-        public int? PropIntBase { get; set; } = 11;
+        public int? PropIntBase { get; set; }
 
         [Key("PropStringBase")]
-        public string? PropStringBase { get; set; } = "Abc";
+        public string? PropStringBase { get; set; }
     }
 
     [MessagePackObject()]
-    public class PayloadModel
+    public class PayloadModel : PayloadModelBase
     {
         [Key("PropId")]
         public Guid? PropId { get; set; }
@@ -28,7 +30,7 @@ namespace SignalRMessagePack.Hubs
         public decimal PropDecimal { get; set; }
 
         [Key("PropDecimalString")]
-        public string PropDecimalString { get; set; }
+        public string? PropDecimalString { get; set; }
 
         [Key("PropDecimalNullable")]
         public decimal? PropDecimalNullable { get; set; }
@@ -57,12 +59,19 @@ namespace SignalRMessagePack.Hubs
         [Key("PropDict")]
         public Dictionary<string, object>? PropDict { get; set; }
 
+        [Key("JObject")]
+        public object? JObject { get; set; }
+
+        [Key("JArray")]
+        public object? JArray { get; set; }
+
         public static PayloadModel Create() => new PayloadModel()
         {
             PropId = Guid.NewGuid(),
             PropInt = 10,
-            PropString = "str",
+            PropString = "PropString",
             PropDecimal = 123456789.123456789M,
+            PropDecimalString = "PropDecimalString",
             PropDecimalNullable = null,
             PropDouble = 123456789.123456789D,
             PropDateTime = DateTime.Now,
@@ -77,13 +86,44 @@ namespace SignalRMessagePack.Hubs
             },
             PropDict = new Dictionary<string, object>()
             {
-                { "aa", "Aaa" },
+                { "aa", "aa" },
                 { "bb", 11 },
                 { "cc", new { Cc1 = 1, Cc2 = "Cc2" } },
                 { "ee", null },
-                { "ff", new object[] {11, "aa", null }}
-            }
+                { "ff", new object[] {11, "aa", null }},
+                { "jobj", Newtonsoft.Json.Linq.JObject.Parse(jobjectJson) },
+                { "jarr", Newtonsoft.Json.Linq.JArray.Parse(jarrayJson) }
+            },
+            PropIntBase = 10,
+            PropStringBase = "PropStringBase",
+            JObject = Newtonsoft.Json.Linq.JObject.Parse(jobjectJson),
+            JArray = Newtonsoft.Json.Linq.JArray.Parse(jarrayJson)
         };
+
+        private static string jobjectJson = @"
+        {
+            ""Id"":3,
+            ""Name"":""Color"",
+            ""Blue"": null,
+            ""Obj"":{
+                ""a"":""aa"",
+                ""b"":""bb""
+            },
+            ""Arr"":[ 11, null, ""text"", { ""c"":""cc"", ""d"":""dd"" } ]
+        }";
+
+        private static string jarrayJson = @"[
+            123, 
+            ""text"", 
+            -2.56, 
+            null, 
+            {}, 
+            {
+                ""a"" : ""aa"",
+                ""b"" : 123
+            },
+            [1, null, ""text""]
+        ]";
     }
 
     [MessagePackObject(true)]
