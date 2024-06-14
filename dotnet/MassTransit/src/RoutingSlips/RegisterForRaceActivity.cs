@@ -9,6 +9,11 @@ namespace MassTransitProject.RoutingSlips
     {
         public static HashSet<string> registrations = new HashSet<string>();
 
+        public RegisterForRaceActivity()
+        {
+            
+        }
+
         public async Task<ExecutionResult> Execute(ExecuteContext<RegisterForRaceActivityArguments> context)
         {
             await Task.Yield();

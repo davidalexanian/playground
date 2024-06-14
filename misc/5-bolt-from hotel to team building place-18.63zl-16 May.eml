@@ -1,0 +1,2173 @@
+Received: from GV2PR10MB6694.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:150:b6::12)
+ by AS8PR10MB6272.EURPRD10.PROD.OUTLOOK.COM with HTTPS; Thu, 16 May 2024
+ 15:32:37 +0000
+Received: from CH0PR03CA0046.namprd03.prod.outlook.com (2603:10b6:610:b3::21)
+ by GV2PR10MB6694.EURPRD10.PROD.OUTLOOK.COM (2603:10a6:150:b6::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.27; Thu, 16 May
+ 2024 15:32:33 +0000
+Received: from CH3PEPF0000000C.namprd04.prod.outlook.com
+ (2603:10b6:610:b3:cafe::d) by CH0PR03CA0046.outlook.office365.com
+ (2603:10b6:610:b3::21) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7587.28 via Frontend
+ Transport; Thu, 16 May 2024 15:32:32 +0000
+Authentication-Results: spf=pass (sender IP is 69.169.224.52)
+ smtp.mailfrom=bounce-eu-central-1.bolt.eu; dkim=pass (signature was verified)
+ header.d=bolt.eu;dmarc=pass action=none header.from=bolt.eu;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ bounce-eu-central-1.bolt.eu designates 69.169.224.52 as permitted sender)
+ receiver=protection.outlook.com; client-ip=69.169.224.52;
+ helo=b224-52.smtp-out.eu-central-1.amazonses.com; pr=C
+Received: from b224-52.smtp-out.eu-central-1.amazonses.com (69.169.224.52) by
+ CH3PEPF0000000C.mail.protection.outlook.com (10.167.244.39) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7587.21 via Frontend Transport; Thu, 16 May 2024 15:32:32 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:A3A0A2504F36A27D7F351A1593AD1ED53059FB8FAF6D622BD0B7E495AA5242C1;UpperCasedChecksum:835DD3807EFC3B47F0E0579B9B874CC5AEF97D4E3F1568666702B28B5B19CFB2;SizeAsReceived:1415;Count:12
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=3grt4hhwntdthdmej2kb4oicb7qyn57h; d=bolt.eu; t=1715873551;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version;
+	bh=tkQrjzuQf7yTZXq7ixqyYDny+bRM2CRTXXSidZGMPMo=;
+	b=c9iM5A59YFDFHkXqwdDSePa4k8pcP7ajvQLkX9P5YNpnwJ5Q8zFZezcx2X6hurP0
+	V5WeGnn7ZaZzt7IKyh9Rh+GfHoU8JLx8PkvFMgejPjYwolhE3bZ3XPq1aZ3laRt8bDo
+	4Kib8Fve1iPSwhWF1A69ajl4B9t43R3bfPjJYcIc=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=qftdzk2dqsatjnlrq4r5brjbihpfcrsh; d=amazonses.com; t=1715873551;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version:Feedback-ID;
+	bh=tkQrjzuQf7yTZXq7ixqyYDny+bRM2CRTXXSidZGMPMo=;
+	b=IxsnmJw9XdfPyCwx/L6y5bp21gkBvq097+mq2RiSiVfyhZtJ31PokDNArLhGp4s5
+	Z9I54w6vI8aV9cZEKQRzxVHd4q/Adqinja3o1AOzS8hENZB1vR+90IAH9+7WbzGep7G
+	+zQiQzewbMIzyLlhNUcS46Z/UvyDBC3Z3uolR24k=
+Content-Type: text/html; charset=utf-8
+From: Bolt Poland <receipts-poland@bolt.eu>
+To: David <alexaniandavid@live.com>
+Subject: Your Bolt trip on Thursday
+Message-ID: <0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000@eu-central-1.amazonses.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 16 May 2024 15:32:30 +0000
+Feedback-ID: ::1.eu-central-1.Iw3A2QVyXllb/zTSb0pR+vg3L1wSOw8eTtUZKrDF7hI=:AmazonSES
+X-SES-Outgoing: 2024.05.16-69.169.224.52
+X-IncomingHeaderCount: 12
+Return-Path:
+ 0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000@bounce-eu-central-1.bolt.eu
+X-MS-Exchange-Organization-ExpirationStartTime: 16 May 2024 15:32:32.5522
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f6d9526d-0808-4ace-ada5-08dc75bd6780
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ CH3PEPF0000000C:EE_|GV2PR10MB6694:EE_|AS8PR10MB6272:EE_
+X-MS-Exchange-Organization-AuthSource:
+ CH3PEPF0000000C.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 5/16/2024 2:40:27 PM
+X-MS-Office365-Filtering-Correlation-Id: f6d9526d-0808-4ace-ada5-08dc75bd6780
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 69.169.224.52
+X-SID-PRA: RECEIPTS-POLAND@BOLT.EU
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:1444111002|10300799020|47200799009|9400799015|9000799038|42300799006|10700799012|1680799042|45200799009|461199019|58200799006|70000799006|1122599004|4601999003|1602099003|1370799021|1360799021|1290799018|1380799021|3412199016|440099019;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 May 2024 15:32:32.1616
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f6d9526d-0808-4ace-ada5-08dc75bd6780
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ CH3PEPF0000000C.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: GV2PR10MB6694
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.9494443
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7587.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90012020)(91020020)(91040095)(9050020)(9100341)(944500132)(2008001134)(4810010)(4910033)(9575002)(10195002)(9320005)(120001);
+X-Message-Info:
+	qZelhIiYnPkx84CNH6AeQsXrl1garOPt6qK1ezZflFqjNJtFAv/FqABr447JSy3bMUF0DWne5M4BNWJJ6MrElftvmZuMm9qgwfyReQkqBH18O835Qnpw+hMMZ0iAlAPFS0uYtMkMToIOTZCbhCHm8qcuYDPMBEJMAruAeKBIxjbMjZhdO7wgjra7+sXWVjCNvK/JpwejNOYEqJUA81CvFA==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?UnJKL0EyQzc5MVNPTGhHcTlrZCtSVzJLOFpDWk9ySzZHR3lRT29UUFFJWUMx?=
+ =?utf-8?B?VzRRbzRMcmptYXNURm5KcHFIbTZNWmxsRlN0cGM3TXhrM1ArakFCZGJBYTl5?=
+ =?utf-8?B?TEtTamxKckpieFgweW9nZEdzY2V0YnhzV1RuQjRSZ1JUMUlPM2xtbHUxWExl?=
+ =?utf-8?B?M0FULzZwR1paTGwzdnc1amFObVM1OCtvVCt1Tks5b3RCQjN6bFl5bmU1NStW?=
+ =?utf-8?B?UmMwTEpySEtkUGp1RWY1bmpSQWpMcW1EMWxSV2UwUlFQVDBiSWtZdnJ3d3ZD?=
+ =?utf-8?B?MXFZb2ZRYkVaZkMrTWo3SjNnZ0cxNHpYdnE3dkkzS29EZ3l1UnNSUXJ3UU01?=
+ =?utf-8?B?ZjVidWhKK2VjcldKWHMreXllc3V3RG8vMjNGZnphb3NWUWtjQlVWbnpDalkw?=
+ =?utf-8?B?N21EbjNNY01kWmdoQWdSKzJzQTlxNFhzTG1acFdFSHVRMmk4RmRxelBXbG9B?=
+ =?utf-8?B?RWE0WE9zdzZQbTQxQjUyRU9BaDI5UG81alB0MHBiQjN0S2tEaUVONk00NEp0?=
+ =?utf-8?B?RzZjcmc1Q3drcFQ5NXh2dTBvbHVGVkFxNHF5U2k3eUk1TDdoS1dNSUcwSjgw?=
+ =?utf-8?B?SzZtZ1lld2tLUjNoSFJpWFowVmhOaGEwODhQbE5MQlhEd3JSeXZFZHU4b3ZL?=
+ =?utf-8?B?bmg2VXdPNW5XWnlDajFEVTR0UjR6U3NYS3ZQYi9HU1l6eXhQOHhQY2tnNjNj?=
+ =?utf-8?B?dGZuZjU0cUhTK2hKU1hVR0F1U0taTmxRb3lVbUZiZHlXRDFLM05ubHVRS2FR?=
+ =?utf-8?B?K1J5a0pwRytSUFVWa1c1bjBoRm1NcXNCZncveXZVQXNwaXdUUFNWK0dodk5Y?=
+ =?utf-8?B?MXlxeUtML2JZVld1UkZPVTBGSmlSMnpzSG5TMmtwOTNQREx3MTdsQUFaaXd0?=
+ =?utf-8?B?MUsvRjdSbUtrdHZ1c2V3QVlyaHp4eG1LWVF6dGpwcnpxYithTkZobFFrcXln?=
+ =?utf-8?B?Rm5WdVFSTHFrMlhNVC9ncTdCTE9SUVJGY2JFSHpUdWVEbWJpaHB2dlBhYkR0?=
+ =?utf-8?B?dWFKaDFoTmMyUUdDZk4zaDBLbUxxUklZdCtHREo4QTNNYWdUQnZHWFRJNnhF?=
+ =?utf-8?B?RGRjUWZWVFBHa29MNjY2Sm81WE9lajNxbjl1V1l5ZlIrU1FXT0Z3UDg5eVZP?=
+ =?utf-8?B?akp0OENmSFE1dG9BNkRaS0U4RkNBQThNWFB1cUQrekVnT2NqMWtZVkZ4WG4r?=
+ =?utf-8?B?NUl2MDFUeTJhYnltSGRrbzZPdE9HRkE0eldGTFN3S2h3MjE0VjNIcjNCL2Nv?=
+ =?utf-8?B?TmJuRDgwSWFBQ0UzMW02MDJCQm01ZjRvY3RYNGJQVk9abXVmNUhMRFozZUhv?=
+ =?utf-8?B?eVhkWWpjODM0VHhhSFdrMFlVQlNlKzFpNC9LdWlBT1dRTldKSlRlcWlhcGY4?=
+ =?utf-8?B?QStwTFRnamhEUkdaMjdGQld5RUNSVStJdXF5T1VlRlYyK2F0aUhsOW5LWWhE?=
+ =?utf-8?B?bDRrdVNWZjRRa3dxNlluc3BTMTUrNjJzS2lMeWdzb2tIZWNUL0hLV0pXZXZv?=
+ =?utf-8?B?VDVaS0hUbWQ2alZWeGF5VXNXdk1oWVhnZWlzL2ZvYjJMNUtIeDFkZHE4NXpG?=
+ =?utf-8?B?czlwSVBSSFdROHUyT053aUFCckEzdzN6UE5YaVF0K3VFeWtYZGdyUjkwV1pQ?=
+ =?utf-8?B?L3BET1FuTDhxVTEzOER0K2pyQkdvSDlvVmZVaHVTTDA4SjBDZE1IT2xZSmtH?=
+ =?utf-8?B?YkhRVDlWdGV6THZpcVlObS9rNVVRdVB0OTE1S0t2bUNBWE9jMUZXblRuYVE4?=
+ =?utf-8?B?N0N4dnd0SjlWTFBiVDVHSU10SmducXNDZjJGUEd1c0lmbWVadjVpYXVma3kz?=
+ =?utf-8?B?ZlZVT0kwRHJ1TGNJaVVsT28zbTIvRExtaUFxOWRndlc5aFQzS0VkT0RYbWIw?=
+ =?utf-8?B?d2pRaTVOWHNwbjRsLzE5MHVDOElPOG95cFduM3BVYllMbHJkSFc2WkxicW9s?=
+ =?utf-8?B?cWl6SFZTeDBha1RxbUZQRzJZdW5FT3VnSjVzZFV2UXZqTDhlU25PbFlzYmFw?=
+ =?utf-8?B?aGJYdnB0dU5qMENuUVpaaGlJbEFMcmFFVU5TVFBOUjFScHNoMnR3d1MzY2Rr?=
+ =?utf-8?B?VXovRll0UjI0dWpIbURITDlBVWRodmxXUHRCL0VpOXNuY3JXZS85QUduV3l3?=
+ =?utf-8?B?WURTUkxWUXlmaHd0aHdXY1NpOVUvSTdBbzJVWnB6M1NZaUxTZGFzZkVsNTBq?=
+ =?utf-8?B?Zko0MDR3UjNqblZaWTZhcmROajZ5azJIWGJBTnpMZExsUS9hWVd1VWRiQlhR?=
+ =?utf-8?B?T1l3OTJpcEszOVdzakdWUG1oWW03OWNCZTBqeXVaS21EUHRRd1ZTdE9zMmZW?=
+ =?utf-8?B?VUJXYmFRTExSR1ZndlF3WnJSZVBzZ0kvbG5uQXdQRFdadjQ2SnljdTc4S2tp?=
+ =?utf-8?B?ZkNhWENkWG0xQncxM1dPUU1Hck02bXJCbmZLVzhFWnhCVHFBeitXUktFS3B5?=
+ =?utf-8?B?aGd2TlVweXUyN2Z3OXp5bkRjblIycjRVbWkxdkw3a3NQbFZWeFF3QTNscFNw?=
+ =?utf-8?B?YjJKaW9yaEtMNTl4R1lqVFl1ejZudE9zL2t1TkVCQTRhQ0dDUjBPanA5dXgr?=
+ =?utf-8?B?cnNEcmFsM0VmNE83ZEFVWmFtNkI4ZEIyRkZpcHVCRGpQR1Fibm1ldHdZSEpY?=
+ =?utf-8?Q?w7aRf4KWV+Z/UA05y1DjwuGzq1OA=3D?=
+MIME-Version: 1.0
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/x=
+html1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.org/1999/xh=
+tml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+    <meta name=3D"x-apple-disable-message-reformatting">
+    <meta name=3D"format-detection" content=3D"telephone=3Dno">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width; initial-scale=
+=3D1; maximum-scale=3D1; user-scalable=3Dno;">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7;=
+ IE=3DEDGE">
+
+    <title>Rider Receipt Email</title>
+
+    <style type=3D"text/css">
+        #bodyTable {
+            height: 100% !important;
+            width: 100% !important;
+            margin: 0;
+            padding: 0
+        }
+
+        a img,
+        img {
+            border: 0;
+            outline: 0;
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            word-break: break-word
+        }
+
+        .mp0 {
+            margin: 0 !important;
+            padding: 0 !important
+        }
+
+        table {
+            mso-table-lspace: 0 !important;
+            mso-table-rspace: 0 !important
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic
+        }
+
+        #bodyTable,
+        body,
+        table {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+
+        .color-contentPrimary {
+            color: #2f313f
+        }
+
+        .color-contentSecondary {
+            color: #818391
+        }
+
+        .color-contentTertiary {
+            color: #a9abb9
+        }
+
+        .color-contentPrimaryInverted {
+            color: #fff
+        }
+
+        .color-linkPrimary,
+        .color-linkPrimary:visited {
+            color: #249e64 !important
+        }
+
+        .color-yellowBackground {
+            background-color: #fff8d6
+        }
+
+        .color-green700 {
+            color: #249e64
+        }
+
+        .color-green900 {
+            color: #186841
+        }
+
+        .color-accentPurple {
+            color: #5b68f6
+        }
+
+        .color-red700 {
+            color: #c91d2b
+        }
+
+        .link,
+        a {
+            text-decoration: none !important;
+            color: #249e64;
+        }
+
+        .headingLarge {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .headingXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .bodyLarge {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyLargeBold {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMedium {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyMediumBold {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodySmall {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .bodyXS {
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .caption {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        .captionBold {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            font-family: "Euclid Circular B", Arial, Avenir, Helvetica, Ver=
+dana, sans-serif;
+            font-style: normal
+        }
+
+        @media only screen and (max-width:600px) {
+            .headingLarge {
+                font-size: 28px !important;
+                line-height: 36px !important
+            }
+
+            .bodyLarge {
+                font-size: 16px !important
+            }
+
+            .bodyLargeBold {
+                font-size: 16px !important
+            }
+        }
+
+        .height-40 {
+            height: 40px
+        }
+
+        .spacing-outer {
+            padding-top: 40px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-carbon-neutral-banner {
+            padding-top: 40px;
+            padding-right: 0;
+            padding-left: 40px;
+            padding-bottom: 40px
+        }
+
+        .spacing-outer-safety-banner {
+            padding: 40px
+        }
+
+        .spacing-outer-giveget-banner {
+            padding: 24px
+        }
+
+        .routePoints-text {
+            padding: 0 16px 17px 16px
+        }
+
+        .spacing-outer-sides {
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-32 {
+            padding-top: 32px;
+            padding-right: 40px;
+            padding-left: 40px
+        }
+
+        .spacing-outer-16 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 16px;
+            padding-left: 16px
+        }
+
+        .spacing-outer-24 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 24px;
+            padding-left: 24px
+        }
+
+        .spacing-outer-label {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px
+        }
+
+        .spacing-inner-label {
+            padding-top: 12px;
+            padding-left: 16px;
+            padding-right: 16px
+        }
+
+        .spacing-outer-promo {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 24px;
+            padding-right: 24px
+        }
+
+        .spacing-bottom-40,
+        .spacing-bottom-40-sm {
+            padding-bottom: 40px
+        }
+
+        .spacing-bottom-24 {
+            padding-bottom: 24px
+        }
+
+        .spacing-bottom-16 {
+            padding-bottom: 16px
+        }
+
+        .spacing-bottom-16-sm {
+            padding-bottom: 16px
+        }
+
+        .spacing-bottom-8 {
+            padding-bottom: 8px
+        }
+
+        .spacing-bottom-4 {
+            padding-bottom: 4px
+        }
+
+        .spacing-top-8-sm {
+            padding-top: 8px
+        }
+
+        .spacing-car-image {
+            padding-right: 40px;
+        }
+
+        .container-border-top {
+            display: block;
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+        .container-border {
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 0;
+            border-left: 1px solid #e9eaee
+        }
+
+
+        .container-border-bottom {
+            display: block;
+            border-top: 0;
+            border-right: 1px solid #e9eaee;
+            border-bottom: 1px solid #e9eaee;
+            border-left: 1px solid #e9eaee;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 16px
+        }
+
+        .comment-spacing {
+            padding-top: 4px
+        }
+
+        .label {
+            padding-top: 8px;
+            padding-bottom: 4px
+        }
+
+        .img {
+            display: block
+        }
+
+        .img-social-link {
+            display: block;
+            padding-top: 8px;
+            padding-right: 8px;
+            padding-bottom: 8px;
+            padding-left: 8px
+        }
+
+        .safety-banner-image {
+            width: 96px;
+            height: 96px
+        }
+
+        .giveget-banner-image {
+            width: 160px;
+            height: 108px
+        }
+
+        .banner-spacing {
+            padding-right: 112px;
+            padding-bottom: 0
+        }
+
+        @media only screen and (max-width:600px) {
+
+            #bodyContainer,
+            #footerContainer,
+            #headerContainer {
+                width: 100% !important
+            }
+
+            .routePoints {
+                display: none
+            }
+
+            .spacing-outer {
+                padding-top: 24px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-sides {
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-32 {
+                padding-top: 28px !important;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-24 {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-right: 16px !important;
+                padding-left: 16px !important
+            }
+
+            .spacing-outer-16 {
+                padding-top: 0 !important;
+                padding-bottom: 0 !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important
+            }
+
+            .spacing-bottom-16-sm {
+                padding-bottom: 12px !important
+            }
+
+            .spacing-top-8-sm {
+                padding-top: 4px !important
+            }
+
+            .spacing-bottom-40-sm {
+                padding-bottom: 24px !important
+            }
+
+            .spacing-outer-carbon-neutral-banner {
+                padding-top: 40px !important;
+                padding-right: 0 !important;
+                padding-left: 16px !important;
+                padding-bottom: 40px !important
+            }
+
+            .spacing-outer-safety-banner {
+                padding-top: 24px !important;
+                padding-right: 24px !important;
+                padding-left: 24px !important;
+                padding-bottom: 24px !important
+            }
+
+            .routePoints-text {
+                padding: 8px 0 !important
+            }
+
+            .container-border-bottom,
+            .container-border,
+            .container-border-top {
+                border: 0 !important;
+                border-radius: 0 !important
+            }
+
+            .container-border-bottom {
+                border-bottom: 1px solid #f4f4f6 !important
+            }
+
+            .banner-spacing {
+                padding-right: 20px !important
+            }
+
+            .spacing-car-image {
+                padding-right: 16px !important
+            }
+
+            .giveGetImg {
+                display: none;
+            }
+
+            .notOnMobile {
+                display: none;
+            }
+        }
+
+        /* GMAIL FIXES */
+        @media only screen and (max-width: 480px) {
+
+            u~div,
+            u+#body {
+                min-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+
+<body id=3D"body">
+    <div style=3D"display:none; max-height: 0px; overflow: hidden;">
+        Thanks for choosing Bolt =E2=80=94 here's your ride receipt!
+        &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C
+        <wbr>&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;
+        <wbr>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=20
+    </div>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" =
+id=3D"bodyTable">
+        <tr>
+            <td align=3D"center" valign=3D"top" width=3D"100%" style=3D"wid=
+th:100%; max-width:100%; min-width:100%;">
+
+                <!-- Email Header -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"headerWrapper" bgcolor=3D"#249E64" style=3D"background-co=
+lor:#249E64; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"16" cellspac=
+ing=3D"0" width=3D"602" id=3D"headerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-outer container-border-top">
+
+                                        <!-- Email Header Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"headerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"headerContentLogo" st=
+yle=3D"max-width:100%; min-width:100%;">
+                                                        <tr>
+                                                            <td align=3D"le=
+ft">
+                                                                <img src=3D=
+"https://upload.taxify.eu/EmailTemplateImage/554-image-826.png" border=3D"0=
+" width=3D"56" height=3D"32" alt=3D"Bolt" class=3D"bodySmall color-contentP=
+rimaryInverted img" id=3D"imgLogo">
+                                                            </td>
+                                                            <td align=3D"ri=
+ght">
+
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"headerCon=
+tentHeading">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span class=3D"caption color-contentPrimaryInverted">Total:
+                                                                           =
+ </span>
+                                                                           =
+ <span class=3D"captionBold color-contentPrimaryInverted">18.63 Z=C5=81</sp=
+an>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"right">
+                                                                           =
+ <span class=3D"caption color-contentPrimaryInverted">Thursday, 16 May 2024=
+</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"he=
+ight-40" colspan=3D"2"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- if [$email_subscri=
+ption_disclaimer] is not empty -->
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"headerContentHeading"=
+>
+                                                        <tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top" class=3D"spacing-bottom-16">
+                                                                <h1 class=
+=3D"headingLarge color-contentPrimaryInverted mp0">
+                                                                    Thanks =
+for riding with us, David</h1>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"le=
+ft" valign=3D"top">
+                                                                <span class=
+=3D"bodyLarge color-contentPrimaryInverted">We hope you enjoyed your ride</=
+span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Email Header Content -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Header -->
+
+                <!-- Image Header -->
+                <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border-=
+width:0;--ms-text-style-adjust:100%;--webkit-text-size-adjust:100%;width:10=
+0%;max-width:100%;min-width:100%;">
+                    <tbody>
+                        <tr>
+                            <td valign=3D"top">
+                                <table cellpadding=3D"1" cellspacing=3D"0" =
+style=3D"border-width:0;--ms-text-style-adjust:100%;--webkit-text-size-adju=
+st:100%;width:100%;max-width:100%;min-width:100%;">
+                                    <tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div style=3D"height: 56px; bac=
+kground-color:#249E64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align=3D"center" valign=3D"top" width=3D"60=
+0px" valign=3D"top" class=3D"container-border" style=3D"width: 600px;" heig=
+ht=3D"112">
+
+                                <!--[if gte mso 9]>
+                  <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D=
+"true" stroke=3D"false" style=3D"width:600px; height:112px;" fillcolor=3D"#=
+249E64">
+                  <v:fill type=3D"gradient" color2=3D"#249E64" colors=3D"0%=
+ #FFFFFF, 51% #FFFFFF, 51% #249E64" position=3D"0, 0" origin=3D"0, 0" />
+                  <v:textbox inset=3D"0,0,0,0">
+                <![endif]-->
+                                <table cellpadding=3D"0" cellspacing=3D"0" =
+width=3D"600px" style=3D"--ms-text-style-adjust:100%;--webkit-text-size-adj=
+ust:100%;width:100%;box-sizing: border-box;">
+                                    <tbody>
+                                        <tr>
+                                            <td width=3D"600" valign=3D"top=
+" align=3D"right">
+                                                <div style=3D"height: 56px;=
+ background-color:#249E64">
+                                                     <img src=3D"https://up=
+load.taxify.eu/EmailTemplateImage/541-image-444.png" height=3D"112" alt=3D"=
+Car" class=3D"spacing-car-image">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--[if gte mso 9]>
+                              </v:textbox>
+                            </v:rect>
+                            <![endif]-->
+                            </td>
+                            <td valign=3D"top">
+                                <table cellpadding=3D"1" cellspacing=3D"0" =
+style=3D"border-width:0;--ms-text-style-adjust:100%;--webkit-text-size-adju=
+st:100%;width:100%;max-width:100%;min-width:100%;">
+                                    <tr>
+                                        <td valign=3D"top" style=3D"padding=
+:0">
+                                            <div style=3D"height: 56px; bac=
+kground-color:#249E64">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--/ Image Header -->
+
+                <!-- Email Body -->
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"bodyWrapper" bgcolor=3D"#FFFFFF" style=3D"background-colo=
+r:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"602" id=3D"bodyContainer" class=3D"container-border-botto=
+m">
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+
+                                        <!-- Info Labels -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 24px; padding-bottom: 24px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <!-- Label noti=
+fication -->
+                                                            <!-- /Label not=
+ification -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label succ=
+ess -->
+                                                            <!-- /Label suc=
+cess -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label erro=
+r -->
+                                                            <!--/ Label err=
+or -->
+                                                        </tr>
+                                                        <tr>
+                                                            <!-- Label disc=
+ount -->
+                                                            <!--/ Label dis=
+count -->
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!--/ Info Labels-->
+
+                                        <!-- Total row -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16-sm spacing-top-8-sm">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"heading color-contentPrimary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"heading color-contentPrimary">
+                                                                           =
+ <span>18.63 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- /Total row -->
+
+                                        <!-- Details -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 16px; padding-bottom: 0px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>Fare</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>18.63 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodySmall color-contentSecondary comment-spacing">
+                                                                           =
+ <span></span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Details -->
+
+                                        <!-- Element Divider -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides" style=3D"padding-top:=
+ 0px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDivider2" heig=
+ht=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Element Divider -->
+
+                                        <!-- Detailed reciept -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 16px; padding-bottom: 0px;">
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td>
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>Subtotal</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>17.25 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodySmall color-contentSecondary">
+                                                                           =
+ <span>VAT (8%)</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"bodySmall color-contentSecondary">
+                                                                           =
+ <span>1.38 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td>
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>Total</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+ <span>18.63 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Discount -->
+
+                                        <!-- Element Divider -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides" style=3D"padding-top:=
+ 0px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDivider6" heig=
+ht=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Element Divider -->
+
+                                        <!-- Total charged -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 24px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodyLargeBold color-contentPrimary">
+                                                                           =
+ <span>Total charged</span>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" class=3D"bodyLargeBold color-contentPrimary">
+                                                                           =
+ <span>18.63 Z=C5=81</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td align=3D"left" valign=3D"middle" width=3D"32" class=3D"imgWrapper">
+                                                                           =
+     <img src=3D"https://static.bolt.eu/payment/icons/amex.png" border=3D"0=
+" width=3D"24" height=3D"24" alt=3D"PaymentIcon" class=3D"bodySmall color-c=
+ontentSecondary img" id=3D"imgPayment">
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"left" class=3D"bodyLarge ">
+                                                                           =
+     <span>=E2=80=A2=E2=80=A2=E2=80=A2=E2=80=A2 1005</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"bodyLarge ">
+                                                                           =
+     <span>18.63 Z=C5=81</span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <!-- Space divider -->
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td height=3D"2=
+2px;" style=3D"height: 22px;"></td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- End of Space divid=
+er -->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Total charged -->
+
+                                        <!-- Hold info -->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+sides" style=3D"padding-top: 0px; padding-bottom: 0px;">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-24">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+>
+                                                                           =
+ <span class=3D"bodySmall color-contentPrimary">A temporary hold could have=
+ been placed on your payment method at the beginning of the ride for our pa=
+yment method verification process. This hold is not an actual charge. The f=
+unds are already released or will be released once the payment method verif=
+ication is completed. This hold should also disappear form your account sta=
+tement shortly after this. </span>
+                                                                           =
+ <span><a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%=
+2Fsupport.taxify.eu%2Fhc%2Fen-us%2Farticles%2F115002904873-I-was-charged-do=
+uble-for-the-same-trip/1/0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c=
+42c-000000/1HLO6lsxXGUAqPwS0Rnq3mpdFG4=3D155" class=3D"link"><span class=3D=
+"bodySmall color-linkPrimary">Learn more.</span></a></span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- / Hold info -->
+
+                                        <!-- if order is from EU -->
+                                        <!-- Carbon Neutral Banner -->
+                                        <!-- End of Carbon Neutral Banner -=
+->
+
+                                        <!-- if order is not from EU -->
+                                        <!-- Safety Banner -->
+                                        <!-- End of Safety Banner -->
+                                        <!-- // end if -->
+
+
+                                        <!-- Ride details -->
+                                        <table width=3D"100%" height=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collaps=
+e: collapse;">
+                                            <tr>
+                                                <td class=3D"spacing-outer-=
+32">
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: c=
+ollapse;">
+                                                        <tr>
+                                                            <td class=3D"he=
+ading spacing-bottom-4 color-contentPrimary">
+                                                                <span>Ride =
+details</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"bo=
+dySmall color-contentSecondary spacing-bottom-16">
+                                                                <span>Thurs=
+day, 16 May 2024</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- Route Map -->
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                                    <tr>
+                                                                        <im=
+g src=3D"https://staticmaps.live.boltsvc.net/mapImage/get?token=3DeyJhbGciO=
+iJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImltYWdlX3dpZHRoIjo1MTgsImltYWdlX2h=
+laWdodCI6MjU5LCJwaWNrdXBfbWFya2VyIjp7Imljb24iOiJodHRwczovL2ltYWdlcy5ib2x0Lm=
+V1L2ludm9pY2luZy9lbWFpbF9tYXBfc3RhcnRfcG9pbnQucG5nIiwibG9jYXRpb24iOnsibGF0I=
+jo1MC4yNDU0ODIsImxuZyI6MTkuMDM2NDI5fX0sImRyb3BvZmZfbWFya2VyIjp7Imljb24iOiJo=
+dHRwczovL2ltYWdlcy5ib2x0LmV1L2ludm9pY2luZy9lbWFpbF9tYXBfZmluaXNoX3BvaW50LnB=
+uZyIsImxvY2F0aW9uIjp7ImxhdCI6NTAuMjYzMTUzLCJsbmciOjE5LjAwOTc1fX0sImJyYW5kIj=
+oiYm9sdCJ9LCJpYXQiOjE3MTU4NzM1NTAsImV4cCI6MTc3ODk0NTU1MH0.9JiEBlowg2uuA_Cmk=
+d8d2GUboDDfNa19GegsVb5PzIs" width=3D"100%">
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Route Map -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: c=
+ollapse;">
+                                                        <tr>
+                                                            <td class=3D"ro=
+utePoints" valign=3D"top" style=3D"background: url(https://upload.taxify.eu=
+/EmailTemplateImage/578-image-111.png) top -6px left no-repeat; background-=
+size: 24px; width: 24px;">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter" class=3D"bodyLarge color-contentPrimary routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodySmall spacing-bottom-4 color-contentSecondary">
+                                                                           =
+ <span>Pickup:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"color-contentPrimary">
+                                                                           =
+ <span>Genera=C5=82a J=C3=B3zefa Longina Sowi=C5=84skiego 48, Katowice 40-0=
+18</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" align=3D"right" class=3D"bodyLarge color-contentSecondary" style=3D"=
+width: 48px; padding: 0 16px 17px 16px;">
+                                                                <span style=
+=3D"word-break: keep-all;">17:07</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"ro=
+utePoints" valign=3D"top" style=3D"background: url(https://upload.taxify.eu=
+/EmailTemplateImage/576-image-420.png) bottom 12px left no-repeat; backgrou=
+nd-size: 24px; padding-bottom: 24px; width: 24px;">
+                                                            </td>
+                                                            <td valign=3D"c=
+enter" class=3D"bodyLarge color-contentPrimary routePoints-text">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse: collapse;">
+                                                                    <tr>
+                                                                        <td=
+ class=3D"bodySmall spacing-bottom-4 color-contentSecondary">
+                                                                           =
+ <span>Dropoff:</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ class=3D"color-contentPrimary">
+                                                                           =
+ <span>Club Garage, D=C4=85br=C3=B3wki, Katowice, Poland</span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+
+                                                            </td>
+                                                            <td valign=3D"b=
+ottom" class=3D"bodyLarge color-contentSecondary" align=3D"right" style=3D"=
+width: 48px; padding: 0 16px 17px 16px;">
+                                                                <span style=
+=3D"word-break: keep-all;">17:16</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- Element Divider --=
+>
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDi=
+vider4" height=3D"1" style=3D"height: 1px;">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=
+=3D"background-color:#F0F2F5; height: 1px;">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Element Divider=
+ -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr class=3D"spacin=
+g-bottom-16">
+                                                            <td rowspan=3D"=
+2" width=3D"56" class=3D"spacing-bottom-16">
+                                                                <img width=
+=3D"40" height=3D"40" src=3D"https://upload.taxify.eu/EmailTemplateImage/24=
+0625-image-322.png" alt=3D"Driver photo" style=3D"display: block;">
+                                                            </td>
+                                                            <td class=3D"bo=
+dySmall spacing-bottom-4 color-contentSecondary">
+                                                                <span>Your =
+driver</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-bottom-16">
+                                                                <span class=
+=3D"bodyLarge color-contentPrimary">Nazarii</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- Element Divider --=
+>
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" width=3D"100%" style=3D"padding-bottom: 16px;">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDi=
+vider4" height=3D"1" style=3D"height: 1px;">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=
+=3D"background-color:#F0F2F5; height: 1px;">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <!-- // Element Divider=
+ -->
+
+                                                    <table width=3D"100%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tr class=3D"spacin=
+g-bottom-32">
+                                                            <td class=3D"bo=
+dySmall spacing-bottom-40-sm color-contentSecondary">
+                                                                <span>00:09=
+:01</span>
+                                                                =E2=80=A2
+                                                                <span>5 km<=
+/span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- End of ride details -->
+
+                                        <!-- Give Get Banner-->
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse;borde=
+r-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table=
+-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1=
+00%;">
+                                            <tr>
+                                                <td style=3D"padding-left:1=
+6px;padding-right:16px;">
+                                                    <table width=3D"100%" b=
+gcolor=3D"#E3FDED" border=3D"0" class=3D"promo" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:collapse;border-radius:8px;border-spacing=
+:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0=
+pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;backg=
+round-color:#249E64;">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-outer-24" style=3D"padding-top:24px;padding-bottom:0px;padding-right:=
+24px;padding-left:24px;">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse;border-spacing:0;word-break:break-word;mso-table-lspace:=
+0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-w=
+ebkit-text-size-adjust:100%;position:relative;">
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding-bottom:16px;">
+                                                                           =
+ <span class=3D"heading color-contentPrimaryInverted" style=3D"color:#FFFFF=
+F;font-size:28px;font-weight:bold;line-height:36px;font-family:'Euclid Circ=
+ular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:normal;">
+                                                                           =
+     Save on your trips!
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                        <td=
+ style=3D"padding-bottom:16px; float: right;" class=3D"giveGetImg">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Finvi=
+te.bolt.eu%2FDAVIDAYTJ/1/0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c=
+42c-000000/vSt9ghFz5oJomT-wkoy_MhYgN-s=3D155" class=3D"link" style=3D"text-=
+decoration:none !important;"><img src=3D"https://upload.taxify.eu/EmailTemp=
+lateImage/546-image-951.png" border=3D"0" width=3D"24" height=3D"24" alt=3D=
+"Info" class=3D"bodySmall color-contentPrimaryInverted img" style=3D"-ms-in=
+terpolation-mode:bicubic;border-width:0;outline-style:none;text-decoration:=
+none;color:#FFFFFF;font-size:14px;font-weight:normal;line-height:20px;font-=
+family:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;f=
+ont-style:normal;display:block;"></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+>
+                                                                           =
+ <span class=3D"bodyLarge color-contentPrimaryInverted" style=3D"color:#FFF=
+FFF;font-size:18px;font-weight:normal;line-height:24px;font-family:'Euclid =
+Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-style:norma=
+l;">
+                                                                           =
+     Share the code below with your friends and you'll get 15 Z=C5=81 off y=
+our next 1 trip(s)!
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ align=3D"left" valign=3D"center">
+                                                                           =
+ <table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse:collapse;border-radius:4px;background-color:#FFFFFF;backgroun=
+d-image:none;background-repeat:repeat;background-position:top left;backgrou=
+nd-attachment:scroll;border-spacing:0;word-break:break-word;mso-table-lspac=
+e:0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;=
+-webkit-text-size-adjust:100%;width:unset;margin-bottom:24px;margin-top:16p=
+x;">
+                                                                           =
+     <tr>
+                                                                           =
+         <td align=3D"middle" valign=3D"bottom" style=3D"padding-top:8px;pa=
+dding-bottom:8px;padding-left:24px;padding-right:24px;">
+                                                                           =
+             <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse:collapse;text-align:center;border-spacing:0;word-break:=
+break-word;mso-table-lspace:0pt !important;mso-table-rspace:0pt !important;=
+-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td class=3D"caption color-contentSecondary" style=3D"=
+color:#818391;font-size:12px;font-weight:normal;line-height:16px;font-famil=
+y:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font-s=
+tyle:normal;">
+                                                                           =
+                         <span>Your code</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td class=3D"bodyLargeBold color-contentPrimary" style=
+=3D"color:#2F313F;font-size:18px;font-weight:bold;line-height:24px;font-fam=
+ily:'Euclid Circular B', Arial, Avenir, Helvetica, Verdana, sans-serif;font=
+-style:normal;">
+                                                                           =
+                         <span>DAVIDAYTJ</span>
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+             </table>
+                                                                           =
+         </td>
+                                                                           =
+     </tr>
+                                                                           =
+ </table>
+                                                                        </t=
+d>
+                                                                        <td=
+ align=3D"right" valign=3D"bottom" style=3D"padding-bottom: 24px;" class=3D=
+"giveGetImg">
+                                                                           =
+ <img src=3D"https://upload.taxify.eu/EmailTemplateImage/548-image-290.png"=
+ border=3D"0" alt=3D"GiveGet" class=3D"bodySmall color-contentPrimaryInvert=
+ed img" style=3D"-ms-interpolation-mode:bicubic;border-width:0;outline-styl=
+e:none;text-decoration:none;color:#FFFFFF;font-size:14px;font-weight:normal=
+;line-height:20px;font-family:'Euclid Circular B', Arial, Avenir, Helvetica=
+, Verdana, sans-serif;font-style:normal;display:block;">
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- End of Give Get Banner -->
+
+                                <!-- Space divider-->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td height=3D"24px;" style=
+=3D"height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End of Space divider -->
+
+
+                                <!-- Space divider-->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr>
+                                                <td height=3D"24px;" style=
+=3D"height: 24px;"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- End of Space divider -->
+
+                                <!-- Scooters Banner -->
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse:collapse;borde=
+r-spacing:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table=
+-rspace:0pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1=
+00%;">
+                                            <tr>
+                                                <td style=3D"padding-left:1=
+6px;padding-right:16px;">
+                                                    <table width=3D"100%" b=
+gcolor=3D"#F4F4F6" border=3D"0" class=3D"promo" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:collapse;border-radius:8px;border-spacing=
+:0;word-break:break-word;mso-table-lspace:0pt !important;mso-table-rspace:0=
+pt !important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;backg=
+round-color:#F4F4F6;">
+                                                        <tr>
+                                                            <td class=3D"sp=
+acing-outer-24" style=3D"padding-top:24px;padding-bottom:0px;padding-right:=
+24px;padding-left:24px;">
+                                                                <table widt=
+h=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border=
+-collapse:collapse;border-spacing:0;word-break:break-word;mso-table-lspace:=
+0pt !important;mso-table-rspace:0pt !important;-ms-text-size-adjust:100%;-w=
+ebkit-text-size-adjust:100%;">
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding: 8px 0px 0px 0px">
+                                                                           =
+ <span class=3D" headingXS
+                                                                         co=
+lor-contentPrimary">
+                                                                           =
+     Bolt scooters are now live in Silesia
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding: 8px 0px 0px 0px;">
+                                                                           =
+ <span class=3D"bodyMedium color-contentPrimary">
+                                                                           =
+     Get affordable, fast, and fun scooter rides at the tap of a button.
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding: 8px 0px 0px 0px;" class=3D"spacing-bottom-40-sm banner-s=
+pacing">
+                                                                           =
+ <span>
+                                                                           =
+     <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2F=
+bolt.onelink.me%2FCgkX%2F75048f2c/1/0107018f82089267-07b96506-47ed-410d-875=
+d-6cec7c55c42c-000000/UxlQ96ccCuqCyW6tyPs4wcJHnQ4=3D155" class=3D"link">
+                                                                           =
+         <span class=3D"bodyMediumBold color-green700">
+                                                                           =
+             Try out our scooters =E2=86=92
+                                                                           =
+         </span>
+                                                                           =
+     </a>
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td=
+ style=3D"padding: 16px 0px 32px 0px;" class=3D"spacing-bottom-40-sm banner=
+-spacing">
+                                                                           =
+ <span>
+                                                                           =
+     <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2F=
+bolt.eu%2Fen%2Flegal%2Fterms-for-e-vehicles%2F/1/0107018f82089267-07b96506-=
+47ed-410d-875d-6cec7c55c42c-000000/KZnEU75evR0RXlzVQIq2Dhg7JWU=3D155" class=
+=3D"link">
+                                                                           =
+         <span class=3D"bodyXS color-green700">
+                                                                           =
+             Terms and conditions apply
+                                                                           =
+         </span>
+                                                                           =
+     </a>
+                                                                           =
+ </span>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td style=3D"pa=
+dding: 0px 11px 0px 0;">
+                                                                <img src=3D=
+"https://upload.taxify.eu/EmailTemplateImage/535-image-841.png" width=3D"16=
+0px" height=3D"108px">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- End of Scooters Banner -->
+
+                                <!-- LINKS -->
+
+                                <!-- Invoice -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td class=3D"spacing-ou=
+ter-sides" style=3D"padding-bottom: 0px;">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tr>
+                                                                <td style=
+=3D"padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"bodyMedium color-linkPrimary">
+                                                                           =
+     <span><a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:=
+%2F%2Finvoice.taxify.eu%2F%3Fs=3Df00fd9bb-cc90-4b2b-a5a5-3ddb652fef84/1/010=
+7018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000/Tr58o6JR9hxEuJKA-=
+16WygFDKgY=3D155">Download PDF invoice</a></span>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                    </td>
+                                </tr>
+                                <!-- End of invoice -->
+
+
+
+                                <!-- Element Divider -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides" style=3D"padding-top:=
+ 0px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDivider5" heig=
+ht=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+                                <!-- Element Divider -->
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top" width=3D"100%" class=3D"spacing-outer-sides" style=3D"padding-top:=
+ 0px; padding-bottom: 0px;">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"elementDivider5" heig=
+ht=3D"1" style=3D"height: 1px;">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" bgcolor=3D"#F0F2F5" width=3D"100%" style=3D"background=
+-color:#F0F2F5; height: 1px;"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- // Element Divider -->
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <a href=3D"https://3zf1wp45.r.eu-ce=
+ntral-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2Fce134c74/1/0107=
+018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000/9Js91RYGLQXVowHtbo=
+FkBDM_m7Q=3D155" style=3D"text-decoration: none;">
+                                            <table width=3D"100%" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                <tr>
+                                                    <td class=3D"spacing-ou=
+ter-sides" style=3D"padding-top: 0px; padding-bottom: 24px;">
+                                                        <table width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                            <tr>
+                                                                <td style=
+=3D"padding-top: 16px; padding-bottom: 16px;">
+                                                                    <table =
+width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: collapse;">
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"bodyMedium color-linkPrimary">
+                                                                           =
+     <span>Contact support</span>
+                                                                           =
+ </td>
+                                                                           =
+ <td align=3D"right" class=3D"bodyLarge color-contentPrimary">
+                                                                           =
+     <img src=3D"https://upload.taxify.eu/EmailTemplateImage/572-image-563.=
+png" border=3D"0" width=3D"24" height=3D"24" alt=3D"Support" class=3D"bodyS=
+mall color-contentSecondary img" id=3D"imgSupport">
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- End of LINKS -->
+
+                                <!-- Contact Support notice -->
+
+                                <tr>
+                                    <td align=3D"center" valign=3D"top">
+                                        <table width=3D"100%" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0">
+                                            <tr class=3D"spacing-outer-32">
+                                                <td class=3D"bodySmall spac=
+ing-bottom-40-sm color-contentSecondary spacing-outer-sides ">
+                                                    <span>
+                                                        This is an automate=
+d email. If you need help, please
+                                                        <a href=3D"https://=
+3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fbolt.onelink.me%2FsbJ2%2=
+Fce134c74/2/0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000/pI=
+o45OqRodUMiHx9r4zlVl4SUW0=3D155" style=3D"text-decoration: none; font-size:=
+ 14px" class=3D"color-linkPrimary">contact support here</a>
+                                                        instead of replying=
+ to this email.
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Contact Support notice -->
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Body -->
+
+                <!-- Email Footer -->
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"footerWrapper" bgcolor=3D"#FFFFFF" style=3D"background-co=
+lor:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" cellspacing=3D"0" width=3D"=
+600" id=3D"footerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-outer spacing-bottom-40-sm">
+
+                                        <!-- Email Footer Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"footerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"bodySmall color-co=
+ntentTertiary">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>Invoi=
+ce issuer
+                                                                    Vonco P=
+artners Sp. z o.o.</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>Miko=
+=C5=82aja Kopernika 8/6 40-064 Katowice</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>Reg. =
+code
+                                                                    3868260=
+86</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>VAT n=
+o
+                                                                    6443555=
+711</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top">
+                                                                <span>
+                                                                    4327</s=
+pan>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" id=3D"footerWrapper" bgcolor=3D"#FFFFFF" style=3D"background-co=
+lor:#FFFFFF; ">
+                    <tr>
+                        <td align=3D"center" valign=3D"top">
+                            <table border=3D"0" class=3D"spacing-outer" cel=
+lspacing=3D"0" width=3D"600" id=3D"footerContainer">
+                                <tr>
+                                    <td align=3D"center" valign=3D"top" cla=
+ss=3D"spacing-bottom-24">
+
+                                        <!-- Email Footer Content -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" id=3D"footerContent">
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"footerContentCaption"=
+>
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"top" class=3D"spacing-bottom-8">
+                                                                <span class=
+=3D"bodySmall color-contentSecondary">
+                                                                    Made wi=
+th
+                                                                    &#12815=
+4;
+                                                                    in Esto=
+nia</span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" id=3D"footerContentSocial">
+                                                        <tr>
+                                                            <td align=3D"ce=
+nter" valign=3D"middle">
+                                                                <table bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"initial">
+                                                                    <tr>
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40" class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+facebook.com%2FBoltPL%2F/1/0107018f82089267-07b96506-47ed-410d-875d-6cec7c5=
+5c42c-000000/ORbnawYiCOOUtDWhbjORmzv0CDU=3D155" class=3D"link"><img src=3D"=
+https://upload.taxify.eu/EmailTemplateImage/573-image-535.png" width=3D"24"=
+ height=3D"24" alt=3D"Facebook" class=3D"bodySmall color-contentSecondary i=
+mg-social-link"></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40" class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Fwww.=
+instagram.com%2Fbolt_poland%2F/1/0107018f82089267-07b96506-47ed-410d-875d-6=
+cec7c55c42c-000000/aE5vNUB_StYkg22QNVe_eAK5rgQ=3D155" class=3D"link"><img s=
+rc=3D"https://upload.taxify.eu/EmailTemplateImage/574-image-442.png" width=
+=3D"24" height=3D"24" alt=3D"Instagram" class=3D"bodySmall color-contentSec=
+ondary img-social-link"></a>
+                                                                        </t=
+d>
+
+                                                                        <td=
+ align=3D"center" valign=3D"middle" width=3D"40" class=3D"imgWrapper">
+                                                                           =
+ <a href=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/L0/https:%2F%2Ftwit=
+ter.com%2Fboltapp/1/0107018f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-0=
+00000/u1ecehnF2VILhYs_J6pxve9pPuc=3D155" class=3D"link"><img src=3D"https:/=
+/upload.taxify.eu/EmailTemplateImage/575-image-586.png" width=3D"24" height=
+=3D"24" alt=3D"Twitter" class=3D"bodySmall color-contentSecondary img-socia=
+l-link"></a>
+                                                                        </t=
+d>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- // Email Footer Content -->
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!--/ Email Footer -->
+
+            </td>
+        </tr>
+    </table>
+    <div style=3D"display:none;">
+     =20
+    </div>
+    <img src=3D"https://node.bolt.eu/email-internal/pixel?id=3D257c0191340c=
+64b393e0c18fd4a07f9c430fb736ac729cbb3f464554bb3b30d4f747e3a0f88b.gif" style=
+=3D"width:1px;height:1px;">
+<img alt=3D"" src=3D"https://3zf1wp45.r.eu-central-1.awstrack.me/I0/0107018=
+f82089267-07b96506-47ed-410d-875d-6cec7c55c42c-000000/bMvNZ6qJCu4VMfS-EbKFo=
+zBEYYI=3D155" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+
+</html>
