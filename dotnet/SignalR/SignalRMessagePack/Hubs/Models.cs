@@ -65,6 +65,9 @@ namespace SignalRMessagePack.Hubs
         [Key("JArray")]
         public object? JArray { get; set; }
 
+        [Key("byteArray")]
+        public byte[] ByteArray { get; set; }
+
         public static PayloadModel Create() => new PayloadModel()
         {
             PropId = Guid.NewGuid(),
@@ -97,7 +100,7 @@ namespace SignalRMessagePack.Hubs
             PropIntBase = 10,
             PropStringBase = "PropStringBase",
             JObject = Newtonsoft.Json.Linq.JObject.Parse(jobjectJson),
-            JArray = Newtonsoft.Json.Linq.JArray.Parse(jarrayJson)
+            JArray = Newtonsoft.Json.Linq.JArray.Parse(jarrayJson),
         };
 
         private static string jobjectJson = @"

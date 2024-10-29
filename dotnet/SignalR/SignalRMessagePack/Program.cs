@@ -16,7 +16,9 @@ namespace SignalRMessagePack
             builder.Services.AddResponseCompression(options => options.EnableForHttps = true);
 
             builder.Services
-                .AddSignalR()
+                .AddSignalR(options => { 
+                    options.EnableDetailedErrors = true;
+                })
                 .AddNewtonsoftJsonProtocol(config => {
                     //config.PayloadSerializerSettings.DateTimeZoneHandling = Newtonsoft.Json.DateTimeZoneHandling.RoundtripKind; default
                     config.PayloadSerializerSettings.DateParseHandling = Newtonsoft.Json.DateParseHandling.DateTimeOffset;

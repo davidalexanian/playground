@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  another-param: another-value
+  extra-param: extra-value
+  my-configmap.txt: "# This is a sample config file that I might use toconfigure an
+    application\r\nparameter1 = value1\r\nparameter2 = value2"
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-08-30T10:31:29Z"
+  name: my-configmap
+  namespace: default
+  resourceVersion: "5071180"
+  uid: 846fdb71-7b1e-4a14-9182-f9b2159c4fa6

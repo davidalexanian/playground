@@ -2,12 +2,12 @@ function Person(firstname, lastname) {
     // properties
     this.firstname = firstname;
     this.lastname = lastname;
-    
+
     //methods
     this.Display = ()=>console.log(this.firstname + ' ' + this.lastname);
 }
 function MyFunc() {
-    this.x = 100;               
+    this.x = 100;
     return { a: 123 };
 }
 

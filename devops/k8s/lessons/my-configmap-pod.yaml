@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kuard-config
+spec:
+  containers:
+  - name: test-container
+    image: gcr.io/kuar-demo/kuard-amd64:blue
+    imagePullPolicy: Always
+    command:
+    - "/kuard"
+    - "$(EXTRA_PARAM)" # pass configmap variable as parameter
+    env:
+    - name: ANOTHER_PARAM # set configmap variable as env variable
+      valueFrom:
+        configMapKeyRef:
+          name: my-configmap
+          key: another-param
+    - name: EXTRA_PARAM
+      valueFrom:
+        configMapKeyRef:
+          name: my-configmap
+          key: extra-param # set configmapmap variable as env variable
+    volumeMounts:
+    - name: config-volume # Mounting the ConfigMap as a set of files
+      mountPath: /config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: my-configmap

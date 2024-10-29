@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json.Linq;
+using System.Collections;
+using System.Text;
 using System.Text.Json;
 
 namespace SignalRMessagePack.Hubs
@@ -43,6 +45,8 @@ namespace SignalRMessagePack.Hubs
         public async Task SendFromServerButtonClick()
         {
             var payload = PayloadModel.Create();
+            payload.ByteArray = Encoding.UTF8.GetBytes("abcdef");
+
             Console.WriteLine($"Method:{nameof(SendToServerButtonClick)}, connection:{this.Context.ConnectionId}, payload:{JsonSerializer.Serialize(payload)}");
             await Clients.All.SendAsync("ReceiveMessageFromServer", payload);
         }

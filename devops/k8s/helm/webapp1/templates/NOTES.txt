@@ -1,0 +1,2 @@
+NOTES.txt will output its content after hellm upgrade command
+it is templated as well {{ .Values.namespace }} {{ .Values.data.CUSTOM_HEADER }}

@@ -1,0 +1,7 @@
+appName: webapp1
+namespace: default
+data:
+  CUSTOM_HEADER: "my custom header"
+image:
+  name: devopsjourney1/mywebapp
+  tag: latest

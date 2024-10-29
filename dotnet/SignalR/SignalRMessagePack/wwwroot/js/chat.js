@@ -65,6 +65,12 @@ let messagePackHub = new signalR.HubConnectionBuilder()
 
 messagePackHub.on("ReceiveMessageFromServer", function (payload) {
     console.log("ReceiveMessageFromServer", payload);
+    console.log(payload.byteArray);
+    console.log(JSON.stringify(payload.byteArray));
+    var base64 = btoa(
+        payload.byteArray.reduce((data, byte) => data + String.fromCharCode(byte), '')
+    );
+    console.log(base64);
 
     let pre = document.createElement("pre");
     pre.textContent = JSON.stringify(payload, undefined, 2);
@@ -79,6 +85,8 @@ let jsonHub = new signalR.HubConnectionBuilder()
 
 jsonHub.on("ReceiveMessageFromServer", function (payload) {
     console.log("ReceiveMessageFromServer", payload);
+    console.log(payload.byteArray);
+    console.log(JSON.stringify(payload.byteArray));
 
     let pre = document.createElement("pre");
     pre.textContent = JSON.stringify(payload, undefined, 2);

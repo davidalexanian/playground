@@ -38,8 +38,6 @@ namespace TempConsole
                 new System.Text.Json.JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase }));
         }
 
-
-
         static Meter meter = new Meter("HatStoreMeter", "1.0.0");
         static async Task MainOld(string[] args)
         {
