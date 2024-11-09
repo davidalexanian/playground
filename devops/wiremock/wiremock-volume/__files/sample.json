@@ -1,0 +1,7 @@
+{
+  "message": "Sample message !",
+  "data" : {
+    "aa" : 11,
+    "bb": 22
+  }
+}
