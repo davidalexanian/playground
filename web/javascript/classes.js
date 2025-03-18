@@ -6,7 +6,7 @@ let Rectangle1 = class {
     }
 };
 console.log(Rectangle1.name);                // Rectangle1
-console.log( new Rectangle1(10, 20).height); // 10
+console.log(new Rectangle1(10, 20).height);  // 10
 
 // named class expression
 let rn = class RectangleNew {
@@ -47,7 +47,7 @@ class Rectangle {
         if (this != undefined) {
             console.log(this.staticField);
             console.log(this);  //[Function: Rectangle] { staticField: 'staticField' }
-        }        
+        }
         else {
             console.log("this == undefined");
         }

@@ -1,6 +1,6 @@
 export function promisesDemo() {
     // resolve immediately
-    var p1 = Promise.resolve("foo");    
+    var p1 = Promise.resolve("foo");
     p1.then((res) => console.log(res));
     
     // resolve after 2 seconds

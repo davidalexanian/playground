@@ -1,0 +1,150 @@
+{
+  "$schema": "https://www.krakend.io/schema/krakend.json",
+  "version": 3,
+  "name": "KrakenD - API Gateway",
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "echo_endpoint": true,
+  "debug_endpoint": true,
+  "endpoints": [
+    {
+      "endpoint": "/v1/posts",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "posts",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "extra_config": {
+            "qos/circuit-breaker": {
+              "interval": 60,
+              "name": "circuit-breaker-1",
+              "timeout": 10,
+              "max_errors": 30,
+              "log_status_change": true
+            },
+            "qos/ratelimit/proxy": {
+              "max_rate": 30,
+              "capacity": 30,
+              "every": "10s"
+            }
+          },
+          "host": [
+            "https://jsonplaceholder.typicode.com/"
+          ],
+          "disable_host_sanitize": false,
+          "is_collection": true,
+          "target": ""
+        }
+      ],
+      "extra_config": {
+        "proxy": {
+          "static": {
+            "data": {
+              "error": "backend failed"
+            },
+            "strategy": "errored"
+          }
+        },
+        "plugin/req-resp-modifier": {
+          "name": [
+            "ip-filter"
+          ],
+          "ip-filter": {
+            "allow": false,
+            "client_ip_headers": [
+              "X-Forwarded-For",
+              "X-Real-IP",
+              "X-Appengine-Remote-Addr"
+            ]
+          }
+        }
+      },
+      "input_query_strings": []
+    },
+
+    {
+      "endpoint": "/v1/posts/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "posts/{id}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "disable_host_sanitize": false,
+          "host": [
+            "https://jsonplaceholder.typicode.com/"
+          ]
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    },
+
+    {
+      "endpoint": "/v1/comments/posts/{postId}",
+      "method": "GET",
+      "output_encoding": "json-collection",
+      "backend": [
+        {
+          "url_pattern": "comments?postId={postId}",
+          "encoding": "json",
+          "sd": "static",
+          "method": "GET",
+          "disable_host_sanitize": true,
+          "host": [
+            "https://jsonplaceholder.typicode.com/"
+          ],
+          "is_collection": true,
+          "target": ""
+        }
+      ],
+      "input_query_strings": [
+        "postId"
+      ]
+    },
+
+    {
+      "endpoint": "/v1/posts/{id}/post-with-comments",
+      "method": "GET",
+      "encoding": "json",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "posts/{id}",
+          "method": "GET",
+          "host": [
+            "https://jsonplaceholder.typicode.com/"
+          ]
+        },
+        {
+          "url_pattern": "comments?postId={id}",
+          "encoding": "json-collection",
+          "method": "GET",
+          "disable_host_sanitize": false,
+          "host": [
+            "https://jsonplaceholder.typicode.com/"
+          ],
+          "sd": "static",
+          "is_collection": true,
+          "mapping": {
+            "collection": "comments"
+          }
+        }
+      ],
+      "input_query_strings": [
+        "id"
+      ]
+    }
+  ],
+  "plugin": {
+    "pattern": ".so",
+    "folder": "/opt/krakend/plugins/"
+  }
+}
